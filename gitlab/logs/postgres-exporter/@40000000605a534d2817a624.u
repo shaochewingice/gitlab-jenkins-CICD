@@ -1,0 +1,7 @@
+2021-03-23_03:44:00.21584 time="2021-03-23T03:44:00Z" level=info msg="Established new database connection to \"/var/opt/gitlab/postgresql:5432\"." source="postgres_exporter.go:878"
+2021-03-23_03:44:00.31954 time="2021-03-23T03:44:00Z" level=info msg="Semantic Version Changed on \"/var/opt/gitlab/postgresql:5432\": 0.0.0 -> 12.5.0" source="postgres_exporter.go:1405"
+2021-03-23_03:44:00.31957 time="2021-03-23T03:44:00Z" level=error msg="Failed to reload user queries: /var/opt/gitlab/postgres-exporter/queries.yaml open /var/opt/gitlab/postgres-exporter/queries.yaml: no such file or directory" source="postgres_exporter.go:1426"
+2021-03-23_03:44:00.38323 time="2021-03-23T03:44:00Z" level=info msg="Starting Server: localhost:9187" source="postgres_exporter.go:1672"
+2021-03-23_03:54:34.51936 time="2021-03-23T03:54:34Z" level=info msg="Established new database connection to \"/var/opt/gitlab/postgresql:5432\"." source="postgres_exporter.go:878"
+2021-03-23_03:54:34.56068 time="2021-03-23T03:54:34Z" level=info msg="Semantic Version Changed on \"/var/opt/gitlab/postgresql:5432\": 0.0.0 -> 12.5.0" source="postgres_exporter.go:1405"
+2021-03-23_03:54:36.24861 time="2021-03-23T03:54:36Z" level=info msg="Starting Server: localhost:9187" source="postgres_exporter.go:1672"

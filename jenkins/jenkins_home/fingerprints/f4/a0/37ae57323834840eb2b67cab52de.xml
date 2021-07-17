@@ -1,0 +1,23 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2021-04-03 03:25:38.816 UTC</timestamp>
+  <md5sum>f4a037ae57323834840eb2b67cab52de</md5sum>
+  <fileName>Credential id=ec5a97c8-f322-43db-986d-3e3d58ed972f name=root (jenkinsdocker-gitlabdocker)</fileName>
+  <usages>
+    <entry>
+      <string>tomcat-cicd</string>
+      <ranges>5</ranges>
+    </entry>
+    <entry>
+      <string>pipeline-java</string>
+      <ranges>6-8</ranges>
+    </entry>
+  </usages>
+  <facets>
+    <com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet plugin="credentials@2.3.15">
+      <timestamp>1617423527198</timestamp>
+      <itemFullName>pipeline-java</itemFullName>
+      <timestamp0>1617423387392</timestamp0>
+    </com.cloudbees.plugins.credentials.fingerprints.ItemCredentialsFingerprintFacet>
+  </facets>
+</fingerprint>

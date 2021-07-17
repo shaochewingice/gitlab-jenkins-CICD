@@ -1,0 +1,56 @@
+2021-03-24_06:30:17.27111 level=info ts=2021-03-24T06:30:17.268Z caller=main.go:366 msg="No time or size retention was set so using the default time retention" duration=15d
+2021-03-24_06:30:17.27121 level=info ts=2021-03-24T06:30:17.269Z caller=main.go:404 msg="Starting Prometheus" version="(version=2.25.0, branch=master, revision=)"
+2021-03-24_06:30:17.27121 level=info ts=2021-03-24T06:30:17.269Z caller=main.go:409 build_context="(go=go1.15.8, user=GitLab-Omnibus, date=)"
+2021-03-24_06:30:17.27121 level=info ts=2021-03-24T06:30:17.269Z caller=main.go:410 host_details="(Linux 3.10.0-1127.el7.x86_64 #1 SMP Tue Mar 31 23:36:51 UTC 2020 x86_64 gitlab.shao.com (none))"
+2021-03-24_06:30:17.27122 level=info ts=2021-03-24T06:30:17.269Z caller=main.go:411 fd_limits="(soft=50000, hard=50000)"
+2021-03-24_06:30:17.27122 level=info ts=2021-03-24T06:30:17.269Z caller=main.go:412 vm_limits="(soft=unlimited, hard=unlimited)"
+2021-03-24_06:30:17.29537 level=info ts=2021-03-24T06:30:17.294Z caller=web.go:532 component=web msg="Start listening for connections" address=localhost:9090
+2021-03-24_06:30:17.31850 level=info ts=2021-03-24T06:30:17.317Z caller=main.go:779 msg="Starting TSDB ..."
+2021-03-24_06:30:17.34523 level=info ts=2021-03-24T06:30:17.341Z caller=tls_config.go:191 component=web msg="TLS is disabled." http2=false
+2021-03-24_06:30:17.45681 level=info ts=2021-03-24T06:30:17.451Z caller=head.go:668 component=tsdb msg="Replaying on-disk memory mappable chunks if any"
+2021-03-24_06:30:18.63572 level=info ts=2021-03-24T06:30:18.634Z caller=head.go:682 component=tsdb msg="On-disk memory mappable chunks replay completed" duration=1.183690546s
+2021-03-24_06:30:18.63574 level=info ts=2021-03-24T06:30:18.635Z caller=head.go:688 component=tsdb msg="Replaying WAL, this may take a while"
+2021-03-24_06:30:19.70167 level=info ts=2021-03-24T06:30:19.698Z caller=head.go:740 component=tsdb msg="WAL segment loaded" segment=0 maxSegment=10
+2021-03-24_06:30:22.87169 level=info ts=2021-03-24T06:30:22.870Z caller=head.go:740 component=tsdb msg="WAL segment loaded" segment=1 maxSegment=10
+2021-03-24_06:30:43.24866 level=info ts=2021-03-24T06:30:43.246Z caller=head.go:740 component=tsdb msg="WAL segment loaded" segment=2 maxSegment=10
+2021-03-24_06:30:43.34809 level=info ts=2021-03-24T06:30:43.347Z caller=head.go:740 component=tsdb msg="WAL segment loaded" segment=3 maxSegment=10
+2021-03-24_06:30:43.37858 level=info ts=2021-03-24T06:30:43.375Z caller=head.go:740 component=tsdb msg="WAL segment loaded" segment=4 maxSegment=10
+2021-03-24_06:30:43.82992 level=info ts=2021-03-24T06:30:43.828Z caller=head.go:740 component=tsdb msg="WAL segment loaded" segment=5 maxSegment=10
+2021-03-24_06:30:43.87057 level=info ts=2021-03-24T06:30:43.867Z caller=head.go:740 component=tsdb msg="WAL segment loaded" segment=6 maxSegment=10
+2021-03-24_06:30:43.88581 level=info ts=2021-03-24T06:30:43.883Z caller=head.go:740 component=tsdb msg="WAL segment loaded" segment=7 maxSegment=10
+2021-03-24_06:30:43.92164 level=info ts=2021-03-24T06:30:43.918Z caller=head.go:740 component=tsdb msg="WAL segment loaded" segment=8 maxSegment=10
+2021-03-24_06:30:44.72549 level=info ts=2021-03-24T06:30:44.722Z caller=head.go:740 component=tsdb msg="WAL segment loaded" segment=9 maxSegment=10
+2021-03-24_06:30:44.72551 level=info ts=2021-03-24T06:30:44.722Z caller=head.go:740 component=tsdb msg="WAL segment loaded" segment=10 maxSegment=10
+2021-03-24_06:30:44.72552 level=info ts=2021-03-24T06:30:44.722Z caller=head.go:745 component=tsdb msg="WAL replay completed" checkpoint_replay_duration=168.159µs wal_replay_duration=26.087219945s total_replay_duration=27.271151694s
+2021-03-24_06:30:44.78539 level=info ts=2021-03-24T06:30:44.776Z caller=main.go:799 fs_type=XFS_SUPER_MAGIC
+2021-03-24_06:30:44.78541 level=info ts=2021-03-24T06:30:44.776Z caller=main.go:802 msg="TSDB started"
+2021-03-24_06:30:44.78542 level=info ts=2021-03-24T06:30:44.776Z caller=main.go:928 msg="Loading configuration file" filename=/var/opt/gitlab/prometheus/prometheus.yml
+2021-03-24_06:30:44.78542 level=error ts=2021-03-24T06:30:44.778Z caller=manager.go:314 component="discovery manager scrape" msg="Cannot create service discovery" err="unable to load specified CA cert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: open /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: no such file or directory" type=kubernetes
+2021-03-24_06:30:44.78543 level=error ts=2021-03-24T06:30:44.778Z caller=manager.go:314 component="discovery manager scrape" msg="Cannot create service discovery" err="unable to load specified CA cert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: open /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: no such file or directory" type=kubernetes
+2021-03-24_06:30:44.78543 level=error ts=2021-03-24T06:30:44.778Z caller=manager.go:314 component="discovery manager scrape" msg="Cannot create service discovery" err="unable to load specified CA cert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: open /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: no such file or directory" type=kubernetes
+2021-03-24_06:30:44.81400 level=info ts=2021-03-24T06:30:44.811Z caller=main.go:959 msg="Completed loading of configuration file" filename=/var/opt/gitlab/prometheus/prometheus.yml totalDuration=35.174012ms remote_storage=8.899µs web_handler=736ns query_engine=1.252µs scrape=93.946µs scrape_sd=360.643µs notify=24.746µs notify_sd=12.211µs rules=33.457004ms
+2021-03-24_06:30:44.81403 level=info ts=2021-03-24T06:30:44.812Z caller=main.go:751 msg="Server is ready to receive web requests."
+2021-03-24_06:30:49.81539 level=error ts=2021-03-24T06:30:49.814Z caller=manager.go:188 component="scrape manager" msg="error creating new scrape pool" err="error creating HTTP client: unable to load specified CA cert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: open /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: no such file or directory" scrape_pool=kubernetes-pods
+2021-03-24_06:30:49.81543 level=error ts=2021-03-24T06:30:49.814Z caller=manager.go:188 component="scrape manager" msg="error creating new scrape pool" err="error creating HTTP client: unable to load specified CA cert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: open /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: no such file or directory" scrape_pool=kubernetes-nodes
+2021-03-24_06:30:49.81543 level=error ts=2021-03-24T06:30:49.814Z caller=manager.go:188 component="scrape manager" msg="error creating new scrape pool" err="error creating HTTP client: unable to load specified CA cert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: open /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: no such file or directory" scrape_pool=kubernetes-cadvisor
+2021-03-24_06:30:50.16813 level=error ts=2021-03-24T06:30:50.168Z caller=db.go:766 component=tsdb msg="compaction failed" err="compact head: persist head block: populate block: write chunks: preallocate: no space left on device"
+2021-03-24_06:30:51.36928 level=error ts=2021-03-24T06:30:51.369Z caller=db.go:766 component=tsdb msg="compaction failed" err="compact head: persist head block: populate block: write chunks: preallocate: no space left on device"
+2021-03-24_06:30:54.66557 level=error ts=2021-03-24T06:30:54.665Z caller=db.go:766 component=tsdb msg="compaction failed" err="compact head: persist head block: populate block: write chunks: preallocate: no space left on device"
+2021-03-24_06:30:58.75968 level=error ts=2021-03-24T06:30:58.759Z caller=db.go:766 component=tsdb msg="compaction failed" err="compact head: persist head block: populate block: write chunks: preallocate: no space left on device"
+2021-03-24_06:31:07.04735 level=error ts=2021-03-24T06:31:07.047Z caller=db.go:766 component=tsdb msg="compaction failed" err="compact head: persist head block: populate block: write chunks: preallocate: no space left on device"
+2021-03-24_06:31:23.13507 level=error ts=2021-03-24T06:31:23.134Z caller=db.go:766 component=tsdb msg="compaction failed" err="compact head: persist head block: populate block: write chunks: preallocate: no space left on device"
+2021-03-24_06:31:55.54440 level=error ts=2021-03-24T06:31:55.543Z caller=db.go:766 component=tsdb msg="compaction failed" err="compact head: persist head block: populate block: write chunks: preallocate: no space left on device"
+2021-03-24_06:32:55.56712 level=error ts=2021-03-24T06:32:55.567Z caller=db.go:766 component=tsdb msg="compaction failed" err="compact head: persist head block: populate block: write chunks: preallocate: no space left on device"
+2021-03-24_06:33:55.59133 level=error ts=2021-03-24T06:33:55.591Z caller=db.go:766 component=tsdb msg="compaction failed" err="compact head: persist head block: populate block: write chunks: preallocate: no space left on device"
+2021-03-24_06:34:34.58719 level=warn ts=2021-03-24T06:34:34.583Z caller=main.go:629 msg="Received SIGTERM, exiting gracefully..."
+2021-03-24_06:34:34.59248 level=info ts=2021-03-24T06:34:34.583Z caller=main.go:652 msg="Stopping scrape discovery manager..."
+2021-03-24_06:34:34.59250 level=info ts=2021-03-24T06:34:34.590Z caller=main.go:666 msg="Stopping notify discovery manager..."
+2021-03-24_06:34:34.59251 level=info ts=2021-03-24T06:34:34.590Z caller=main.go:688 msg="Stopping scrape manager..."
+2021-03-24_06:34:34.59251 level=info ts=2021-03-24T06:34:34.590Z caller=main.go:648 msg="Scrape discovery manager stopped"
+2021-03-24_06:34:34.59251 level=info ts=2021-03-24T06:34:34.590Z caller=main.go:662 msg="Notify discovery manager stopped"
+2021-03-24_06:34:34.59251 level=info ts=2021-03-24T06:34:34.591Z caller=manager.go:924 component="rule manager" msg="Stopping rule manager..."
+2021-03-24_06:34:34.59252 level=info ts=2021-03-24T06:34:34.591Z caller=manager.go:934 component="rule manager" msg="Rule manager stopped"
+2021-03-24_06:34:34.59430 level=info ts=2021-03-24T06:34:34.594Z caller=main.go:682 msg="Scrape manager stopped"
+2021-03-24_06:34:34.59520 level=info ts=2021-03-24T06:34:34.594Z caller=notifier.go:601 component=notifier msg="Stopping notification manager..."
+2021-03-24_06:34:34.59521 level=info ts=2021-03-24T06:34:34.595Z caller=main.go:856 msg="Notifier manager stopped"
+2021-03-24_06:34:34.59521 level=info ts=2021-03-24T06:34:34.595Z caller=main.go:868 msg="See you next time!"

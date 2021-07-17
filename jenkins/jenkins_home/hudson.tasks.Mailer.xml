@@ -1,0 +1,15 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<hudson.tasks.Mailer_-DescriptorImpl plugin="mailer@1.33">
+  <defaultSuffix>@jenkins</defaultSuffix>
+  <hudsonUrl>http://gitlab.shao.com:9980/</hudsonUrl>
+  <authentication>
+    <username>ninedollarmilk@gmail.com</username>
+    <password>{AQAAABAAAAAQY+nB1Td2iGcG9zM99pE7jisaT7dforq22AdgI7JxGGc=}</password>
+  </authentication>
+  <replyToAddress>ninedollarmilk@gmail.com</replyToAddress>
+  <smtpHost>smtp.gmail.com</smtpHost>
+  <useSsl>true</useSsl>
+  <useTls>false</useTls>
+  <smtpPort>465</smtpPort>
+  <charset>UTF-8</charset>
+</hudson.tasks.Mailer_-DescriptorImpl>

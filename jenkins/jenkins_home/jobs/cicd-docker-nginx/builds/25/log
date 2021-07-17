@@ -1,0 +1,59 @@
+Started by GitLab push by Administrator
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/cicd-docker-nginx
+The recommended git tool is: NONE
+using credential ec5a97c8-f322-43db-986d-3e3d58ed972f
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url ssh://git@cicd_gitlab_1/devops/cicd-docker-env.git # timeout=10
+Fetching upstream changes from ssh://git@cicd_gitlab_1/devops/cicd-docker-env.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.26.3'
+ > git fetch --tags --force --progress -- ssh://git@cicd_gitlab_1/devops/cicd-docker-env.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+skipping resolution of commit remotes/origin/dev, since it originates from another repository
+ > git rev-parse refs/remotes/origin/dev^{commit} # timeout=10
+Checking out Revision aa8f2a019a27a87cf9b1bf78fcd610693003ec02 (refs/remotes/origin/dev)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f aa8f2a019a27a87cf9b1bf78fcd610693003ec02 # timeout=10
+Commit message: "version 7.3"
+ > git rev-list --no-walk eb8d43ccea77f667f6e8ce30ab225ea4036c7f2a # timeout=10
+[cicd-docker-nginx] $ /bin/sh -xe /tmp/jenkins7026875868274799094.sh
++ sh -x /var/jenkins_home/deploy.sh
++ host=192.168.124.151
++ ssh root@192.168.124.151 '
+                mkdir -p /home/cicd_nginx
+                cd /home/cicd_nginx
+                docker-compose ps -q
+                if [[ -n 0 ]]; then docker-compose down; fi
+                wait
+                echo '"'"'shut-down complete'"'"'
+		rm -rf /home/cicd_nginx/*
+'
+1a75cadec9435bc9b4e3bc8af1f21e16d3b39702a09e39b1275ab46fdf4cd3e3
+50747e77702fe86f3a5f95f7a19ea2a9d91e611f33957524ef5418bb021789ef
+6cd20e40259ad8c1c188733d118757fb64003e737d47768080d3c75ffce3f144
+Stopping cicd_nginx_web_1 ... 
+Stopping cicd_nginx_fpm_1 ... 
+Stopping cicd_nginx_db_1  ... 
+Stopping cicd_nginx_web_1 ... done
+Stopping cicd_nginx_fpm_1 ... done
+Stopping cicd_nginx_db_1  ... done
+Removing cicd_nginx_web_1 ... 
+Removing cicd_nginx_fpm_1 ... 
+Removing cicd_nginx_db_1  ... 
+Removing cicd_nginx_db_1  ... done
+Removing cicd_nginx_fpm_1 ... done
+Removing cicd_nginx_web_1 ... done
+Removing network cicd_nginx_default
+shut-down complete
++ scp -rp /var/jenkins_home/workspace/cicd-docker-nginx/. root@192.168.124.151:/home/cicd_nginx/
++ ssh root@192.168.124.151 'cd /home/cicd_nginx && docker-compose up -d'
+Building with native build. Learn about native build in Compose here: https://docs.docker.com/go/compose-native-build/
+Creating network "cicd_nginx_default" with the default driver
+Creating cicd_nginx_db_1 ... 
+Creating cicd_nginx_db_1 ... done
+Creating cicd_nginx_fpm_1 ... 
+Creating cicd_nginx_fpm_1 ... done
+Creating cicd_nginx_web_1 ... 
+Creating cicd_nginx_web_1 ... done
+Finished: SUCCESS

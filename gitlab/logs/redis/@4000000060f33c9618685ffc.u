@@ -1,0 +1,905 @@
+2021-07-16_14:33:11.32108 311:C 16 Jul 2021 14:33:11.310 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+2021-07-16_14:33:11.32121 311:C 16 Jul 2021 14:33:11.310 # Redis version=6.0.10, bits=64, commit=8d70d498, modified=1, pid=311, just started
+2021-07-16_14:33:11.32122 311:C 16 Jul 2021 14:33:11.310 # Configuration loaded
+2021-07-16_14:33:11.32122 311:M 16 Jul 2021 14:33:11.311 * Running mode=standalone, port=0.
+2021-07-16_14:33:11.32122 311:M 16 Jul 2021 14:33:11.311 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+2021-07-16_14:33:11.32122 311:M 16 Jul 2021 14:33:11.311 # Server initialized
+2021-07-16_14:33:11.32122 311:M 16 Jul 2021 14:33:11.311 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+2021-07-16_14:33:11.32123 311:M 16 Jul 2021 14:33:11.311 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo madvise > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled (set to 'madvise' or 'never').
+2021-07-16_14:33:11.50908 311:M 16 Jul 2021 14:33:11.505 * Loading RDB produced by version 6.0.10
+2021-07-16_14:33:11.50910 311:M 16 Jul 2021 14:33:11.505 * RDB age 41465 seconds
+2021-07-16_14:33:11.50911 311:M 16 Jul 2021 14:33:11.505 * RDB memory usage when created 2.20 Mb
+2021-07-16_14:33:11.52218 311:M 16 Jul 2021 14:33:11.515 * DB loaded from disk: 0.055 seconds
+2021-07-16_14:33:11.52221 311:M 16 Jul 2021 14:33:11.515 * The server is now ready to accept connections at /var/opt/gitlab/redis/redis.socket
+2021-07-16_14:38:12.09666 311:M 16 Jul 2021 14:38:12.089 * 10 changes in 300 seconds. Saving...
+2021-07-16_14:38:12.09877 311:M 16 Jul 2021 14:38:12.098 * Background saving started by pid 1040
+2021-07-16_14:38:12.10250 1040:C 16 Jul 2021 14:38:12.102 * DB saved on disk
+2021-07-16_14:38:12.10297 1040:C 16 Jul 2021 14:38:12.102 * RDB: 6 MB of memory used by copy-on-write
+2021-07-16_14:38:12.19968 311:M 16 Jul 2021 14:38:12.199 * Background saving terminated with success
+2021-07-16_14:43:13.10533 311:M 16 Jul 2021 14:43:13.099 * 10 changes in 300 seconds. Saving...
+2021-07-16_14:43:13.10764 311:M 16 Jul 2021 14:43:13.105 * Background saving started by pid 1609
+2021-07-16_14:43:13.12460 1609:C 16 Jul 2021 14:43:13.123 * DB saved on disk
+2021-07-16_14:43:13.12463 1609:C 16 Jul 2021 14:43:13.124 * RDB: 4 MB of memory used by copy-on-write
+2021-07-16_14:43:13.20703 311:M 16 Jul 2021 14:43:13.206 * Background saving terminated with success
+2021-07-16_14:48:14.08580 311:M 16 Jul 2021 14:48:14.068 * 10 changes in 300 seconds. Saving...
+2021-07-16_14:48:14.08855 311:M 16 Jul 2021 14:48:14.086 * Background saving started by pid 2173
+2021-07-16_14:48:14.09970 2173:C 16 Jul 2021 14:48:14.098 * DB saved on disk
+2021-07-16_14:48:14.09992 2173:C 16 Jul 2021 14:48:14.099 * RDB: 2 MB of memory used by copy-on-write
+2021-07-16_14:48:14.18887 311:M 16 Jul 2021 14:48:14.188 * Background saving terminated with success
+2021-07-16_14:53:15.00843 311:M 16 Jul 2021 14:53:15.007 * 10 changes in 300 seconds. Saving...
+2021-07-16_14:53:15.00850 311:M 16 Jul 2021 14:53:15.008 * Background saving started by pid 2731
+2021-07-16_14:53:15.05377 2731:C 16 Jul 2021 14:53:15.053 * DB saved on disk
+2021-07-16_14:53:15.05431 2731:C 16 Jul 2021 14:53:15.054 * RDB: 2 MB of memory used by copy-on-write
+2021-07-16_14:53:15.10931 311:M 16 Jul 2021 14:53:15.109 * Background saving terminated with success
+2021-07-16_14:58:16.08276 311:M 16 Jul 2021 14:58:16.082 * 10 changes in 300 seconds. Saving...
+2021-07-16_14:58:16.08389 311:M 16 Jul 2021 14:58:16.083 * Background saving started by pid 3284
+2021-07-16_14:58:16.10239 3284:C 16 Jul 2021 14:58:16.101 * DB saved on disk
+2021-07-16_14:58:16.10325 3284:C 16 Jul 2021 14:58:16.103 * RDB: 5 MB of memory used by copy-on-write
+2021-07-16_14:58:16.18490 311:M 16 Jul 2021 14:58:16.184 * Background saving terminated with success
+2021-07-16_15:03:17.10248 311:M 16 Jul 2021 15:03:17.082 * 10 changes in 300 seconds. Saving...
+2021-07-16_15:03:17.10649 311:M 16 Jul 2021 15:03:17.103 * Background saving started by pid 3846
+2021-07-16_15:03:17.12440 3846:C 16 Jul 2021 15:03:17.122 * DB saved on disk
+2021-07-16_15:03:17.12448 3846:C 16 Jul 2021 15:03:17.124 * RDB: 2 MB of memory used by copy-on-write
+2021-07-16_15:03:17.20508 311:M 16 Jul 2021 15:03:17.204 * Background saving terminated with success
+2021-07-16_15:08:18.06324 311:M 16 Jul 2021 15:08:18.045 * 10 changes in 300 seconds. Saving...
+2021-07-16_15:08:18.06451 311:M 16 Jul 2021 15:08:18.064 * Background saving started by pid 4411
+2021-07-16_15:08:18.08496 4411:C 16 Jul 2021 15:08:18.081 * DB saved on disk
+2021-07-16_15:08:18.08504 4411:C 16 Jul 2021 15:08:18.083 * RDB: 2 MB of memory used by copy-on-write
+2021-07-16_15:08:18.16787 311:M 16 Jul 2021 15:08:18.167 * Background saving terminated with success
+2021-07-16_15:13:19.05913 311:M 16 Jul 2021 15:13:19.057 * 10 changes in 300 seconds. Saving...
+2021-07-16_15:13:19.05928 311:M 16 Jul 2021 15:13:19.058 * Background saving started by pid 4971
+2021-07-16_15:13:19.07288 4971:C 16 Jul 2021 15:13:19.071 * DB saved on disk
+2021-07-16_15:13:19.07293 4971:C 16 Jul 2021 15:13:19.072 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_15:13:19.16002 311:M 16 Jul 2021 15:13:19.159 * Background saving terminated with success
+2021-07-16_15:18:20.05547 311:M 16 Jul 2021 15:18:20.053 * 10 changes in 300 seconds. Saving...
+2021-07-16_15:18:20.05554 311:M 16 Jul 2021 15:18:20.055 * Background saving started by pid 5530
+2021-07-16_15:18:20.06693 5530:C 16 Jul 2021 15:18:20.065 * DB saved on disk
+2021-07-16_15:18:20.06793 5530:C 16 Jul 2021 15:18:20.066 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_15:18:20.15653 311:M 16 Jul 2021 15:18:20.156 * Background saving terminated with success
+2021-07-16_15:23:21.09094 311:M 16 Jul 2021 15:23:21.084 * 10 changes in 300 seconds. Saving...
+2021-07-16_15:23:21.09148 311:M 16 Jul 2021 15:23:21.090 * Background saving started by pid 6209
+2021-07-16_15:23:21.09658 6209:C 16 Jul 2021 15:23:21.096 * DB saved on disk
+2021-07-16_15:23:21.09712 6209:C 16 Jul 2021 15:23:21.096 * RDB: 2 MB of memory used by copy-on-write
+2021-07-16_15:23:21.19024 311:M 16 Jul 2021 15:23:21.190 * Background saving terminated with success
+2021-07-16_15:28:22.02364 311:M 16 Jul 2021 15:28:22.023 * 10 changes in 300 seconds. Saving...
+2021-07-16_15:28:22.02550 311:M 16 Jul 2021 15:28:22.025 * Background saving started by pid 6763
+2021-07-16_15:28:22.03734 6763:C 16 Jul 2021 15:28:22.036 * DB saved on disk
+2021-07-16_15:28:22.03859 6763:C 16 Jul 2021 15:28:22.038 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_15:28:22.12764 311:M 16 Jul 2021 15:28:22.127 * Background saving terminated with success
+2021-07-16_15:33:23.01580 311:M 16 Jul 2021 15:33:23.002 * 10 changes in 300 seconds. Saving...
+2021-07-16_15:33:23.01669 311:M 16 Jul 2021 15:33:23.016 * Background saving started by pid 7412
+2021-07-16_15:33:23.02730 7412:C 16 Jul 2021 15:33:23.027 * DB saved on disk
+2021-07-16_15:33:23.02867 7412:C 16 Jul 2021 15:33:23.028 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_15:33:23.11799 311:M 16 Jul 2021 15:33:23.117 * Background saving terminated with success
+2021-07-16_15:38:24.10130 311:M 16 Jul 2021 15:38:24.100 * 10 changes in 300 seconds. Saving...
+2021-07-16_15:38:24.10198 311:M 16 Jul 2021 15:38:24.101 * Background saving started by pid 8055
+2021-07-16_15:38:24.12532 8055:C 16 Jul 2021 15:38:24.125 * DB saved on disk
+2021-07-16_15:38:24.12670 8055:C 16 Jul 2021 15:38:24.126 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_15:38:24.20334 311:M 16 Jul 2021 15:38:24.203 * Background saving terminated with success
+2021-07-16_15:43:25.04058 311:M 16 Jul 2021 15:43:25.039 * 10 changes in 300 seconds. Saving...
+2021-07-16_15:43:25.04068 311:M 16 Jul 2021 15:43:25.040 * Background saving started by pid 8625
+2021-07-16_15:43:25.07074 8625:C 16 Jul 2021 15:43:25.069 * DB saved on disk
+2021-07-16_15:43:25.07239 8625:C 16 Jul 2021 15:43:25.071 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_15:43:25.14126 311:M 16 Jul 2021 15:43:25.141 * Background saving terminated with success
+2021-07-16_15:48:26.08248 311:M 16 Jul 2021 15:48:26.081 * 10 changes in 300 seconds. Saving...
+2021-07-16_15:48:26.08366 311:M 16 Jul 2021 15:48:26.083 * Background saving started by pid 9193
+2021-07-16_15:48:26.09591 9193:C 16 Jul 2021 15:48:26.095 * DB saved on disk
+2021-07-16_15:48:26.09726 9193:C 16 Jul 2021 15:48:26.097 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_15:48:26.18569 311:M 16 Jul 2021 15:48:26.185 * Background saving terminated with success
+2021-07-16_15:53:27.03523 311:M 16 Jul 2021 15:53:27.034 * 10 changes in 300 seconds. Saving...
+2021-07-16_15:53:27.03627 311:M 16 Jul 2021 15:53:27.035 * Background saving started by pid 9748
+2021-07-16_15:53:27.04999 9748:C 16 Jul 2021 15:53:27.047 * DB saved on disk
+2021-07-16_15:53:27.05005 9748:C 16 Jul 2021 15:53:27.049 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_15:53:27.13907 311:M 16 Jul 2021 15:53:27.138 * Background saving terminated with success
+2021-07-16_15:58:28.00687 311:M 16 Jul 2021 15:58:28.006 * 10 changes in 300 seconds. Saving...
+2021-07-16_15:58:28.00695 311:M 16 Jul 2021 15:58:28.006 * Background saving started by pid 10304
+2021-07-16_15:58:28.01127 10304:C 16 Jul 2021 15:58:28.010 * DB saved on disk
+2021-07-16_15:58:28.01135 10304:C 16 Jul 2021 15:58:28.011 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_15:58:28.10778 311:M 16 Jul 2021 15:58:28.107 * Background saving terminated with success
+2021-07-16_16:03:29.04414 311:M 16 Jul 2021 16:03:29.043 * 10 changes in 300 seconds. Saving...
+2021-07-16_16:03:29.04627 311:M 16 Jul 2021 16:03:29.045 * Background saving started by pid 10862
+2021-07-16_16:03:29.05807 10862:C 16 Jul 2021 16:03:29.057 * DB saved on disk
+2021-07-16_16:03:29.05908 10862:C 16 Jul 2021 16:03:29.058 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_16:03:29.14746 311:M 16 Jul 2021 16:03:29.147 * Background saving terminated with success
+2021-07-16_16:08:30.00543 311:M 16 Jul 2021 16:08:30.004 * 10 changes in 300 seconds. Saving...
+2021-07-16_16:08:30.00738 311:M 16 Jul 2021 16:08:30.005 * Background saving started by pid 11410
+2021-07-16_16:08:30.02178 11410:C 16 Jul 2021 16:08:30.019 * DB saved on disk
+2021-07-16_16:08:30.02182 11410:C 16 Jul 2021 16:08:30.020 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_16:08:30.10608 311:M 16 Jul 2021 16:08:30.105 * Background saving terminated with success
+2021-07-16_16:13:31.02884 311:M 16 Jul 2021 16:13:31.027 * 10 changes in 300 seconds. Saving...
+2021-07-16_16:13:31.02958 311:M 16 Jul 2021 16:13:31.028 * Background saving started by pid 11963
+2021-07-16_16:13:31.04175 11963:C 16 Jul 2021 16:13:31.041 * DB saved on disk
+2021-07-16_16:13:31.04315 11963:C 16 Jul 2021 16:13:31.042 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_16:13:31.13031 311:M 16 Jul 2021 16:13:31.130 * Background saving terminated with success
+2021-07-16_16:18:32.02009 311:M 16 Jul 2021 16:18:32.019 * 10 changes in 300 seconds. Saving...
+2021-07-16_16:18:32.02153 311:M 16 Jul 2021 16:18:32.021 * Background saving started by pid 12512
+2021-07-16_16:18:32.03423 12512:C 16 Jul 2021 16:18:32.033 * DB saved on disk
+2021-07-16_16:18:32.03635 12512:C 16 Jul 2021 16:18:32.036 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_16:18:32.12274 311:M 16 Jul 2021 16:18:32.122 * Background saving terminated with success
+2021-07-16_16:23:33.07299 311:M 16 Jul 2021 16:23:33.072 * 10 changes in 300 seconds. Saving...
+2021-07-16_16:23:33.07333 311:M 16 Jul 2021 16:23:33.073 * Background saving started by pid 13069
+2021-07-16_16:23:33.08695 13069:C 16 Jul 2021 16:23:33.085 * DB saved on disk
+2021-07-16_16:23:33.08700 13069:C 16 Jul 2021 16:23:33.086 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_16:23:33.17431 311:M 16 Jul 2021 16:23:33.174 * Background saving terminated with success
+2021-07-16_16:28:34.01115 311:M 16 Jul 2021 16:28:34.010 * 10 changes in 300 seconds. Saving...
+2021-07-16_16:28:34.01696 311:M 16 Jul 2021 16:28:34.011 * Background saving started by pid 13715
+2021-07-16_16:28:34.02385 13715:C 16 Jul 2021 16:28:34.023 * DB saved on disk
+2021-07-16_16:28:34.02554 13715:C 16 Jul 2021 16:28:34.025 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_16:28:34.11248 311:M 16 Jul 2021 16:28:34.112 * Background saving terminated with success
+2021-07-16_16:33:35.08497 311:M 16 Jul 2021 16:33:35.083 * 10 changes in 300 seconds. Saving...
+2021-07-16_16:33:35.08511 311:M 16 Jul 2021 16:33:35.084 * Background saving started by pid 14278
+2021-07-16_16:33:35.11580 14278:C 16 Jul 2021 16:33:35.113 * DB saved on disk
+2021-07-16_16:33:35.11585 14278:C 16 Jul 2021 16:33:35.114 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_16:33:35.18669 311:M 16 Jul 2021 16:33:35.185 * Background saving terminated with success
+2021-07-16_16:38:36.00142 311:M 16 Jul 2021 16:38:36.000 * 10 changes in 300 seconds. Saving...
+2021-07-16_16:38:36.00436 311:M 16 Jul 2021 16:38:36.002 * Background saving started by pid 14995
+2021-07-16_16:38:36.01914 14995:C 16 Jul 2021 16:38:36.016 * DB saved on disk
+2021-07-16_16:38:36.01918 14995:C 16 Jul 2021 16:38:36.018 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_16:38:36.10223 311:M 16 Jul 2021 16:38:36.102 * Background saving terminated with success
+2021-07-16_16:43:37.00318 311:M 16 Jul 2021 16:43:37.002 * 10 changes in 300 seconds. Saving...
+2021-07-16_16:43:37.00441 311:M 16 Jul 2021 16:43:37.003 * Background saving started by pid 15557
+2021-07-16_16:43:37.02811 15557:C 16 Jul 2021 16:43:37.027 * DB saved on disk
+2021-07-16_16:43:37.02880 15557:C 16 Jul 2021 16:43:37.028 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_16:43:37.10568 311:M 16 Jul 2021 16:43:37.105 * Background saving terminated with success
+2021-07-16_16:48:38.01036 311:M 16 Jul 2021 16:48:38.009 * 10 changes in 300 seconds. Saving...
+2021-07-16_16:48:38.01099 311:M 16 Jul 2021 16:48:38.010 * Background saving started by pid 16189
+2021-07-16_16:48:38.04151 16189:C 16 Jul 2021 16:48:38.041 * DB saved on disk
+2021-07-16_16:48:38.04305 16189:C 16 Jul 2021 16:48:38.042 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_16:48:38.11227 311:M 16 Jul 2021 16:48:38.111 * Background saving terminated with success
+2021-07-16_16:53:39.08767 311:M 16 Jul 2021 16:53:39.086 * 10 changes in 300 seconds. Saving...
+2021-07-16_16:53:39.08776 311:M 16 Jul 2021 16:53:39.087 * Background saving started by pid 16743
+2021-07-16_16:53:39.10100 16743:C 16 Jul 2021 16:53:39.098 * DB saved on disk
+2021-07-16_16:53:39.10114 16743:C 16 Jul 2021 16:53:39.100 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_16:53:39.18898 311:M 16 Jul 2021 16:53:39.188 * Background saving terminated with success
+2021-07-16_16:58:40.05816 311:M 16 Jul 2021 16:58:40.057 * 10 changes in 300 seconds. Saving...
+2021-07-16_16:58:40.05949 311:M 16 Jul 2021 16:58:40.059 * Background saving started by pid 17381
+2021-07-16_16:58:40.07807 17381:C 16 Jul 2021 16:58:40.075 * DB saved on disk
+2021-07-16_16:58:40.07962 17381:C 16 Jul 2021 16:58:40.078 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_16:58:40.16072 311:M 16 Jul 2021 16:58:40.159 * Background saving terminated with success
+2021-07-16_17:03:41.06651 311:M 16 Jul 2021 17:03:41.066 * 10 changes in 300 seconds. Saving...
+2021-07-16_17:03:41.06655 311:M 16 Jul 2021 17:03:41.066 * Background saving started by pid 17935
+2021-07-16_17:03:41.07074 17935:C 16 Jul 2021 17:03:41.070 * DB saved on disk
+2021-07-16_17:03:41.07121 17935:C 16 Jul 2021 17:03:41.071 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_17:03:41.16714 311:M 16 Jul 2021 17:03:41.167 * Background saving terminated with success
+2021-07-16_17:08:42.08111 311:M 16 Jul 2021 17:08:42.080 * 10 changes in 300 seconds. Saving...
+2021-07-16_17:08:42.08222 311:M 16 Jul 2021 17:08:42.081 * Background saving started by pid 18574
+2021-07-16_17:08:42.08655 18574:C 16 Jul 2021 17:08:42.086 * DB saved on disk
+2021-07-16_17:08:42.08715 18574:C 16 Jul 2021 17:08:42.087 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_17:08:42.18256 311:M 16 Jul 2021 17:08:42.182 * Background saving terminated with success
+2021-07-16_17:13:43.07808 311:M 16 Jul 2021 17:13:43.063 * 10 changes in 300 seconds. Saving...
+2021-07-16_17:13:43.07972 311:M 16 Jul 2021 17:13:43.078 * Background saving started by pid 19203
+2021-07-16_17:13:43.09128 19203:C 16 Jul 2021 17:13:43.090 * DB saved on disk
+2021-07-16_17:13:43.09179 19203:C 16 Jul 2021 17:13:43.091 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_17:13:43.17947 311:M 16 Jul 2021 17:13:43.178 * Background saving terminated with success
+2021-07-16_17:18:44.00593 311:M 16 Jul 2021 17:18:44.004 * 10 changes in 300 seconds. Saving...
+2021-07-16_17:18:44.00677 311:M 16 Jul 2021 17:18:44.005 * Background saving started by pid 19922
+2021-07-16_17:18:44.03532 19922:C 16 Jul 2021 17:18:44.035 * DB saved on disk
+2021-07-16_17:18:44.03678 19922:C 16 Jul 2021 17:18:44.036 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_17:18:44.10753 311:M 16 Jul 2021 17:18:44.106 * Background saving terminated with success
+2021-07-16_17:23:45.03871 311:M 16 Jul 2021 17:23:45.038 * 10 changes in 300 seconds. Saving...
+2021-07-16_17:23:45.03988 311:M 16 Jul 2021 17:23:45.039 * Background saving started by pid 20569
+2021-07-16_17:23:45.07324 20569:C 16 Jul 2021 17:23:45.072 * DB saved on disk
+2021-07-16_17:23:45.07420 20569:C 16 Jul 2021 17:23:45.073 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_17:23:45.14088 311:M 16 Jul 2021 17:23:45.140 * Background saving terminated with success
+2021-07-16_17:28:46.10044 311:M 16 Jul 2021 17:28:46.099 * 10 changes in 300 seconds. Saving...
+2021-07-16_17:28:46.10055 311:M 16 Jul 2021 17:28:46.100 * Background saving started by pid 21128
+2021-07-16_17:28:46.11122 21128:C 16 Jul 2021 17:28:46.110 * DB saved on disk
+2021-07-16_17:28:46.11288 21128:C 16 Jul 2021 17:28:46.112 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_17:28:46.20189 311:M 16 Jul 2021 17:28:46.201 * Background saving terminated with success
+2021-07-16_17:33:47.01432 311:M 16 Jul 2021 17:33:47.013 * 10 changes in 300 seconds. Saving...
+2021-07-16_17:33:47.01443 311:M 16 Jul 2021 17:33:47.014 * Background saving started by pid 21679
+2021-07-16_17:33:47.02906 21679:C 16 Jul 2021 17:33:47.027 * DB saved on disk
+2021-07-16_17:33:47.02911 21679:C 16 Jul 2021 17:33:47.028 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_17:33:47.11537 311:M 16 Jul 2021 17:33:47.115 * Background saving terminated with success
+2021-07-16_17:38:48.06418 311:M 16 Jul 2021 17:38:48.063 * 10 changes in 300 seconds. Saving...
+2021-07-16_17:38:48.06484 311:M 16 Jul 2021 17:38:48.064 * Background saving started by pid 22237
+2021-07-16_17:38:48.07812 22237:C 16 Jul 2021 17:38:48.077 * DB saved on disk
+2021-07-16_17:38:48.07911 22237:C 16 Jul 2021 17:38:48.078 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_17:38:48.16560 311:M 16 Jul 2021 17:38:48.165 * Background saving terminated with success
+2021-07-16_17:43:49.00702 311:M 16 Jul 2021 17:43:49.003 * 10 changes in 300 seconds. Saving...
+2021-07-16_17:43:49.01801 311:M 16 Jul 2021 17:43:49.009 * Background saving started by pid 22872
+2021-07-16_17:43:49.02675 22872:C 16 Jul 2021 17:43:49.025 * DB saved on disk
+2021-07-16_17:43:49.02678 22872:C 16 Jul 2021 17:43:49.026 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_17:43:49.11069 311:M 16 Jul 2021 17:43:49.110 * Background saving terminated with success
+2021-07-16_17:48:50.06286 311:M 16 Jul 2021 17:48:50.061 * 10 changes in 300 seconds. Saving...
+2021-07-16_17:48:50.06309 311:M 16 Jul 2021 17:48:50.062 * Background saving started by pid 23480
+2021-07-16_17:48:50.07163 23480:C 16 Jul 2021 17:48:50.070 * DB saved on disk
+2021-07-16_17:48:50.07172 23480:C 16 Jul 2021 17:48:50.071 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_17:48:50.16387 311:M 16 Jul 2021 17:48:50.163 * Background saving terminated with success
+2021-07-16_17:53:51.01690 311:M 16 Jul 2021 17:53:51.016 * 10 changes in 300 seconds. Saving...
+2021-07-16_17:53:51.01694 311:M 16 Jul 2021 17:53:51.016 * Background saving started by pid 24114
+2021-07-16_17:53:51.03563 24114:C 16 Jul 2021 17:53:51.035 * DB saved on disk
+2021-07-16_17:53:51.03654 24114:C 16 Jul 2021 17:53:51.036 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_17:53:51.11833 311:M 16 Jul 2021 17:53:51.116 * Background saving terminated with success
+2021-07-16_17:58:52.03629 311:M 16 Jul 2021 17:58:52.035 * 10 changes in 300 seconds. Saving...
+2021-07-16_17:58:52.03697 311:M 16 Jul 2021 17:58:52.036 * Background saving started by pid 24709
+2021-07-16_17:58:52.04976 24709:C 16 Jul 2021 17:58:52.049 * DB saved on disk
+2021-07-16_17:58:52.05120 24709:C 16 Jul 2021 17:58:52.050 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_17:58:52.13775 311:M 16 Jul 2021 17:58:52.137 * Background saving terminated with success
+2021-07-16_18:03:53.01367 311:M 16 Jul 2021 18:03:53.012 * 10 changes in 300 seconds. Saving...
+2021-07-16_18:03:53.01399 311:M 16 Jul 2021 18:03:53.013 * Background saving started by pid 25261
+2021-07-16_18:03:53.02672 25261:C 16 Jul 2021 18:03:53.025 * DB saved on disk
+2021-07-16_18:03:53.02764 25261:C 16 Jul 2021 18:03:53.027 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_18:03:53.11520 311:M 16 Jul 2021 18:03:53.115 * Background saving terminated with success
+2021-07-16_18:08:54.03733 311:M 16 Jul 2021 18:08:54.020 * 10 changes in 300 seconds. Saving...
+2021-07-16_18:08:54.03858 311:M 16 Jul 2021 18:08:54.038 * Background saving started by pid 25920
+2021-07-16_18:08:54.05154 25920:C 16 Jul 2021 18:08:54.051 * DB saved on disk
+2021-07-16_18:08:54.05205 25920:C 16 Jul 2021 18:08:54.051 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_18:08:54.13929 311:M 16 Jul 2021 18:08:54.139 * Background saving terminated with success
+2021-07-16_18:13:55.01948 311:M 16 Jul 2021 18:13:55.018 * 10 changes in 300 seconds. Saving...
+2021-07-16_18:13:55.02133 311:M 16 Jul 2021 18:13:55.019 * Background saving started by pid 26502
+2021-07-16_18:13:55.03941 26502:C 16 Jul 2021 18:13:55.038 * DB saved on disk
+2021-07-16_18:13:55.04019 26502:C 16 Jul 2021 18:13:55.039 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_18:13:55.12182 311:M 16 Jul 2021 18:13:55.121 * Background saving terminated with success
+2021-07-16_18:18:56.06986 311:M 16 Jul 2021 18:18:56.068 * 10 changes in 300 seconds. Saving...
+2021-07-16_18:18:56.06993 311:M 16 Jul 2021 18:18:56.069 * Background saving started by pid 27059
+2021-07-16_18:18:56.08159 27059:C 16 Jul 2021 18:18:56.081 * DB saved on disk
+2021-07-16_18:18:56.08230 27059:C 16 Jul 2021 18:18:56.082 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_18:18:56.17141 311:M 16 Jul 2021 18:18:56.171 * Background saving terminated with success
+2021-07-16_18:23:57.07326 311:M 16 Jul 2021 18:23:57.072 * 10 changes in 300 seconds. Saving...
+2021-07-16_18:23:57.07333 311:M 16 Jul 2021 18:23:57.073 * Background saving started by pid 27614
+2021-07-16_18:23:57.08539 27614:C 16 Jul 2021 18:23:57.085 * DB saved on disk
+2021-07-16_18:23:57.08655 27614:C 16 Jul 2021 18:23:57.086 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_18:23:57.17429 311:M 16 Jul 2021 18:23:57.174 * Background saving terminated with success
+2021-07-16_18:28:58.10059 311:M 16 Jul 2021 18:28:58.099 * 10 changes in 300 seconds. Saving...
+2021-07-16_18:28:58.10062 311:M 16 Jul 2021 18:28:58.099 * Background saving started by pid 28170
+2021-07-16_18:28:58.10458 28170:C 16 Jul 2021 18:28:58.104 * DB saved on disk
+2021-07-16_18:28:58.10599 28170:C 16 Jul 2021 18:28:58.105 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_18:28:58.20101 311:M 16 Jul 2021 18:28:58.200 * Background saving terminated with success
+2021-07-16_18:33:59.09662 311:M 16 Jul 2021 18:33:59.096 * 10 changes in 300 seconds. Saving...
+2021-07-16_18:33:59.09696 311:M 16 Jul 2021 18:33:59.096 * Background saving started by pid 28811
+2021-07-16_18:33:59.10161 28811:C 16 Jul 2021 18:33:59.100 * DB saved on disk
+2021-07-16_18:33:59.10167 28811:C 16 Jul 2021 18:33:59.101 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_18:33:59.19912 311:M 16 Jul 2021 18:33:59.197 * Background saving terminated with success
+2021-07-16_18:39:00.03803 311:M 16 Jul 2021 18:39:00.037 * 10 changes in 300 seconds. Saving...
+2021-07-16_18:39:00.03918 311:M 16 Jul 2021 18:39:00.038 * Background saving started by pid 29364
+2021-07-16_18:39:00.05139 29364:C 16 Jul 2021 18:39:00.051 * DB saved on disk
+2021-07-16_18:39:00.05275 29364:C 16 Jul 2021 18:39:00.052 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_18:39:00.14013 311:M 16 Jul 2021 18:39:00.139 * Background saving terminated with success
+2021-07-16_18:44:01.03745 311:M 16 Jul 2021 18:44:01.024 * 10 changes in 300 seconds. Saving...
+2021-07-16_18:44:01.03776 311:M 16 Jul 2021 18:44:01.037 * Background saving started by pid 29923
+2021-07-16_18:44:01.04682 29923:C 16 Jul 2021 18:44:01.046 * DB saved on disk
+2021-07-16_18:44:01.04684 29923:C 16 Jul 2021 18:44:01.046 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_18:44:01.13976 311:M 16 Jul 2021 18:44:01.139 * Background saving terminated with success
+2021-07-16_18:49:02.10473 311:M 16 Jul 2021 18:49:02.087 * 10 changes in 300 seconds. Saving...
+2021-07-16_18:49:02.10606 311:M 16 Jul 2021 18:49:02.105 * Background saving started by pid 30478
+2021-07-16_18:49:02.11838 30478:C 16 Jul 2021 18:49:02.118 * DB saved on disk
+2021-07-16_18:49:02.11979 30478:C 16 Jul 2021 18:49:02.119 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_18:49:02.20749 311:M 16 Jul 2021 18:49:02.207 * Background saving terminated with success
+2021-07-16_18:54:03.07787 311:M 16 Jul 2021 18:54:03.060 * 10 changes in 300 seconds. Saving...
+2021-07-16_18:54:03.07956 311:M 16 Jul 2021 18:54:03.079 * Background saving started by pid 31115
+2021-07-16_18:54:03.09784 31115:C 16 Jul 2021 18:54:03.097 * DB saved on disk
+2021-07-16_18:54:03.09924 31115:C 16 Jul 2021 18:54:03.099 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_18:54:03.18091 311:M 16 Jul 2021 18:54:03.180 * Background saving terminated with success
+2021-07-16_18:59:04.09597 311:M 16 Jul 2021 18:59:04.095 * 10 changes in 300 seconds. Saving...
+2021-07-16_18:59:04.09599 311:M 16 Jul 2021 18:59:04.095 * Background saving started by pid 31671
+2021-07-16_18:59:04.11425 31671:C 16 Jul 2021 18:59:04.113 * DB saved on disk
+2021-07-16_18:59:04.11427 31671:C 16 Jul 2021 18:59:04.113 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_18:59:04.19868 311:M 16 Jul 2021 18:59:04.196 * Background saving terminated with success
+2021-07-16_19:04:05.09283 311:M 16 Jul 2021 19:04:05.077 * 10 changes in 300 seconds. Saving...
+2021-07-16_19:04:05.09328 311:M 16 Jul 2021 19:04:05.092 * Background saving started by pid 32382
+2021-07-16_19:04:05.11048 32382:C 16 Jul 2021 19:04:05.110 * DB saved on disk
+2021-07-16_19:04:05.11197 32382:C 16 Jul 2021 19:04:05.111 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_19:04:05.19400 311:M 16 Jul 2021 19:04:05.193 * Background saving terminated with success
+2021-07-16_19:09:06.08771 311:M 16 Jul 2021 19:09:06.087 * 10 changes in 300 seconds. Saving...
+2021-07-16_19:09:06.08774 311:M 16 Jul 2021 19:09:06.087 * Background saving started by pid 32944
+2021-07-16_19:09:06.09263 32944:C 16 Jul 2021 19:09:06.091 * DB saved on disk
+2021-07-16_19:09:06.09267 32944:C 16 Jul 2021 19:09:06.092 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_19:09:06.18824 311:M 16 Jul 2021 19:09:06.188 * Background saving terminated with success
+2021-07-16_19:14:07.00209 311:M 16 Jul 2021 19:14:07.001 * 10 changes in 300 seconds. Saving...
+2021-07-16_19:14:07.00664 311:M 16 Jul 2021 19:14:07.002 * Background saving started by pid 33499
+2021-07-16_19:14:07.01578 33499:C 16 Jul 2021 19:14:07.014 * DB saved on disk
+2021-07-16_19:14:07.01694 33499:C 16 Jul 2021 19:14:07.016 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_19:14:07.10481 311:M 16 Jul 2021 19:14:07.104 * Background saving terminated with success
+2021-07-16_19:19:08.08421 311:M 16 Jul 2021 19:19:08.084 * 10 changes in 300 seconds. Saving...
+2021-07-16_19:19:08.08535 311:M 16 Jul 2021 19:19:08.085 * Background saving started by pid 34055
+2021-07-16_19:19:08.09889 34055:C 16 Jul 2021 19:19:08.097 * DB saved on disk
+2021-07-16_19:19:08.09980 34055:C 16 Jul 2021 19:19:08.099 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_19:19:08.18647 311:M 16 Jul 2021 19:19:08.186 * Background saving terminated with success
+2021-07-16_19:24:09.07207 311:M 16 Jul 2021 19:24:09.071 * 10 changes in 300 seconds. Saving...
+2021-07-16_19:24:09.07273 311:M 16 Jul 2021 19:24:09.072 * Background saving started by pid 34608
+2021-07-16_19:24:09.08312 34608:C 16 Jul 2021 19:24:09.082 * DB saved on disk
+2021-07-16_19:24:09.08387 34608:C 16 Jul 2021 19:24:09.083 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_19:24:09.17352 311:M 16 Jul 2021 19:24:09.173 * Background saving terminated with success
+2021-07-16_19:29:10.06839 311:M 16 Jul 2021 19:29:10.066 * 10 changes in 300 seconds. Saving...
+2021-07-16_19:29:10.06845 311:M 16 Jul 2021 19:29:10.067 * Background saving started by pid 35164
+2021-07-16_19:29:10.07978 35164:C 16 Jul 2021 19:29:10.079 * DB saved on disk
+2021-07-16_19:29:10.08145 35164:C 16 Jul 2021 19:29:10.080 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_19:29:10.16948 311:M 16 Jul 2021 19:29:10.169 * Background saving terminated with success
+2021-07-16_19:34:11.07615 311:M 16 Jul 2021 19:34:11.074 * 10 changes in 300 seconds. Saving...
+2021-07-16_19:34:11.07634 311:M 16 Jul 2021 19:34:11.075 * Background saving started by pid 35721
+2021-07-16_19:34:11.09077 35721:C 16 Jul 2021 19:34:11.089 * DB saved on disk
+2021-07-16_19:34:11.09089 35721:C 16 Jul 2021 19:34:11.090 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_19:34:11.17958 311:M 16 Jul 2021 19:34:11.178 * Background saving terminated with success
+2021-07-16_19:39:12.09217 311:M 16 Jul 2021 19:39:12.091 * 10 changes in 300 seconds. Saving...
+2021-07-16_19:39:12.09299 311:M 16 Jul 2021 19:39:12.092 * Background saving started by pid 36276
+2021-07-16_19:39:12.10216 36276:C 16 Jul 2021 19:39:12.102 * DB saved on disk
+2021-07-16_19:39:12.10275 36276:C 16 Jul 2021 19:39:12.102 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_19:39:12.19449 311:M 16 Jul 2021 19:39:12.193 * Background saving terminated with success
+2021-07-16_19:44:13.08960 311:M 16 Jul 2021 19:44:13.087 * 10 changes in 300 seconds. Saving...
+2021-07-16_19:44:13.08972 311:M 16 Jul 2021 19:44:13.088 * Background saving started by pid 36829
+2021-07-16_19:44:13.10201 36829:C 16 Jul 2021 19:44:13.100 * DB saved on disk
+2021-07-16_19:44:13.10206 36829:C 16 Jul 2021 19:44:13.101 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_19:44:13.18917 311:M 16 Jul 2021 19:44:13.189 * Background saving terminated with success
+2021-07-16_19:49:14.02104 311:M 16 Jul 2021 19:49:14.020 * 10 changes in 300 seconds. Saving...
+2021-07-16_19:49:14.02108 311:M 16 Jul 2021 19:49:14.020 * Background saving started by pid 37384
+2021-07-16_19:49:14.02609 37384:C 16 Jul 2021 19:49:14.025 * DB saved on disk
+2021-07-16_19:49:14.02613 37384:C 16 Jul 2021 19:49:14.025 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_19:49:14.12196 311:M 16 Jul 2021 19:49:14.121 * Background saving terminated with success
+2021-07-16_19:54:15.02901 311:M 16 Jul 2021 19:54:15.028 * 10 changes in 300 seconds. Saving...
+2021-07-16_19:54:15.02969 311:M 16 Jul 2021 19:54:15.029 * Background saving started by pid 37935
+2021-07-16_19:54:15.03504 37935:C 16 Jul 2021 19:54:15.034 * DB saved on disk
+2021-07-16_19:54:15.03508 37935:C 16 Jul 2021 19:54:15.034 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_19:54:15.13102 311:M 16 Jul 2021 19:54:15.130 * Background saving terminated with success
+2021-07-16_19:59:16.04735 311:M 16 Jul 2021 19:59:16.046 * 10 changes in 300 seconds. Saving...
+2021-07-16_19:59:16.04741 311:M 16 Jul 2021 19:59:16.047 * Background saving started by pid 38492
+2021-07-16_19:59:16.05765 38492:C 16 Jul 2021 19:59:16.056 * DB saved on disk
+2021-07-16_19:59:16.05860 38492:C 16 Jul 2021 19:59:16.057 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_19:59:16.14930 311:M 16 Jul 2021 19:59:16.148 * Background saving terminated with success
+2021-07-16_20:04:17.04702 311:M 16 Jul 2021 20:04:17.045 * 10 changes in 300 seconds. Saving...
+2021-07-16_20:04:17.06105 311:M 16 Jul 2021 20:04:17.047 * Background saving started by pid 39045
+2021-07-16_20:04:17.06260 39045:C 16 Jul 2021 20:04:17.061 * DB saved on disk
+2021-07-16_20:04:17.06262 39045:C 16 Jul 2021 20:04:17.061 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_20:04:17.14929 311:M 16 Jul 2021 20:04:17.149 * Background saving terminated with success
+2021-07-16_20:09:18.09952 311:M 16 Jul 2021 20:09:18.098 * 10 changes in 300 seconds. Saving...
+2021-07-16_20:09:18.09963 311:M 16 Jul 2021 20:09:18.099 * Background saving started by pid 39604
+2021-07-16_20:09:18.11206 39604:C 16 Jul 2021 20:09:18.111 * DB saved on disk
+2021-07-16_20:09:18.11308 39604:C 16 Jul 2021 20:09:18.112 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_20:09:18.20110 311:M 16 Jul 2021 20:09:18.200 * Background saving terminated with success
+2021-07-16_20:14:19.06806 311:M 16 Jul 2021 20:14:19.066 * 10 changes in 300 seconds. Saving...
+2021-07-16_20:14:19.06819 311:M 16 Jul 2021 20:14:19.067 * Background saving started by pid 40158
+2021-07-16_20:14:19.08117 40158:C 16 Jul 2021 20:14:19.080 * DB saved on disk
+2021-07-16_20:14:19.08277 40158:C 16 Jul 2021 20:14:19.082 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_20:14:19.16951 311:M 16 Jul 2021 20:14:19.169 * Background saving terminated with success
+2021-07-16_20:19:20.05083 311:M 16 Jul 2021 20:19:20.047 * 10 changes in 300 seconds. Saving...
+2021-07-16_20:19:20.05100 311:M 16 Jul 2021 20:19:20.048 * Background saving started by pid 40716
+2021-07-16_20:19:20.06686 40716:C 16 Jul 2021 20:19:20.064 * DB saved on disk
+2021-07-16_20:19:20.06698 40716:C 16 Jul 2021 20:19:20.065 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_20:19:20.15010 311:M 16 Jul 2021 20:19:20.149 * Background saving terminated with success
+2021-07-16_20:24:21.02520 311:M 16 Jul 2021 20:24:21.022 * 10 changes in 300 seconds. Saving...
+2021-07-16_20:24:21.02528 311:M 16 Jul 2021 20:24:21.023 * Background saving started by pid 41271
+2021-07-16_20:24:21.05081 41271:C 16 Jul 2021 20:24:21.048 * DB saved on disk
+2021-07-16_20:24:21.05084 41271:C 16 Jul 2021 20:24:21.050 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_20:24:21.12322 311:M 16 Jul 2021 20:24:21.123 * Background saving terminated with success
+2021-07-16_20:29:22.03836 311:M 16 Jul 2021 20:29:22.037 * 10 changes in 300 seconds. Saving...
+2021-07-16_20:29:22.03846 311:M 16 Jul 2021 20:29:22.038 * Background saving started by pid 41829
+2021-07-16_20:29:22.05200 41829:C 16 Jul 2021 20:29:22.050 * DB saved on disk
+2021-07-16_20:29:22.05205 41829:C 16 Jul 2021 20:29:22.051 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_20:29:22.13946 311:M 16 Jul 2021 20:29:22.139 * Background saving terminated with success
+2021-07-16_20:34:23.08834 311:M 16 Jul 2021 20:34:23.087 * 10 changes in 300 seconds. Saving...
+2021-07-16_20:34:23.09433 311:M 16 Jul 2021 20:34:23.089 * Background saving started by pid 42385
+2021-07-16_20:34:23.10104 42385:C 16 Jul 2021 20:34:23.100 * DB saved on disk
+2021-07-16_20:34:23.10177 42385:C 16 Jul 2021 20:34:23.101 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_20:34:23.19122 311:M 16 Jul 2021 20:34:23.191 * Background saving terminated with success
+2021-07-16_20:39:24.08192 311:M 16 Jul 2021 20:39:24.080 * 10 changes in 300 seconds. Saving...
+2021-07-16_20:39:24.08201 311:M 16 Jul 2021 20:39:24.081 * Background saving started by pid 42941
+2021-07-16_20:39:24.09283 42941:C 16 Jul 2021 20:39:24.091 * DB saved on disk
+2021-07-16_20:39:24.09355 42941:C 16 Jul 2021 20:39:24.093 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_20:39:24.18309 311:M 16 Jul 2021 20:39:24.183 * Background saving terminated with success
+2021-07-16_20:44:25.00567 311:M 16 Jul 2021 20:44:25.004 * 10 changes in 300 seconds. Saving...
+2021-07-16_20:44:25.00681 311:M 16 Jul 2021 20:44:25.006 * Background saving started by pid 43495
+2021-07-16_20:44:25.01980 43495:C 16 Jul 2021 20:44:25.018 * DB saved on disk
+2021-07-16_20:44:25.01991 43495:C 16 Jul 2021 20:44:25.019 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_20:44:25.10756 311:M 16 Jul 2021 20:44:25.107 * Background saving terminated with success
+2021-07-16_20:49:26.02095 311:M 16 Jul 2021 20:49:26.020 * 10 changes in 300 seconds. Saving...
+2021-07-16_20:49:26.02121 311:M 16 Jul 2021 20:49:26.021 * Background saving started by pid 44046
+2021-07-16_20:49:26.03530 44046:C 16 Jul 2021 20:49:26.035 * DB saved on disk
+2021-07-16_20:49:26.03654 44046:C 16 Jul 2021 20:49:26.036 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_20:49:26.12241 311:M 16 Jul 2021 20:49:26.122 * Background saving terminated with success
+2021-07-16_20:54:27.04831 311:M 16 Jul 2021 20:54:27.047 * 10 changes in 300 seconds. Saving...
+2021-07-16_20:54:27.04837 311:M 16 Jul 2021 20:54:27.048 * Background saving started by pid 44607
+2021-07-16_20:54:27.06078 44607:C 16 Jul 2021 20:54:27.060 * DB saved on disk
+2021-07-16_20:54:27.06207 44607:C 16 Jul 2021 20:54:27.061 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_20:54:27.14948 311:M 16 Jul 2021 20:54:27.149 * Background saving terminated with success
+2021-07-16_20:59:28.06570 311:M 16 Jul 2021 20:59:28.064 * 10 changes in 300 seconds. Saving...
+2021-07-16_20:59:28.06650 311:M 16 Jul 2021 20:59:28.066 * Background saving started by pid 45159
+2021-07-16_20:59:28.07973 45159:C 16 Jul 2021 20:59:28.078 * DB saved on disk
+2021-07-16_20:59:28.08077 45159:C 16 Jul 2021 20:59:28.080 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_20:59:28.16772 311:M 16 Jul 2021 20:59:28.167 * Background saving terminated with success
+2021-07-16_21:04:29.07568 311:M 16 Jul 2021 21:04:29.075 * 10 changes in 300 seconds. Saving...
+2021-07-16_21:04:29.07690 311:M 16 Jul 2021 21:04:29.076 * Background saving started by pid 45718
+2021-07-16_21:04:29.08964 45718:C 16 Jul 2021 21:04:29.089 * DB saved on disk
+2021-07-16_21:04:29.09102 45718:C 16 Jul 2021 21:04:29.090 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_21:04:29.17812 311:M 16 Jul 2021 21:04:29.177 * Background saving terminated with success
+2021-07-16_21:09:30.04046 311:M 16 Jul 2021 21:09:30.039 * 10 changes in 300 seconds. Saving...
+2021-07-16_21:09:30.04052 311:M 16 Jul 2021 21:09:30.040 * Background saving started by pid 46271
+2021-07-16_21:09:30.05539 46271:C 16 Jul 2021 21:09:30.054 * DB saved on disk
+2021-07-16_21:09:30.05668 46271:C 16 Jul 2021 21:09:30.055 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_21:09:30.14177 311:M 16 Jul 2021 21:09:30.141 * Background saving terminated with success
+2021-07-16_21:14:31.07482 311:M 16 Jul 2021 21:14:31.073 * 10 changes in 300 seconds. Saving...
+2021-07-16_21:14:31.07489 311:M 16 Jul 2021 21:14:31.074 * Background saving started by pid 46828
+2021-07-16_21:14:31.09111 46828:C 16 Jul 2021 21:14:31.089 * DB saved on disk
+2021-07-16_21:14:31.09116 46828:C 16 Jul 2021 21:14:31.090 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_21:14:31.17524 311:M 16 Jul 2021 21:14:31.175 * Background saving terminated with success
+2021-07-16_21:19:32.08284 311:M 16 Jul 2021 21:19:32.081 * 10 changes in 300 seconds. Saving...
+2021-07-16_21:19:32.08767 311:M 16 Jul 2021 21:19:32.083 * Background saving started by pid 47381
+2021-07-16_21:19:32.09571 47381:C 16 Jul 2021 21:19:32.094 * DB saved on disk
+2021-07-16_21:19:32.09666 47381:C 16 Jul 2021 21:19:32.096 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_21:19:32.18705 311:M 16 Jul 2021 21:19:32.185 * Background saving terminated with success
+2021-07-16_21:24:33.03119 311:M 16 Jul 2021 21:24:33.028 * 10 changes in 300 seconds. Saving...
+2021-07-16_21:24:33.03125 311:M 16 Jul 2021 21:24:33.029 * Background saving started by pid 47937
+2021-07-16_21:24:33.04117 47937:C 16 Jul 2021 21:24:33.040 * DB saved on disk
+2021-07-16_21:24:33.04244 47937:C 16 Jul 2021 21:24:33.042 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_21:24:33.13130 311:M 16 Jul 2021 21:24:33.130 * Background saving terminated with success
+2021-07-16_21:29:34.09460 311:M 16 Jul 2021 21:29:34.093 * 10 changes in 300 seconds. Saving...
+2021-07-16_21:29:34.09495 311:M 16 Jul 2021 21:29:34.094 * Background saving started by pid 48490
+2021-07-16_21:29:34.10859 48490:C 16 Jul 2021 21:29:34.108 * DB saved on disk
+2021-07-16_21:29:34.11022 48490:C 16 Jul 2021 21:29:34.109 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_21:29:34.19692 311:M 16 Jul 2021 21:29:34.196 * Background saving terminated with success
+2021-07-16_21:34:35.10029 311:M 16 Jul 2021 21:34:35.099 * 10 changes in 300 seconds. Saving...
+2021-07-16_21:34:35.10150 311:M 16 Jul 2021 21:34:35.101 * Background saving started by pid 49053
+2021-07-16_21:34:35.11416 49053:C 16 Jul 2021 21:34:35.113 * DB saved on disk
+2021-07-16_21:34:35.11634 49053:C 16 Jul 2021 21:34:35.116 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_21:34:35.20393 311:M 16 Jul 2021 21:34:35.202 * Background saving terminated with success
+2021-07-16_21:39:36.04234 311:M 16 Jul 2021 21:39:36.042 * 10 changes in 300 seconds. Saving...
+2021-07-16_21:39:36.04275 311:M 16 Jul 2021 21:39:36.042 * Background saving started by pid 49607
+2021-07-16_21:39:36.04897 49607:C 16 Jul 2021 21:39:36.048 * DB saved on disk
+2021-07-16_21:39:36.04898 49607:C 16 Jul 2021 21:39:36.048 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_21:39:36.14237 311:M 16 Jul 2021 21:39:36.142 * Background saving terminated with success
+2021-07-16_21:44:37.06531 311:M 16 Jul 2021 21:44:37.064 * 10 changes in 300 seconds. Saving...
+2021-07-16_21:44:37.06539 311:M 16 Jul 2021 21:44:37.065 * Background saving started by pid 50167
+2021-07-16_21:44:37.07412 50167:C 16 Jul 2021 21:44:37.073 * DB saved on disk
+2021-07-16_21:44:37.07546 50167:C 16 Jul 2021 21:44:37.075 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_21:44:37.16662 311:M 16 Jul 2021 21:44:37.166 * Background saving terminated with success
+2021-07-16_21:49:38.04129 311:M 16 Jul 2021 21:49:38.040 * 10 changes in 300 seconds. Saving...
+2021-07-16_21:49:38.04139 311:M 16 Jul 2021 21:49:38.041 * Background saving started by pid 50719
+2021-07-16_21:49:38.05442 50719:C 16 Jul 2021 21:49:38.053 * DB saved on disk
+2021-07-16_21:49:38.05603 50719:C 16 Jul 2021 21:49:38.055 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_21:49:38.14258 311:M 16 Jul 2021 21:49:38.142 * Background saving terminated with success
+2021-07-16_21:54:39.03217 311:M 16 Jul 2021 21:54:39.031 * 10 changes in 300 seconds. Saving...
+2021-07-16_21:54:39.03285 311:M 16 Jul 2021 21:54:39.032 * Background saving started by pid 51273
+2021-07-16_21:54:39.04430 51273:C 16 Jul 2021 21:54:39.044 * DB saved on disk
+2021-07-16_21:54:39.04480 51273:C 16 Jul 2021 21:54:39.044 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_21:54:39.13358 311:M 16 Jul 2021 21:54:39.133 * Background saving terminated with success
+2021-07-16_21:59:40.00574 311:M 16 Jul 2021 21:59:40.004 * 10 changes in 300 seconds. Saving...
+2021-07-16_21:59:40.00582 311:M 16 Jul 2021 21:59:40.005 * Background saving started by pid 51829
+2021-07-16_21:59:40.02271 51829:C 16 Jul 2021 21:59:40.021 * DB saved on disk
+2021-07-16_21:59:40.02369 51829:C 16 Jul 2021 21:59:40.023 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_21:59:40.10634 311:M 16 Jul 2021 21:59:40.106 * Background saving terminated with success
+2021-07-16_22:04:41.06660 311:M 16 Jul 2021 22:04:41.065 * 10 changes in 300 seconds. Saving...
+2021-07-16_22:04:41.06705 311:M 16 Jul 2021 22:04:41.066 * Background saving started by pid 52385
+2021-07-16_22:04:41.08264 52385:C 16 Jul 2021 22:04:41.081 * DB saved on disk
+2021-07-16_22:04:41.08355 52385:C 16 Jul 2021 22:04:41.082 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_22:04:41.16826 311:M 16 Jul 2021 22:04:41.168 * Background saving terminated with success
+2021-07-16_22:09:42.04301 311:M 16 Jul 2021 22:09:42.041 * 10 changes in 300 seconds. Saving...
+2021-07-16_22:09:42.04315 311:M 16 Jul 2021 22:09:42.042 * Background saving started by pid 52942
+2021-07-16_22:09:42.05464 52942:C 16 Jul 2021 22:09:42.053 * DB saved on disk
+2021-07-16_22:09:42.05466 52942:C 16 Jul 2021 22:09:42.054 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_22:09:42.14446 311:M 16 Jul 2021 22:09:42.144 * Background saving terminated with success
+2021-07-16_22:14:43.01856 311:M 16 Jul 2021 22:14:43.018 * 10 changes in 300 seconds. Saving...
+2021-07-16_22:14:43.01920 311:M 16 Jul 2021 22:14:43.019 * Background saving started by pid 53496
+2021-07-16_22:14:43.03112 53496:C 16 Jul 2021 22:14:43.030 * DB saved on disk
+2021-07-16_22:14:43.03283 53496:C 16 Jul 2021 22:14:43.032 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_22:14:43.12126 311:M 16 Jul 2021 22:14:43.120 * Background saving terminated with success
+2021-07-16_22:19:44.00947 311:M 16 Jul 2021 22:19:44.008 * 10 changes in 300 seconds. Saving...
+2021-07-16_22:19:44.00969 311:M 16 Jul 2021 22:19:44.009 * Background saving started by pid 54054
+2021-07-16_22:19:44.02313 54054:C 16 Jul 2021 22:19:44.022 * DB saved on disk
+2021-07-16_22:19:44.02410 54054:C 16 Jul 2021 22:19:44.023 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_22:19:44.11112 311:M 16 Jul 2021 22:19:44.110 * Background saving terminated with success
+2021-07-16_22:24:45.08540 311:M 16 Jul 2021 22:24:45.084 * 10 changes in 300 seconds. Saving...
+2021-07-16_22:24:45.08551 311:M 16 Jul 2021 22:24:45.085 * Background saving started by pid 54608
+2021-07-16_22:24:45.09724 54608:C 16 Jul 2021 22:24:45.097 * DB saved on disk
+2021-07-16_22:24:45.09901 54608:C 16 Jul 2021 22:24:45.098 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_22:24:45.18641 311:M 16 Jul 2021 22:24:45.186 * Background saving terminated with success
+2021-07-16_22:29:46.01813 311:M 16 Jul 2021 22:29:46.017 * 10 changes in 300 seconds. Saving...
+2021-07-16_22:29:46.01818 311:M 16 Jul 2021 22:29:46.018 * Background saving started by pid 55160
+2021-07-16_22:29:46.02320 55160:C 16 Jul 2021 22:29:46.022 * DB saved on disk
+2021-07-16_22:29:46.02325 55160:C 16 Jul 2021 22:29:46.022 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_22:29:46.11904 311:M 16 Jul 2021 22:29:46.118 * Background saving terminated with success
+2021-07-16_22:34:47.03651 311:M 16 Jul 2021 22:34:47.035 * 10 changes in 300 seconds. Saving...
+2021-07-16_22:34:47.03743 311:M 16 Jul 2021 22:34:47.037 * Background saving started by pid 55718
+2021-07-16_22:34:47.05089 55718:C 16 Jul 2021 22:34:47.049 * DB saved on disk
+2021-07-16_22:34:47.05094 55718:C 16 Jul 2021 22:34:47.050 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_22:34:47.13877 311:M 16 Jul 2021 22:34:47.138 * Background saving terminated with success
+2021-07-16_22:39:48.06146 311:M 16 Jul 2021 22:39:48.061 * 10 changes in 300 seconds. Saving...
+2021-07-16_22:39:48.06498 311:M 16 Jul 2021 22:39:48.062 * Background saving started by pid 56275
+2021-07-16_22:39:48.07441 56275:C 16 Jul 2021 22:39:48.074 * DB saved on disk
+2021-07-16_22:39:48.07581 56275:C 16 Jul 2021 22:39:48.075 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_22:39:48.16507 311:M 16 Jul 2021 22:39:48.163 * Background saving terminated with success
+2021-07-16_22:44:49.06703 311:M 16 Jul 2021 22:44:49.066 * 10 changes in 300 seconds. Saving...
+2021-07-16_22:44:49.06707 311:M 16 Jul 2021 22:44:49.066 * Background saving started by pid 56832
+2021-07-16_22:44:49.07949 56832:C 16 Jul 2021 22:44:49.078 * DB saved on disk
+2021-07-16_22:44:49.07954 56832:C 16 Jul 2021 22:44:49.079 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_22:44:49.16875 311:M 16 Jul 2021 22:44:49.168 * Background saving terminated with success
+2021-07-16_22:49:50.04238 311:M 16 Jul 2021 22:49:50.041 * 10 changes in 300 seconds. Saving...
+2021-07-16_22:49:50.04248 311:M 16 Jul 2021 22:49:50.042 * Background saving started by pid 57392
+2021-07-16_22:49:50.05505 57392:C 16 Jul 2021 22:49:50.054 * DB saved on disk
+2021-07-16_22:49:50.05641 57392:C 16 Jul 2021 22:49:50.056 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_22:49:50.14439 311:M 16 Jul 2021 22:49:50.144 * Background saving terminated with success
+2021-07-16_22:54:51.06274 311:M 16 Jul 2021 22:54:51.062 * 10 changes in 300 seconds. Saving...
+2021-07-16_22:54:51.06277 311:M 16 Jul 2021 22:54:51.062 * Background saving started by pid 57945
+2021-07-16_22:54:51.06771 57945:C 16 Jul 2021 22:54:51.066 * DB saved on disk
+2021-07-16_22:54:51.06775 57945:C 16 Jul 2021 22:54:51.067 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_22:54:51.16270 311:M 16 Jul 2021 22:54:51.162 * Background saving terminated with success
+2021-07-16_22:59:52.06360 311:M 16 Jul 2021 22:59:52.063 * 10 changes in 300 seconds. Saving...
+2021-07-16_22:59:52.06365 311:M 16 Jul 2021 22:59:52.063 * Background saving started by pid 58501
+2021-07-16_22:59:52.07085 58501:C 16 Jul 2021 22:59:52.070 * DB saved on disk
+2021-07-16_22:59:52.07087 58501:C 16 Jul 2021 22:59:52.070 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_22:59:52.16705 311:M 16 Jul 2021 22:59:52.166 * Background saving terminated with success
+2021-07-16_23:04:53.06019 311:M 16 Jul 2021 23:04:53.059 * 10 changes in 300 seconds. Saving...
+2021-07-16_23:04:53.06025 311:M 16 Jul 2021 23:04:53.060 * Background saving started by pid 59053
+2021-07-16_23:04:53.07005 59053:C 16 Jul 2021 23:04:53.069 * DB saved on disk
+2021-07-16_23:04:53.07068 59053:C 16 Jul 2021 23:04:53.070 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_23:04:53.16086 311:M 16 Jul 2021 23:04:53.160 * Background saving terminated with success
+2021-07-16_23:09:54.09496 311:M 16 Jul 2021 23:09:54.094 * 10 changes in 300 seconds. Saving...
+2021-07-16_23:09:54.09600 311:M 16 Jul 2021 23:09:54.095 * Background saving started by pid 59611
+2021-07-16_23:09:54.11033 59611:C 16 Jul 2021 23:09:54.109 * DB saved on disk
+2021-07-16_23:09:54.11146 59611:C 16 Jul 2021 23:09:54.111 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_23:09:54.19782 311:M 16 Jul 2021 23:09:54.197 * Background saving terminated with success
+2021-07-16_23:14:55.00659 311:M 16 Jul 2021 23:14:55.006 * 10 changes in 300 seconds. Saving...
+2021-07-16_23:14:55.00715 311:M 16 Jul 2021 23:14:55.007 * Background saving started by pid 60165
+2021-07-16_23:14:55.01387 60165:C 16 Jul 2021 23:14:55.012 * DB saved on disk
+2021-07-16_23:14:55.01389 60165:C 16 Jul 2021 23:14:55.013 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_23:14:55.10914 311:M 16 Jul 2021 23:14:55.108 * Background saving terminated with success
+2021-07-16_23:19:56.03136 311:M 16 Jul 2021 23:19:56.031 * 10 changes in 300 seconds. Saving...
+2021-07-16_23:19:56.03217 311:M 16 Jul 2021 23:19:56.032 * Background saving started by pid 60720
+2021-07-16_23:19:56.04449 60720:C 16 Jul 2021 23:19:56.044 * DB saved on disk
+2021-07-16_23:19:56.04638 60720:C 16 Jul 2021 23:19:56.046 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_23:19:56.13282 311:M 16 Jul 2021 23:19:56.132 * Background saving terminated with success
+2021-07-16_23:24:57.05163 311:M 16 Jul 2021 23:24:57.049 * 10 changes in 300 seconds. Saving...
+2021-07-16_23:24:57.05174 311:M 16 Jul 2021 23:24:57.050 * Background saving started by pid 61276
+2021-07-16_23:24:57.06274 61276:C 16 Jul 2021 23:24:57.062 * DB saved on disk
+2021-07-16_23:24:57.06416 61276:C 16 Jul 2021 23:24:57.063 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_23:24:57.15229 311:M 16 Jul 2021 23:24:57.151 * Background saving terminated with success
+2021-07-16_23:29:58.09169 311:M 16 Jul 2021 23:29:58.090 * 10 changes in 300 seconds. Saving...
+2021-07-16_23:29:58.09179 311:M 16 Jul 2021 23:29:58.091 * Background saving started by pid 61827
+2021-07-16_23:29:58.10295 61827:C 16 Jul 2021 23:29:58.101 * DB saved on disk
+2021-07-16_23:29:58.10300 61827:C 16 Jul 2021 23:29:58.102 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_23:29:58.19352 311:M 16 Jul 2021 23:29:58.193 * Background saving terminated with success
+2021-07-16_23:34:59.09703 311:M 16 Jul 2021 23:34:59.096 * 10 changes in 300 seconds. Saving...
+2021-07-16_23:34:59.09708 311:M 16 Jul 2021 23:34:59.096 * Background saving started by pid 62387
+2021-07-16_23:34:59.10845 62387:C 16 Jul 2021 23:34:59.108 * DB saved on disk
+2021-07-16_23:34:59.11007 62387:C 16 Jul 2021 23:34:59.109 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_23:34:59.19781 311:M 16 Jul 2021 23:34:59.197 * Background saving terminated with success
+2021-07-16_23:40:00.09982 311:M 16 Jul 2021 23:40:00.099 * 10 changes in 300 seconds. Saving...
+2021-07-16_23:40:00.10029 311:M 16 Jul 2021 23:40:00.099 * Background saving started by pid 62938
+2021-07-16_23:40:00.11384 62938:C 16 Jul 2021 23:40:00.112 * DB saved on disk
+2021-07-16_23:40:00.11480 62938:C 16 Jul 2021 23:40:00.114 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_23:40:00.20136 311:M 16 Jul 2021 23:40:00.201 * Background saving terminated with success
+2021-07-16_23:45:01.03210 311:M 16 Jul 2021 23:45:01.029 * 10 changes in 300 seconds. Saving...
+2021-07-16_23:45:01.03220 311:M 16 Jul 2021 23:45:01.030 * Background saving started by pid 63494
+2021-07-16_23:45:01.05219 63494:C 16 Jul 2021 23:45:01.051 * DB saved on disk
+2021-07-16_23:45:01.05333 63494:C 16 Jul 2021 23:45:01.052 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_23:45:01.13176 311:M 16 Jul 2021 23:45:01.131 * Background saving terminated with success
+2021-07-16_23:50:02.02414 311:M 16 Jul 2021 23:50:02.023 * 10 changes in 300 seconds. Saving...
+2021-07-16_23:50:02.02421 311:M 16 Jul 2021 23:50:02.024 * Background saving started by pid 64046
+2021-07-16_23:50:02.03035 64046:C 16 Jul 2021 23:50:02.029 * DB saved on disk
+2021-07-16_23:50:02.03037 64046:C 16 Jul 2021 23:50:02.030 * RDB: 0 MB of memory used by copy-on-write
+2021-07-16_23:50:02.12531 311:M 16 Jul 2021 23:50:02.125 * Background saving terminated with success
+2021-07-16_23:55:03.04185 311:M 16 Jul 2021 23:55:03.041 * 10 changes in 300 seconds. Saving...
+2021-07-16_23:55:03.05044 311:M 16 Jul 2021 23:55:03.042 * Background saving started by pid 64605
+2021-07-16_23:55:03.05800 64605:C 16 Jul 2021 23:55:03.055 * DB saved on disk
+2021-07-16_23:55:03.05810 64605:C 16 Jul 2021 23:55:03.057 * RDB: 1 MB of memory used by copy-on-write
+2021-07-16_23:55:03.14341 311:M 16 Jul 2021 23:55:03.143 * Background saving terminated with success
+2021-07-17_00:00:04.10134 311:M 17 Jul 2021 00:00:04.100 * 10 changes in 300 seconds. Saving...
+2021-07-17_00:00:04.10174 311:M 17 Jul 2021 00:00:04.101 * Background saving started by pid 65159
+2021-07-17_00:00:04.11622 65159:C 17 Jul 2021 00:00:04.115 * DB saved on disk
+2021-07-17_00:00:04.11724 65159:C 17 Jul 2021 00:00:04.116 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_00:00:04.20283 311:M 17 Jul 2021 00:00:04.202 * Background saving terminated with success
+2021-07-17_00:05:05.05935 311:M 17 Jul 2021 00:05:05.058 * 10 changes in 300 seconds. Saving...
+2021-07-17_00:05:05.05942 311:M 17 Jul 2021 00:05:05.059 * Background saving started by pid 65717
+2021-07-17_00:05:05.07409 65717:C 17 Jul 2021 00:05:05.072 * DB saved on disk
+2021-07-17_00:05:05.07414 65717:C 17 Jul 2021 00:05:05.073 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_00:05:05.16180 311:M 17 Jul 2021 00:05:05.161 * Background saving terminated with success
+2021-07-17_00:10:06.09678 311:M 17 Jul 2021 00:10:06.096 * 10 changes in 300 seconds. Saving...
+2021-07-17_00:10:06.09717 311:M 17 Jul 2021 00:10:06.097 * Background saving started by pid 66269
+2021-07-17_00:10:06.10703 66269:C 17 Jul 2021 00:10:06.105 * DB saved on disk
+2021-07-17_00:10:06.10708 66269:C 17 Jul 2021 00:10:06.106 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_00:10:06.19724 311:M 17 Jul 2021 00:10:06.197 * Background saving terminated with success
+2021-07-17_00:15:07.08554 311:M 17 Jul 2021 00:15:07.085 * 10 changes in 300 seconds. Saving...
+2021-07-17_00:15:07.08690 311:M 17 Jul 2021 00:15:07.086 * Background saving started by pid 66830
+2021-07-17_00:15:07.09900 66830:C 17 Jul 2021 00:15:07.098 * DB saved on disk
+2021-07-17_00:15:07.10026 66830:C 17 Jul 2021 00:15:07.100 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_00:15:07.18761 311:M 17 Jul 2021 00:15:07.187 * Background saving terminated with success
+2021-07-17_00:20:08.07702 311:M 17 Jul 2021 00:20:08.076 * 10 changes in 300 seconds. Saving...
+2021-07-17_00:20:08.07809 311:M 17 Jul 2021 00:20:08.077 * Background saving started by pid 67380
+2021-07-17_00:20:08.09101 67380:C 17 Jul 2021 00:20:08.090 * DB saved on disk
+2021-07-17_00:20:08.09223 67380:C 17 Jul 2021 00:20:08.092 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_00:20:08.17924 311:M 17 Jul 2021 00:20:08.179 * Background saving terminated with success
+2021-07-17_00:25:09.05821 311:M 17 Jul 2021 00:25:09.058 * 10 changes in 300 seconds. Saving...
+2021-07-17_00:25:09.05998 311:M 17 Jul 2021 00:25:09.059 * Background saving started by pid 67937
+2021-07-17_00:25:09.07294 67937:C 17 Jul 2021 00:25:09.071 * DB saved on disk
+2021-07-17_00:25:09.07395 67937:C 17 Jul 2021 00:25:09.073 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_00:25:09.16139 311:M 17 Jul 2021 00:25:09.161 * Background saving terminated with success
+2021-07-17_00:30:10.05575 311:M 17 Jul 2021 00:30:10.055 * 10 changes in 300 seconds. Saving...
+2021-07-17_00:30:10.05577 311:M 17 Jul 2021 00:30:10.055 * Background saving started by pid 68487
+2021-07-17_00:30:10.06049 68487:C 17 Jul 2021 00:30:10.060 * DB saved on disk
+2021-07-17_00:30:10.06114 68487:C 17 Jul 2021 00:30:10.061 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_00:30:10.15714 311:M 17 Jul 2021 00:30:10.156 * Background saving terminated with success
+2021-07-17_00:35:11.08524 311:M 17 Jul 2021 00:35:11.084 * 10 changes in 300 seconds. Saving...
+2021-07-17_00:35:11.08530 311:M 17 Jul 2021 00:35:11.085 * Background saving started by pid 69037
+2021-07-17_00:35:11.09706 69037:C 17 Jul 2021 00:35:11.096 * DB saved on disk
+2021-07-17_00:35:11.09802 69037:C 17 Jul 2021 00:35:11.097 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_00:35:11.18621 311:M 17 Jul 2021 00:35:11.186 * Background saving terminated with success
+2021-07-17_00:40:12.09771 311:M 17 Jul 2021 00:40:12.096 * 10 changes in 300 seconds. Saving...
+2021-07-17_00:40:12.09783 311:M 17 Jul 2021 00:40:12.097 * Background saving started by pid 69592
+2021-07-17_00:40:12.11562 69592:C 17 Jul 2021 00:40:12.114 * DB saved on disk
+2021-07-17_00:40:12.11681 69592:C 17 Jul 2021 00:40:12.115 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_00:40:12.19833 311:M 17 Jul 2021 00:40:12.198 * Background saving terminated with success
+2021-07-17_00:45:13.05941 311:M 17 Jul 2021 00:45:13.058 * 10 changes in 300 seconds. Saving...
+2021-07-17_00:45:13.05951 311:M 17 Jul 2021 00:45:13.059 * Background saving started by pid 70179
+2021-07-17_00:45:13.07220 70179:C 17 Jul 2021 00:45:13.072 * DB saved on disk
+2021-07-17_00:45:13.07415 70179:C 17 Jul 2021 00:45:13.073 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_00:45:13.16036 311:M 17 Jul 2021 00:45:13.160 * Background saving terminated with success
+2021-07-17_00:50:14.10054 311:M 17 Jul 2021 00:50:14.099 * 10 changes in 300 seconds. Saving...
+2021-07-17_00:50:14.10061 311:M 17 Jul 2021 00:50:14.100 * Background saving started by pid 70732
+2021-07-17_00:50:14.11326 70732:C 17 Jul 2021 00:50:14.112 * DB saved on disk
+2021-07-17_00:50:14.11498 70732:C 17 Jul 2021 00:50:14.114 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_00:50:14.20172 311:M 17 Jul 2021 00:50:14.201 * Background saving terminated with success
+2021-07-17_00:55:15.08243 311:M 17 Jul 2021 00:55:15.081 * 10 changes in 300 seconds. Saving...
+2021-07-17_00:55:15.08250 311:M 17 Jul 2021 00:55:15.082 * Background saving started by pid 71289
+2021-07-17_00:55:15.09516 71289:C 17 Jul 2021 00:55:15.094 * DB saved on disk
+2021-07-17_00:55:15.09697 71289:C 17 Jul 2021 00:55:15.096 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_00:55:15.18440 311:M 17 Jul 2021 00:55:15.183 * Background saving terminated with success
+2021-07-17_01:00:16.09171 311:M 17 Jul 2021 01:00:16.090 * 10 changes in 300 seconds. Saving...
+2021-07-17_01:00:16.09179 311:M 17 Jul 2021 01:00:16.091 * Background saving started by pid 71846
+2021-07-17_01:00:16.10056 71846:C 17 Jul 2021 01:00:16.099 * DB saved on disk
+2021-07-17_01:00:16.10057 71846:C 17 Jul 2021 01:00:16.100 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_01:00:16.19155 311:M 17 Jul 2021 01:00:16.191 * Background saving terminated with success
+2021-07-17_01:05:17.08678 311:M 17 Jul 2021 01:05:17.084 * 10 changes in 300 seconds. Saving...
+2021-07-17_01:05:17.08686 311:M 17 Jul 2021 01:05:17.084 * Background saving started by pid 72400
+2021-07-17_01:05:17.10298 72400:C 17 Jul 2021 01:05:17.100 * DB saved on disk
+2021-07-17_01:05:17.10303 72400:C 17 Jul 2021 01:05:17.102 * RDB: 1 MB of memory used by copy-on-write
+2021-07-17_01:05:17.18642 311:M 17 Jul 2021 01:05:17.186 * Background saving terminated with success
+2021-07-17_01:10:18.09226 311:M 17 Jul 2021 01:10:18.091 * 10 changes in 300 seconds. Saving...
+2021-07-17_01:10:18.09257 311:M 17 Jul 2021 01:10:18.092 * Background saving started by pid 72951
+2021-07-17_01:10:18.10623 72951:C 17 Jul 2021 01:10:18.105 * DB saved on disk
+2021-07-17_01:10:18.10734 72951:C 17 Jul 2021 01:10:18.106 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_01:10:18.19373 311:M 17 Jul 2021 01:10:18.193 * Background saving terminated with success
+2021-07-17_01:15:19.01503 311:M 17 Jul 2021 01:15:19.013 * 10 changes in 300 seconds. Saving...
+2021-07-17_01:15:19.01510 311:M 17 Jul 2021 01:15:19.014 * Background saving started by pid 73514
+2021-07-17_01:15:19.02738 73514:C 17 Jul 2021 01:15:19.027 * DB saved on disk
+2021-07-17_01:15:19.02881 73514:C 17 Jul 2021 01:15:19.028 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_01:15:19.11650 311:M 17 Jul 2021 01:15:19.116 * Background saving terminated with success
+2021-07-17_01:20:20.06782 311:M 17 Jul 2021 01:20:20.064 * 10 changes in 300 seconds. Saving...
+2021-07-17_01:20:20.06797 311:M 17 Jul 2021 01:20:20.065 * Background saving started by pid 74066
+2021-07-17_01:20:20.07849 74066:C 17 Jul 2021 01:20:20.078 * DB saved on disk
+2021-07-17_01:20:20.08082 74066:C 17 Jul 2021 01:20:20.079 * RDB: 1 MB of memory used by copy-on-write
+2021-07-17_01:20:20.16690 311:M 17 Jul 2021 01:20:20.166 * Background saving terminated with success
+2021-07-17_01:25:21.05765 311:M 17 Jul 2021 01:25:21.057 * 10 changes in 300 seconds. Saving...
+2021-07-17_01:25:21.05769 311:M 17 Jul 2021 01:25:21.057 * Background saving started by pid 74624
+2021-07-17_01:25:21.06215 74624:C 17 Jul 2021 01:25:21.062 * DB saved on disk
+2021-07-17_01:25:21.06254 74624:C 17 Jul 2021 01:25:21.062 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_01:25:21.15728 311:M 17 Jul 2021 01:25:21.157 * Background saving terminated with success
+2021-07-17_01:30:22.00362 311:M 17 Jul 2021 01:30:22.003 * 10 changes in 300 seconds. Saving...
+2021-07-17_01:30:22.00474 311:M 17 Jul 2021 01:30:22.004 * Background saving started by pid 75176
+2021-07-17_01:30:22.01730 75176:C 17 Jul 2021 01:30:22.016 * DB saved on disk
+2021-07-17_01:30:22.01902 75176:C 17 Jul 2021 01:30:22.018 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_01:30:22.10594 311:M 17 Jul 2021 01:30:22.105 * Background saving terminated with success
+2021-07-17_01:35:23.04131 311:M 17 Jul 2021 01:35:23.040 * 10 changes in 300 seconds. Saving...
+2021-07-17_01:35:23.04137 311:M 17 Jul 2021 01:35:23.041 * Background saving started by pid 75737
+2021-07-17_01:35:23.04736 75737:C 17 Jul 2021 01:35:23.046 * DB saved on disk
+2021-07-17_01:35:23.04738 75737:C 17 Jul 2021 01:35:23.047 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_01:35:23.14179 311:M 17 Jul 2021 01:35:23.141 * Background saving terminated with success
+2021-07-17_01:40:24.02205 311:M 17 Jul 2021 01:40:24.021 * 10 changes in 300 seconds. Saving...
+2021-07-17_01:40:24.02309 311:M 17 Jul 2021 01:40:24.022 * Background saving started by pid 76290
+2021-07-17_01:40:24.04095 76290:C 17 Jul 2021 01:40:24.040 * DB saved on disk
+2021-07-17_01:40:24.04230 76290:C 17 Jul 2021 01:40:24.042 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_01:40:24.12431 311:M 17 Jul 2021 01:40:24.124 * Background saving terminated with success
+2021-07-17_01:45:25.02586 311:M 17 Jul 2021 01:45:25.025 * 10 changes in 300 seconds. Saving...
+2021-07-17_01:45:25.02596 311:M 17 Jul 2021 01:45:25.025 * Background saving started by pid 76846
+2021-07-17_01:45:25.03852 76846:C 17 Jul 2021 01:45:25.038 * DB saved on disk
+2021-07-17_01:45:25.03975 76846:C 17 Jul 2021 01:45:25.039 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_01:45:25.12932 311:M 17 Jul 2021 01:45:25.126 * Background saving terminated with success
+2021-07-17_01:50:26.08084 311:M 17 Jul 2021 01:50:26.079 * 10 changes in 300 seconds. Saving...
+2021-07-17_01:50:26.08121 311:M 17 Jul 2021 01:50:26.080 * Background saving started by pid 77397
+2021-07-17_01:50:26.09478 77397:C 17 Jul 2021 01:50:26.092 * DB saved on disk
+2021-07-17_01:50:26.09482 77397:C 17 Jul 2021 01:50:26.094 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_01:50:26.18318 311:M 17 Jul 2021 01:50:26.183 * Background saving terminated with success
+2021-07-17_01:55:27.06608 311:M 17 Jul 2021 01:55:27.064 * 10 changes in 300 seconds. Saving...
+2021-07-17_01:55:27.06613 311:M 17 Jul 2021 01:55:27.065 * Background saving started by pid 77950
+2021-07-17_01:55:27.08476 77950:C 17 Jul 2021 01:55:27.084 * DB saved on disk
+2021-07-17_01:55:27.08631 77950:C 17 Jul 2021 01:55:27.085 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_01:55:27.16742 311:M 17 Jul 2021 01:55:27.167 * Background saving terminated with success
+2021-07-17_02:00:28.00104 311:M 17 Jul 2021 02:00:28.000 * 10 changes in 300 seconds. Saving...
+2021-07-17_02:00:28.00141 311:M 17 Jul 2021 02:00:28.001 * Background saving started by pid 78507
+2021-07-17_02:00:28.01339 78507:C 17 Jul 2021 02:00:28.012 * DB saved on disk
+2021-07-17_02:00:28.01438 78507:C 17 Jul 2021 02:00:28.013 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_02:00:28.10205 311:M 17 Jul 2021 02:00:28.101 * Background saving terminated with success
+2021-07-17_02:05:29.08556 311:M 17 Jul 2021 02:05:29.084 * 10 changes in 300 seconds. Saving...
+2021-07-17_02:05:29.08596 311:M 17 Jul 2021 02:05:29.085 * Background saving started by pid 79062
+2021-07-17_02:05:29.09957 79062:C 17 Jul 2021 02:05:29.098 * DB saved on disk
+2021-07-17_02:05:29.10081 79062:C 17 Jul 2021 02:05:29.100 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_02:05:29.18711 311:M 17 Jul 2021 02:05:29.186 * Background saving terminated with success
+2021-07-17_02:10:30.02964 311:M 17 Jul 2021 02:10:30.028 * 10 changes in 300 seconds. Saving...
+2021-07-17_02:10:30.02974 311:M 17 Jul 2021 02:10:30.029 * Background saving started by pid 79616
+2021-07-17_02:10:30.04268 79616:C 17 Jul 2021 02:10:30.042 * DB saved on disk
+2021-07-17_02:10:30.04362 79616:C 17 Jul 2021 02:10:30.043 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_02:10:30.13079 311:M 17 Jul 2021 02:10:30.130 * Background saving terminated with success
+2021-07-17_02:15:31.08145 311:M 17 Jul 2021 02:15:31.076 * 10 changes in 300 seconds. Saving...
+2021-07-17_02:15:31.08177 311:M 17 Jul 2021 02:15:31.081 * Background saving started by pid 80172
+2021-07-17_02:15:31.08695 80172:C 17 Jul 2021 02:15:31.086 * DB saved on disk
+2021-07-17_02:15:31.08740 80172:C 17 Jul 2021 02:15:31.087 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_02:15:31.18183 311:M 17 Jul 2021 02:15:31.181 * Background saving terminated with success
+2021-07-17_02:20:32.09516 311:M 17 Jul 2021 02:20:32.094 * 10 changes in 300 seconds. Saving...
+2021-07-17_02:20:32.09911 311:M 17 Jul 2021 02:20:32.095 * Background saving started by pid 80723
+2021-07-17_02:20:32.10875 80723:C 17 Jul 2021 02:20:32.108 * DB saved on disk
+2021-07-17_02:20:32.10937 80723:C 17 Jul 2021 02:20:32.109 * RDB: 1 MB of memory used by copy-on-write
+2021-07-17_02:20:32.19711 311:M 17 Jul 2021 02:20:32.196 * Background saving terminated with success
+2021-07-17_02:25:33.08429 311:M 17 Jul 2021 02:25:33.083 * 10 changes in 300 seconds. Saving...
+2021-07-17_02:25:33.08538 311:M 17 Jul 2021 02:25:33.085 * Background saving started by pid 81280
+2021-07-17_02:25:33.10372 81280:C 17 Jul 2021 02:25:33.103 * DB saved on disk
+2021-07-17_02:25:33.10507 81280:C 17 Jul 2021 02:25:33.104 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_02:25:33.18634 311:M 17 Jul 2021 02:25:33.186 * Background saving terminated with success
+2021-07-17_02:30:34.06696 311:M 17 Jul 2021 02:30:34.065 * 10 changes in 300 seconds. Saving...
+2021-07-17_02:30:34.06703 311:M 17 Jul 2021 02:30:34.066 * Background saving started by pid 81835
+2021-07-17_02:30:34.08086 81835:C 17 Jul 2021 02:30:34.079 * DB saved on disk
+2021-07-17_02:30:34.08171 81835:C 17 Jul 2021 02:30:34.081 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_02:30:34.16880 311:M 17 Jul 2021 02:30:34.168 * Background saving terminated with success
+2021-07-17_02:35:35.02899 311:M 17 Jul 2021 02:35:35.026 * 10 changes in 300 seconds. Saving...
+2021-07-17_02:35:35.02905 311:M 17 Jul 2021 02:35:35.027 * Background saving started by pid 82396
+2021-07-17_02:35:35.04006 82396:C 17 Jul 2021 02:35:35.039 * DB saved on disk
+2021-07-17_02:35:35.04142 82396:C 17 Jul 2021 02:35:35.041 * RDB: 1 MB of memory used by copy-on-write
+2021-07-17_02:35:35.12893 311:M 17 Jul 2021 02:35:35.128 * Background saving terminated with success
+2021-07-17_02:40:36.05573 311:M 17 Jul 2021 02:40:36.055 * 10 changes in 300 seconds. Saving...
+2021-07-17_02:40:36.05578 311:M 17 Jul 2021 02:40:36.055 * Background saving started by pid 82949
+2021-07-17_02:40:36.06117 82949:C 17 Jul 2021 02:40:36.060 * DB saved on disk
+2021-07-17_02:40:36.06118 82949:C 17 Jul 2021 02:40:36.060 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_02:40:36.15707 311:M 17 Jul 2021 02:40:36.157 * Background saving terminated with success
+2021-07-17_02:45:37.02537 311:M 17 Jul 2021 02:45:37.024 * 10 changes in 300 seconds. Saving...
+2021-07-17_02:45:37.02601 311:M 17 Jul 2021 02:45:37.025 * Background saving started by pid 83506
+2021-07-17_02:45:37.03624 83506:C 17 Jul 2021 02:45:37.036 * DB saved on disk
+2021-07-17_02:45:37.03705 83506:C 17 Jul 2021 02:45:37.036 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_02:45:37.12642 311:M 17 Jul 2021 02:45:37.126 * Background saving terminated with success
+2021-07-17_02:50:38.04464 311:M 17 Jul 2021 02:50:38.044 * 10 changes in 300 seconds. Saving...
+2021-07-17_02:50:38.04468 311:M 17 Jul 2021 02:50:38.044 * Background saving started by pid 84059
+2021-07-17_02:50:38.05496 84059:C 17 Jul 2021 02:50:38.054 * DB saved on disk
+2021-07-17_02:50:38.05590 84059:C 17 Jul 2021 02:50:38.055 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_02:50:38.14616 311:M 17 Jul 2021 02:50:38.145 * Background saving terminated with success
+2021-07-17_02:55:39.08240 311:M 17 Jul 2021 02:55:39.081 * 10 changes in 300 seconds. Saving...
+2021-07-17_02:55:39.08352 311:M 17 Jul 2021 02:55:39.083 * Background saving started by pid 84616
+2021-07-17_02:55:39.09613 84616:C 17 Jul 2021 02:55:39.095 * DB saved on disk
+2021-07-17_02:55:39.09744 84616:C 17 Jul 2021 02:55:39.097 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_02:55:39.18508 311:M 17 Jul 2021 02:55:39.184 * Background saving terminated with success
+2021-07-17_03:00:40.05638 311:M 17 Jul 2021 03:00:40.055 * 10 changes in 300 seconds. Saving...
+2021-07-17_03:00:40.05642 311:M 17 Jul 2021 03:00:40.056 * Background saving started by pid 85196
+2021-07-17_03:00:40.06923 85196:C 17 Jul 2021 03:00:40.068 * DB saved on disk
+2021-07-17_03:00:40.06990 85196:C 17 Jul 2021 03:00:40.069 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_03:00:40.15699 311:M 17 Jul 2021 03:00:40.156 * Background saving terminated with success
+2021-07-17_03:05:41.06641 311:M 17 Jul 2021 03:05:41.065 * 10 changes in 300 seconds. Saving...
+2021-07-17_03:05:41.06698 311:M 17 Jul 2021 03:05:41.066 * Background saving started by pid 85872
+2021-07-17_03:05:41.08404 85872:C 17 Jul 2021 03:05:41.083 * DB saved on disk
+2021-07-17_03:05:41.08568 85872:C 17 Jul 2021 03:05:41.084 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_03:05:41.16838 311:M 17 Jul 2021 03:05:41.167 * Background saving terminated with success
+2021-07-17_03:10:42.03383 311:M 17 Jul 2021 03:10:42.031 * 10 changes in 300 seconds. Saving...
+2021-07-17_03:10:42.03388 311:M 17 Jul 2021 03:10:42.032 * Background saving started by pid 86424
+2021-07-17_03:10:42.04559 86424:C 17 Jul 2021 03:10:42.045 * DB saved on disk
+2021-07-17_03:10:42.04687 86424:C 17 Jul 2021 03:10:42.046 * RDB: 1 MB of memory used by copy-on-write
+2021-07-17_03:10:42.13584 311:M 17 Jul 2021 03:10:42.133 * Background saving terminated with success
+2021-07-17_03:15:43.07551 311:M 17 Jul 2021 03:15:43.074 * 10 changes in 300 seconds. Saving...
+2021-07-17_03:15:43.07564 311:M 17 Jul 2021 03:15:43.075 * Background saving started by pid 87002
+2021-07-17_03:15:43.08891 87002:C 17 Jul 2021 03:15:43.088 * DB saved on disk
+2021-07-17_03:15:43.09020 87002:C 17 Jul 2021 03:15:43.089 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_03:15:43.17694 311:M 17 Jul 2021 03:15:43.176 * Background saving terminated with success
+2021-07-17_03:20:44.02293 311:M 17 Jul 2021 03:20:44.021 * 10 changes in 300 seconds. Saving...
+2021-07-17_03:20:44.02298 311:M 17 Jul 2021 03:20:44.022 * Background saving started by pid 87578
+2021-07-17_03:20:44.03081 87578:C 17 Jul 2021 03:20:44.029 * DB saved on disk
+2021-07-17_03:20:44.03093 87578:C 17 Jul 2021 03:20:44.030 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_03:20:44.12470 311:M 17 Jul 2021 03:20:44.124 * Background saving terminated with success
+2021-07-17_03:25:45.04220 311:M 17 Jul 2021 03:25:45.041 * 10 changes in 300 seconds. Saving...
+2021-07-17_03:25:45.04321 311:M 17 Jul 2021 03:25:45.042 * Background saving started by pid 88215
+2021-07-17_03:25:45.05756 88215:C 17 Jul 2021 03:25:45.057 * DB saved on disk
+2021-07-17_03:25:45.05938 88215:C 17 Jul 2021 03:25:45.059 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_03:25:45.14369 311:M 17 Jul 2021 03:25:45.143 * Background saving terminated with success
+2021-07-17_03:30:46.09790 311:M 17 Jul 2021 03:30:46.096 * 10 changes in 300 seconds. Saving...
+2021-07-17_03:30:46.09797 311:M 17 Jul 2021 03:30:46.097 * Background saving started by pid 88850
+2021-07-17_03:30:46.11268 88850:C 17 Jul 2021 03:30:46.111 * DB saved on disk
+2021-07-17_03:30:46.11381 88850:C 17 Jul 2021 03:30:46.113 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_03:30:46.20045 311:M 17 Jul 2021 03:30:46.199 * Background saving terminated with success
+2021-07-17_03:35:47.07072 311:M 17 Jul 2021 03:35:47.069 * 10 changes in 300 seconds. Saving...
+2021-07-17_03:35:47.07678 311:M 17 Jul 2021 03:35:47.071 * Background saving started by pid 89408
+2021-07-17_03:35:47.08565 89408:C 17 Jul 2021 03:35:47.084 * DB saved on disk
+2021-07-17_03:35:47.08661 89408:C 17 Jul 2021 03:35:47.085 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_03:35:47.17219 311:M 17 Jul 2021 03:35:47.172 * Background saving terminated with success
+2021-07-17_03:40:48.02246 311:M 17 Jul 2021 03:40:48.021 * 10 changes in 300 seconds. Saving...
+2021-07-17_03:40:48.02253 311:M 17 Jul 2021 03:40:48.022 * Background saving started by pid 89967
+2021-07-17_03:40:48.03796 89967:C 17 Jul 2021 03:40:48.036 * DB saved on disk
+2021-07-17_03:40:48.03801 89967:C 17 Jul 2021 03:40:48.037 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_03:40:48.12370 311:M 17 Jul 2021 03:40:48.123 * Background saving terminated with success
+2021-07-17_03:45:49.04960 311:M 17 Jul 2021 03:45:49.048 * 10 changes in 300 seconds. Saving...
+2021-07-17_03:45:49.04971 311:M 17 Jul 2021 03:45:49.049 * Background saving started by pid 90523
+2021-07-17_03:45:49.06482 90523:C 17 Jul 2021 03:45:49.062 * DB saved on disk
+2021-07-17_03:45:49.06486 90523:C 17 Jul 2021 03:45:49.064 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_03:45:49.15047 311:M 17 Jul 2021 03:45:49.150 * Background saving terminated with success
+2021-07-17_03:50:50.06825 311:M 17 Jul 2021 03:50:50.067 * 10 changes in 300 seconds. Saving...
+2021-07-17_03:50:50.06849 311:M 17 Jul 2021 03:50:50.068 * Background saving started by pid 91191
+2021-07-17_03:50:50.08008 91191:C 17 Jul 2021 03:50:50.079 * DB saved on disk
+2021-07-17_03:50:50.08094 91191:C 17 Jul 2021 03:50:50.080 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_03:50:50.17053 311:M 17 Jul 2021 03:50:50.170 * Background saving terminated with success
+2021-07-17_03:55:51.03507 311:M 17 Jul 2021 03:55:51.034 * 10 changes in 300 seconds. Saving...
+2021-07-17_03:55:51.03552 311:M 17 Jul 2021 03:55:51.035 * Background saving started by pid 91745
+2021-07-17_03:55:51.04544 91745:C 17 Jul 2021 03:55:51.043 * DB saved on disk
+2021-07-17_03:55:51.04548 91745:C 17 Jul 2021 03:55:51.044 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_03:55:51.13535 311:M 17 Jul 2021 03:55:51.135 * Background saving terminated with success
+2021-07-17_04:00:52.01344 311:M 17 Jul 2021 04:00:52.012 * 10 changes in 300 seconds. Saving...
+2021-07-17_04:00:52.01355 311:M 17 Jul 2021 04:00:52.013 * Background saving started by pid 92304
+2021-07-17_04:00:52.02786 92304:C 17 Jul 2021 04:00:52.026 * DB saved on disk
+2021-07-17_04:00:52.02876 92304:C 17 Jul 2021 04:00:52.028 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_04:00:52.11528 311:M 17 Jul 2021 04:00:52.115 * Background saving terminated with success
+2021-07-17_04:05:53.09149 311:M 17 Jul 2021 04:05:53.090 * 10 changes in 300 seconds. Saving...
+2021-07-17_04:05:53.09155 311:M 17 Jul 2021 04:05:53.091 * Background saving started by pid 92855
+2021-07-17_04:05:53.10295 92855:C 17 Jul 2021 04:05:53.102 * DB saved on disk
+2021-07-17_04:05:53.10302 92855:C 17 Jul 2021 04:05:53.102 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_04:05:53.19211 311:M 17 Jul 2021 04:05:53.191 * Background saving terminated with success
+2021-07-17_04:10:54.00982 311:M 17 Jul 2021 04:10:54.009 * 10 changes in 300 seconds. Saving...
+2021-07-17_04:10:54.01200 311:M 17 Jul 2021 04:10:54.010 * Background saving started by pid 93412
+2021-07-17_04:10:54.02450 93412:C 17 Jul 2021 04:10:54.023 * DB saved on disk
+2021-07-17_04:10:54.02546 93412:C 17 Jul 2021 04:10:54.024 * RDB: 1 MB of memory used by copy-on-write
+2021-07-17_04:10:54.11197 311:M 17 Jul 2021 04:10:54.111 * Background saving terminated with success
+2021-07-17_04:15:55.03076 311:M 17 Jul 2021 04:15:55.029 * 10 changes in 300 seconds. Saving...
+2021-07-17_04:15:55.03083 311:M 17 Jul 2021 04:15:55.030 * Background saving started by pid 93966
+2021-07-17_04:15:55.04439 93966:C 17 Jul 2021 04:15:55.043 * DB saved on disk
+2021-07-17_04:15:55.04535 93966:C 17 Jul 2021 04:15:55.044 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_04:15:55.13188 311:M 17 Jul 2021 04:15:55.131 * Background saving terminated with success
+2021-07-17_04:20:56.07618 311:M 17 Jul 2021 04:20:56.074 * 10 changes in 300 seconds. Saving...
+2021-07-17_04:20:56.07632 311:M 17 Jul 2021 04:20:56.075 * Background saving started by pid 94527
+2021-07-17_04:20:56.09154 94527:C 17 Jul 2021 04:20:56.089 * DB saved on disk
+2021-07-17_04:20:56.09158 94527:C 17 Jul 2021 04:20:56.090 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_04:20:56.17676 311:M 17 Jul 2021 04:20:56.176 * Background saving terminated with success
+2021-07-17_04:25:57.09318 311:M 17 Jul 2021 04:25:57.092 * 10 changes in 300 seconds. Saving...
+2021-07-17_04:25:57.09351 311:M 17 Jul 2021 04:25:57.093 * Background saving started by pid 95081
+2021-07-17_04:25:57.10244 95081:C 17 Jul 2021 04:25:57.101 * DB saved on disk
+2021-07-17_04:25:57.10297 95081:C 17 Jul 2021 04:25:57.102 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_04:25:57.19425 311:M 17 Jul 2021 04:25:57.194 * Background saving terminated with success
+2021-07-17_04:30:58.05907 311:M 17 Jul 2021 04:30:58.057 * 10 changes in 300 seconds. Saving...
+2021-07-17_04:30:58.05920 311:M 17 Jul 2021 04:30:58.058 * Background saving started by pid 95638
+2021-07-17_04:30:58.07283 95638:C 17 Jul 2021 04:30:58.072 * DB saved on disk
+2021-07-17_04:30:58.07422 95638:C 17 Jul 2021 04:30:58.073 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_04:30:58.15934 311:M 17 Jul 2021 04:30:58.159 * Background saving terminated with success
+2021-07-17_04:35:59.03453 311:M 17 Jul 2021 04:35:59.032 * 10 changes in 300 seconds. Saving...
+2021-07-17_04:35:59.03459 311:M 17 Jul 2021 04:35:59.033 * Background saving started by pid 96192
+2021-07-17_04:35:59.04615 96192:C 17 Jul 2021 04:35:59.045 * DB saved on disk
+2021-07-17_04:35:59.04742 96192:C 17 Jul 2021 04:35:59.047 * RDB: 1 MB of memory used by copy-on-write
+2021-07-17_04:35:59.13558 311:M 17 Jul 2021 04:35:59.134 * Background saving terminated with success
+2021-07-17_04:41:00.08566 311:M 17 Jul 2021 04:41:00.084 * 10 changes in 300 seconds. Saving...
+2021-07-17_04:41:00.08575 311:M 17 Jul 2021 04:41:00.085 * Background saving started by pid 96757
+2021-07-17_04:41:00.09929 96757:C 17 Jul 2021 04:41:00.098 * DB saved on disk
+2021-07-17_04:41:00.09933 96757:C 17 Jul 2021 04:41:00.099 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_04:41:00.18685 311:M 17 Jul 2021 04:41:00.186 * Background saving terminated with success
+2021-07-17_04:46:01.01038 311:M 17 Jul 2021 04:46:01.009 * 10 changes in 300 seconds. Saving...
+2021-07-17_04:46:01.01135 311:M 17 Jul 2021 04:46:01.010 * Background saving started by pid 97313
+2021-07-17_04:46:01.02519 97313:C 17 Jul 2021 04:46:01.024 * DB saved on disk
+2021-07-17_04:46:01.02700 97313:C 17 Jul 2021 04:46:01.026 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_04:46:01.11352 311:M 17 Jul 2021 04:46:01.113 * Background saving terminated with success
+2021-07-17_04:51:02.03573 311:M 17 Jul 2021 04:51:02.035 * 10 changes in 300 seconds. Saving...
+2021-07-17_04:51:02.04785 311:M 17 Jul 2021 04:51:02.036 * Background saving started by pid 97871
+2021-07-17_04:51:02.05225 97871:C 17 Jul 2021 04:51:02.050 * DB saved on disk
+2021-07-17_04:51:02.05229 97871:C 17 Jul 2021 04:51:02.051 * RDB: 1 MB of memory used by copy-on-write
+2021-07-17_04:51:02.13698 311:M 17 Jul 2021 04:51:02.136 * Background saving terminated with success
+2021-07-17_04:56:03.04203 311:M 17 Jul 2021 04:56:03.041 * 10 changes in 300 seconds. Saving...
+2021-07-17_04:56:03.04285 311:M 17 Jul 2021 04:56:03.042 * Background saving started by pid 98426
+2021-07-17_04:56:03.06098 98426:C 17 Jul 2021 04:56:03.059 * DB saved on disk
+2021-07-17_04:56:03.06181 98426:C 17 Jul 2021 04:56:03.061 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_04:56:03.14357 311:M 17 Jul 2021 04:56:03.143 * Background saving terminated with success
+2021-07-17_05:01:04.04202 311:M 17 Jul 2021 05:01:04.041 * 10 changes in 300 seconds. Saving...
+2021-07-17_05:01:04.04206 311:M 17 Jul 2021 05:01:04.041 * Background saving started by pid 98986
+2021-07-17_05:01:04.04829 98986:C 17 Jul 2021 05:01:04.047 * DB saved on disk
+2021-07-17_05:01:04.05002 98986:C 17 Jul 2021 05:01:04.049 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_05:01:04.14281 311:M 17 Jul 2021 05:01:04.142 * Background saving terminated with success
+2021-07-17_05:06:05.05659 311:M 17 Jul 2021 05:06:05.055 * 10 changes in 300 seconds. Saving...
+2021-07-17_05:06:05.05666 311:M 17 Jul 2021 05:06:05.056 * Background saving started by pid 99540
+2021-07-17_05:06:05.07036 99540:C 17 Jul 2021 05:06:05.069 * DB saved on disk
+2021-07-17_05:06:05.07099 99540:C 17 Jul 2021 05:06:05.070 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_05:06:05.15891 311:M 17 Jul 2021 05:06:05.158 * Background saving terminated with success
+2021-07-17_05:11:06.01218 311:M 17 Jul 2021 05:11:06.011 * 10 changes in 300 seconds. Saving...
+2021-07-17_05:11:06.01777 311:M 17 Jul 2021 05:11:06.012 * Background saving started by pid 100096
+2021-07-17_05:11:06.02882 100096:C 17 Jul 2021 05:11:06.026 * DB saved on disk
+2021-07-17_05:11:06.02886 100096:C 17 Jul 2021 05:11:06.028 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_05:11:06.11338 311:M 17 Jul 2021 05:11:06.113 * Background saving terminated with success
+2021-07-17_05:16:07.08665 311:M 17 Jul 2021 05:16:07.086 * 10 changes in 300 seconds. Saving...
+2021-07-17_05:16:07.08669 311:M 17 Jul 2021 05:16:07.086 * Background saving started by pid 100647
+2021-07-17_05:16:07.10100 100647:C 17 Jul 2021 05:16:07.098 * DB saved on disk
+2021-07-17_05:16:07.10105 100647:C 17 Jul 2021 05:16:07.100 * RDB: 0 MB of memory used by copy-on-write
+2021-07-17_05:16:07.18895 311:M 17 Jul 2021 05:16:07.188 * Background saving terminated with success
+2021-07-17_05:21:08.07153 311:M 17 Jul 2021 05:21:08.069 * 10 changes in 300 seconds. Saving...
+2021-07-17_05:21:08.07162 311:M 17 Jul 2021 05:21:08.070 * Background saving started by pid 101206
+2021-07-17_05:21:08.08466 101206:C 17 Jul 2021 05:21:08.083 * DB saved on disk
+2021-07-17_05:21:08.08557 101206:C 17 Jul 2021 05:21:08.085 * RDB: 1 MB of memory used by copy-on-write
+2021-07-17_05:21:08.17115 311:M 17 Jul 2021 05:21:08.171 * Background saving terminated with success
+2021-07-17_05:24:00.49040 311:signal-handler (1626499440) Received SIGTERM scheduling shutdown...
+2021-07-17_05:24:00.57705 311:M 17 Jul 2021 05:24:00.576 # User requested shutdown...
+2021-07-17_05:24:00.57711 311:M 17 Jul 2021 05:24:00.576 * Saving the final RDB snapshot before exiting.
+2021-07-17_05:24:00.59197 311:M 17 Jul 2021 05:24:00.591 * DB saved on disk
+2021-07-17_05:24:00.59215 311:M 17 Jul 2021 05:24:00.592 * Removing the pid file.
+2021-07-17_05:24:00.59231 311:M 17 Jul 2021 05:24:00.592 * Removing the unix socket file.
+2021-07-17_05:24:00.59241 311:M 17 Jul 2021 05:24:00.592 # Redis is now ready to exit, bye bye...

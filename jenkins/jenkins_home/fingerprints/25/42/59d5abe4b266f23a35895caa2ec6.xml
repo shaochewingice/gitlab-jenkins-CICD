@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2021-07-16 16:26:18.509 UTC</timestamp>
+  <md5sum>254259d5abe4b266f23a35895caa2ec6</md5sum>
+  <fileName>Credential id=ec5a97c8-f322-43db-986d-3e3d58ed972f name=root (jenkinsdocker-gitlabdocker)</fileName>
+  <usages>
+    <entry>
+      <string>cicd-docker-nginx</string>
+      <ranges>16-27</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

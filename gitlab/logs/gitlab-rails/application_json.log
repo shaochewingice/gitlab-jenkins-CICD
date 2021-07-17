@@ -1,0 +1,77 @@
+{"severity":"INFO","time":"2021-07-17T01:00:15.827Z","correlation_id":"d9c91e61c8d74c399df3ef4469ddc9ac","message":"Refreshing trending projects"}
+{"severity":"INFO","time":"2021-07-17T01:00:15.845Z","correlation_id":"fd3c92b44e9544ceabd9d98237236479","message":"StuckCiJobsWorker: Cleaning stuck builds"}
+{"severity":"INFO","time":"2021-07-17T02:00:14.527Z","correlation_id":"831bfdb41e0fada76ec655a35b0e03b8","message":"StuckCiJobsWorker: Cleaning stuck builds"}
+{"severity":"INFO","time":"2021-07-17T03:00:18.120Z","correlation_id":"11caa53157123b786403ff4eeb09f9db","message":"StuckCiJobsWorker: Cleaning stuck builds"}
+{"severity":"DEBUG","time":"2021-07-17T03:03:31.416Z","correlation_id":"01FAS6PG9B5558XQ0FKXWKX52V","message":"Bypassing session in admin mode for: 1"}
+{"severity":"DEBUG","time":"2021-07-17T03:03:31.607Z","correlation_id":"01FAS6PGFMNC18Z2855V94YXY0","message":"Bypassing session in admin mode for: 1"}
+{"severity":"INFO","time":"2021-07-17T03:03:31.882Z","correlation_id":"01FAS6PGPZK70AKSZZR0AJ2723","message":"Updating statistics for project 6"}
+{"severity":"DEBUG","time":"2021-07-17T03:03:41.137Z","correlation_id":"01FAS6PSS0F4ER9BYNRXBCZGXM","message":"Bypassing session in admin mode for: 1"}
+{"severity":"DEBUG","time":"2021-07-17T03:05:39.479Z","correlation_id":"01FAS6TDBYHG37HRPHZFZJ1KA5","message":"Bypassing session in admin mode for: 1"}
+{"severity":"DEBUG","time":"2021-07-17T03:15:11.651Z","correlation_id":null,"message":"ActiveRecord connection established"}
+{"severity":"DEBUG","time":"2021-07-17T03:16:10.415Z","correlation_id":null,"message":"ActiveRecord connection established"}
+{"severity":"INFO","time":"2021-07-17T03:18:32.648Z","correlation_id":"5e725d8f0781dafbb31906e7393f2b41","message":"Updating statistics for project 6"}
+{"severity":"ERROR","time":"2021-07-17T03:18:32.767Z","correlation_id":"5e725d8f0781dafbb31906e7393f2b41","message":"Cannot obtain an exclusive lease for namespace:namespaces_root_statistics:3. There must be another instance already in execution."}
+{"severity":"DEBUG","time":"2021-07-17T03:25:08.786Z","correlation_id":"01FAS7Y2H9DX1DWHEZF51A81Q2","message":"Bypassing session in admin mode for: 1"}
+{"severity":"DEBUG","time":"2021-07-17T03:25:09.209Z","correlation_id":"01FAS7Y3NZSGKB4AFADDD70TQA","message":"Bypassing session in admin mode for: 1"}
+{"severity":"INFO","time":"2021-07-17T03:25:10.042Z","correlation_id":"01FAS7Y4CB8ZV45NP70TGHZREC","message":"Updating statistics for project 6"}
+{"severity":"DEBUG","time":"2021-07-17T03:25:21.251Z","correlation_id":"01FAS7YFE8Q6K4HEXPWH341RER","message":"Bypassing session in admin mode for: 1"}
+{"severity":"DEBUG","time":"2021-07-17T03:27:08.277Z","correlation_id":"01FAS81QXZ0J4DPCGYGQ9GPAW4","message":"Bypassing session in admin mode for: 1"}
+{"severity":"DEBUG","time":"2021-07-17T03:27:08.357Z","correlation_id":"01FAS81R1QYNDFQ9SSF0S67P42","message":"Bypassing session in admin mode for: 1"}
+{"severity":"DEBUG","time":"2021-07-17T03:27:16.350Z","correlation_id":"01FAS81ZTYNZ6XYV953X6Z8WYY","message":"Bypassing session in admin mode for: 1"}
+{"severity":"INFO","time":"2021-07-17T03:40:13.477Z","correlation_id":"6fdea3c090cd6bd3d76c64499bf19dc3","message":"Updating statistics for project 6"}
+{"severity":"DEBUG","time":"2021-07-17T03:47:59.268Z","correlation_id":"01FAS97XHPRJ4JH7GQBSMZCXA7","message":"Bypassing session in admin mode for: 1"}
+{"severity":"DEBUG","time":"2021-07-17T03:47:59.387Z","correlation_id":"01FAS97XR10GY2K0NK12CE2ZDJ","message":"Bypassing session in admin mode for: 1"}
+{"severity":"INFO","time":"2021-07-17T03:47:59.583Z","correlation_id":"01FAS97XX45P95HERP74PB8DTS","message":"Updating statistics for project 6"}
+{"severity":"DEBUG","time":"2021-07-17T03:48:06.844Z","correlation_id":"01FAS984VHDSAQG9RKXW8CZGT4","message":"Bypassing session in admin mode for: 1"}
+{"severity":"INFO","time":"2021-07-17T04:00:32.831Z","correlation_id":"a40c1f4cb8f4cf2e81ae5731b6a85d52","message":"StuckCiJobsWorker: Cleaning stuck builds"}
+{"severity":"INFO","time":"2021-07-17T04:03:02.356Z","correlation_id":"05dd3e6711cd444cd72eaa4070c3e7e3","message":"Updating statistics for project 6"}
+{"severity":"DEBUG","time":"2021-07-17T04:37:58.216Z","correlation_id":"01FASC3E8V130KXSH6M0EQRVFT","message":"Bypassing session in admin mode for: 1"}
+{"severity":"INFO","time":"2021-07-17T05:00:10.690Z","correlation_id":"02318c28506935fc5d6b85432684b027","message":"StuckCiJobsWorker: Cleaning stuck builds"}
+{"severity":"INFO","time":"2021-07-17T20:25:34.864Z","correlation_id":null,"message":"Checking state of dynamic postgres partitions"}
+{"severity":"INFO","time":"2021-07-17T20:25:34.864Z","correlation_id":null,"message":"Checking state of dynamic postgres partitions"}
+{"severity":"DEBUG","time":"2021-07-17T20:26:17.440Z","correlation_id":null,"message":"ActiveRecord connection disconnected"}
+{"severity":"DEBUG","time":"2021-07-17T20:26:17.938Z","correlation_id":null,"message":"ActiveRecord connection established"}
+{"severity":"DEBUG","time":"2021-07-17T20:26:17.959Z","correlation_id":null,"message":"ActiveRecord connection established"}
+{"severity":"INFO","time":"2021-07-17T20:27:54.484Z","correlation_id":"01FAV2ETB42ZKE4YY5EMVVN7ND","message":"Successful Login: username=root ip=192.168.124.1 method=standard admin=true"}
+{"severity":"INFO","time":"2021-07-17T20:32:18.418Z","correlation_id":"01FAV2PW93HAMHFDH962BSTQ65","message":"User 1 scheduled destruction of project devops/test-cicd-code with job ID c9c2ccd962776df7d501f8c1"}
+{"severity":"INFO","time":"2021-07-17T20:32:18.795Z","correlation_id":"01FAV2PW93HAMHFDH962BSTQ65","message":"Attempting to destroy devops/test-cicd-code (2)"}
+{"severity":"INFO","time":"2021-07-17T20:32:18.971Z","correlation_id":"01FAV2PW93HAMHFDH962BSTQ65","message":"Repository \"@hashed/d4/73/d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35\" moved to \"@hashed/d4/73/d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35+2+deleted\" for repository \"devops/test-cicd-code\""}
+{"severity":"INFO","time":"2021-07-17T20:32:18.971Z","correlation_id":"01FAV2PW93HAMHFDH962BSTQ65","message":"Repository \"devops/test-cicd-code\" was removed"}
+{"severity":"INFO","time":"2021-07-17T20:32:19.295Z","correlation_id":"01FAV2PW93HAMHFDH962BSTQ65","message":"Repository \"@hashed/d4/73/d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35.wiki\" moved to \"@hashed/d4/73/d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35.wiki+2+deleted\" for repository \"devops/test-cicd-code.wiki\""}
+{"severity":"INFO","time":"2021-07-17T20:32:19.295Z","correlation_id":"01FAV2PW93HAMHFDH962BSTQ65","message":"Repository \"devops/test-cicd-code.wiki\" was removed"}
+{"severity":"INFO","time":"2021-07-17T20:32:19.853Z","correlation_id":"01FAV2PW93HAMHFDH962BSTQ65","message":"Project \"devops/test-cicd-code\" was deleted"}
+{"severity":"INFO","time":"2021-07-17T20:32:32.424Z","correlation_id":"01FAV2QA1V0BJX75VY991VXW4Z","message":"User 1 scheduled destruction of project root/test with job ID 67e42e8ab93e1efcda1c7d83"}
+{"severity":"INFO","time":"2021-07-17T20:32:32.463Z","correlation_id":"01FAV2QA1V0BJX75VY991VXW4Z","message":"Attempting to destroy root/test (3)"}
+{"severity":"INFO","time":"2021-07-17T20:32:32.531Z","correlation_id":"01FAV2QA1V0BJX75VY991VXW4Z","message":"Repository \"@hashed/4e/07/4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce\" moved to \"@hashed/4e/07/4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce+3+deleted\" for repository \"root/test\""}
+{"severity":"INFO","time":"2021-07-17T20:32:32.531Z","correlation_id":"01FAV2QA1V0BJX75VY991VXW4Z","message":"Repository \"root/test\" was removed"}
+{"severity":"INFO","time":"2021-07-17T20:32:32.588Z","correlation_id":"01FAV2QA1V0BJX75VY991VXW4Z","message":"Repository \"@hashed/4e/07/4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce.wiki\" moved to \"@hashed/4e/07/4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce.wiki+3+deleted\" for repository \"root/test.wiki\""}
+{"severity":"INFO","time":"2021-07-17T20:32:32.588Z","correlation_id":"01FAV2QA1V0BJX75VY991VXW4Z","message":"Repository \"root/test.wiki\" was removed"}
+{"severity":"INFO","time":"2021-07-17T20:32:32.688Z","correlation_id":"01FAV2QA1V0BJX75VY991VXW4Z","message":"Project \"root/test\" was deleted"}
+{"severity":"INFO","time":"2021-07-17T20:32:51.190Z","correlation_id":"01FAV2QWBWWSWXMHE3QKH5XNSF","message":"User 1 scheduled destruction of project devops/python-redis-counter with job ID 063ed62380ca6c9819d31af2"}
+{"severity":"INFO","time":"2021-07-17T20:32:51.274Z","correlation_id":"01FAV2QWBWWSWXMHE3QKH5XNSF","message":"Attempting to destroy devops/python-redis-counter (5)"}
+{"severity":"INFO","time":"2021-07-17T20:32:51.523Z","correlation_id":"01FAV2QWBWWSWXMHE3QKH5XNSF","message":"Repository \"@hashed/ef/2d/ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d\" moved to \"@hashed/ef/2d/ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d+5+deleted\" for repository \"devops/python-redis-counter\""}
+{"severity":"INFO","time":"2021-07-17T20:32:51.523Z","correlation_id":"01FAV2QWBWWSWXMHE3QKH5XNSF","message":"Repository \"devops/python-redis-counter\" was removed"}
+{"severity":"INFO","time":"2021-07-17T20:32:51.599Z","correlation_id":"01FAV2QWBWWSWXMHE3QKH5XNSF","message":"Repository \"@hashed/ef/2d/ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d.wiki\" moved to \"@hashed/ef/2d/ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d.wiki+5+deleted\" for repository \"devops/python-redis-counter.wiki\""}
+{"severity":"INFO","time":"2021-07-17T20:32:51.599Z","correlation_id":"01FAV2QWBWWSWXMHE3QKH5XNSF","message":"Repository \"devops/python-redis-counter.wiki\" was removed"}
+{"severity":"INFO","time":"2021-07-17T20:32:52.195Z","correlation_id":"01FAV2QWBWWSWXMHE3QKH5XNSF","message":"Project \"devops/python-redis-counter\" was deleted"}
+{"severity":"INFO","time":"2021-07-17T20:33:04.295Z","correlation_id":"01FAV2R969J2ABVE5HPHP30MM7","message":"User 1 scheduled destruction of project gitlab-instance-0b08e768/Monitoring with job ID 12704082d16e842841aa5957"}
+{"severity":"INFO","time":"2021-07-17T20:33:04.335Z","correlation_id":"01FAV2R969J2ABVE5HPHP30MM7","message":"Attempting to destroy gitlab-instance-0b08e768/Monitoring (1)"}
+{"severity":"INFO","time":"2021-07-17T20:33:04.389Z","correlation_id":"01FAV2R969J2ABVE5HPHP30MM7","message":"Repository \"@hashed/6b/86/6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b\" moved to \"@hashed/6b/86/6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b+1+deleted\" for repository \"gitlab-instance-0b08e768/Monitoring\""}
+{"severity":"INFO","time":"2021-07-17T20:33:04.389Z","correlation_id":"01FAV2R969J2ABVE5HPHP30MM7","message":"Repository \"gitlab-instance-0b08e768/Monitoring\" was removed"}
+{"severity":"INFO","time":"2021-07-17T20:33:04.454Z","correlation_id":"01FAV2R969J2ABVE5HPHP30MM7","message":"Repository \"@hashed/6b/86/6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b.wiki\" moved to \"@hashed/6b/86/6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b.wiki+1+deleted\" for repository \"gitlab-instance-0b08e768/Monitoring.wiki\""}
+{"severity":"INFO","time":"2021-07-17T20:33:04.454Z","correlation_id":"01FAV2R969J2ABVE5HPHP30MM7","message":"Repository \"gitlab-instance-0b08e768/Monitoring.wiki\" was removed"}
+{"severity":"INFO","time":"2021-07-17T20:33:04.568Z","correlation_id":"01FAV2R969J2ABVE5HPHP30MM7","message":"Project \"gitlab-instance-0b08e768/Monitoring\" was deleted"}
+{"severity":"INFO","time":"2021-07-17T20:33:15.911Z","correlation_id":"01FAV2RMGJHXWFRR8SV2QWXFK0","message":"User 1 scheduled destruction of project devops/cicd-docker-java with job ID f12f3001a2590596e7011fd0"}
+{"severity":"INFO","time":"2021-07-17T20:33:15.966Z","correlation_id":"01FAV2RMGJHXWFRR8SV2QWXFK0","message":"Attempting to destroy devops/cicd-docker-java (7)"}
+{"severity":"INFO","time":"2021-07-17T20:33:16.153Z","correlation_id":"01FAV2RMGJHXWFRR8SV2QWXFK0","message":"Repository \"@hashed/79/02/7902699be42c8a8e46fbbb4501726517e86b22c56a189f7625a6da49081b2451\" moved to \"@hashed/79/02/7902699be42c8a8e46fbbb4501726517e86b22c56a189f7625a6da49081b2451+7+deleted\" for repository \"devops/cicd-docker-java\""}
+{"severity":"INFO","time":"2021-07-17T20:33:16.153Z","correlation_id":"01FAV2RMGJHXWFRR8SV2QWXFK0","message":"Repository \"devops/cicd-docker-java\" was removed"}
+{"severity":"INFO","time":"2021-07-17T20:33:16.220Z","correlation_id":"01FAV2RMGJHXWFRR8SV2QWXFK0","message":"Repository \"@hashed/79/02/7902699be42c8a8e46fbbb4501726517e86b22c56a189f7625a6da49081b2451.wiki\" moved to \"@hashed/79/02/7902699be42c8a8e46fbbb4501726517e86b22c56a189f7625a6da49081b2451.wiki+7+deleted\" for repository \"devops/cicd-docker-java.wiki\""}
+{"severity":"INFO","time":"2021-07-17T20:33:16.220Z","correlation_id":"01FAV2RMGJHXWFRR8SV2QWXFK0","message":"Repository \"devops/cicd-docker-java.wiki\" was removed"}
+{"severity":"INFO","time":"2021-07-17T20:33:16.357Z","correlation_id":"01FAV2RMGJHXWFRR8SV2QWXFK0","message":"Project \"devops/cicd-docker-java\" was deleted"}
+{"severity":"INFO","time":"2021-07-17T20:36:23.518Z","correlation_id":null,"message":"Checking state of dynamic postgres partitions"}
+{"severity":"INFO","time":"2021-07-17T20:36:26.295Z","correlation_id":null,"message":"Checking state of dynamic postgres partitions"}
+{"severity":"DEBUG","time":"2021-07-17T20:37:05.495Z","correlation_id":null,"message":"ActiveRecord connection disconnected"}
+{"severity":"DEBUG","time":"2021-07-17T20:37:06.003Z","correlation_id":null,"message":"ActiveRecord connection established"}
+{"severity":"DEBUG","time":"2021-07-17T20:37:06.118Z","correlation_id":null,"message":"ActiveRecord connection established"}
+{"severity":"DEBUG","time":"2021-07-17T20:37:39.328Z","correlation_id":null,"message":"ActiveRecord connection established"}
+{"severity":"INFO","time":"2021-07-17T20:37:41.105Z","correlation_id":null,"message":"Checking state of dynamic postgres partitions"}

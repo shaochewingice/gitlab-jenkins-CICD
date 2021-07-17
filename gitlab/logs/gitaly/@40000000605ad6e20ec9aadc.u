@@ -1,0 +1,36 @@
+{"level":"info","msg":"Wrapper started","time":"2021-03-24T06:00:27.155Z","wrapper":266}
+{"level":"info","msg":"finding gitaly","pid_file":"/var/opt/gitlab/gitaly/gitaly.pid","time":"2021-03-24T06:00:27.155Z","wrapper":266}
+{"level":"info","msg":"spawning a process","time":"2021-03-24T06:00:27.155Z","wrapper":266}
+{"gitaly":270,"level":"info","msg":"monitoring gitaly","time":"2021-03-24T06:00:27.165Z","wrapper":266}
+time="2021-03-24T06:00:27Z" level=info msg="Starting GitalyversionGitaly, version 13.10.0"
+time="2021-03-24T06:00:27Z" level=warning msg="git path not configured. Using default path resolution" resolvedPath=/opt/gitlab/embedded/bin/git
+time="2021-03-24T06:00:27Z" level=info msg="clearing disk cache object folder" path=/var/opt/gitlab/git-data/repositories
+time="2021-03-24T06:00:27Z" level=info msg="moving disk cache object folder to /var/opt/gitlab/git-data/repositories/+gitaly/tmp/diskcache874263478" path=/var/opt/gitlab/git-data/repositories
+time="2021-03-24T06:00:27Z" level=info msg="disk cache object folder doesn't exist, no need to remove" path=/var/opt/gitlab/git-data/repositories
+time="2021-03-24T06:00:27Z" level=info msg="Starting file walker for /var/opt/gitlab/git-data/repositories/+gitaly/cache" path=/var/opt/gitlab/git-data/repositories/+gitaly/cache
+time="2021-03-24T06:00:27Z" level=info msg="Starting file walker for /var/opt/gitlab/git-data/repositories/+gitaly/state" path=/var/opt/gitlab/git-data/repositories/+gitaly/state
+time="2021-03-24T06:00:27Z" level=info msg="cleared all cache object files in /var/opt/gitlab/git-data/repositories/+gitaly/tmp/diskcache874263478 after 85.387µs" path=/var/opt/gitlab/git-data/repositories
+{"level":"info","msg":"finished tempdir cleaner walk","storage":"default","time":"2021-03-24T06:00:29.201Z","time_ms":0}
+{"level":"warning","msg":"spawned","supervisor.args":["bundle","exec","bin/ruby-cd","/var/opt/gitlab/gitaly","/opt/gitlab/embedded/service/gitaly-ruby/bin/gitaly-ruby","270","/var/opt/gitlab/gitaly/internal_sockets/ruby.0"],"supervisor.name":"gitaly-ruby.0","supervisor.pid":285,"time":"2021-03-24T06:00:29.222Z"}
+{"level":"warning","msg":"spawned","supervisor.args":["bundle","exec","bin/ruby-cd","/var/opt/gitlab/gitaly","/opt/gitlab/embedded/service/gitaly-ruby/bin/gitaly-ruby","270","/var/opt/gitlab/gitaly/internal_sockets/ruby.1"],"supervisor.name":"gitaly-ruby.1","supervisor.pid":286,"time":"2021-03-24T06:00:29.247Z"}
+{"level":"info","msg":"starting RSS monitor","supervisor.name":"gitaly-ruby.0","supervisor.rss_threshold":209715200,"time":"2021-03-24T06:00:29.299Z"}
+{"address":"/var/opt/gitlab/gitaly/gitaly.socket","level":"info","msg":"listening at unix address","time":"2021-03-24T06:00:29.336Z"}
+{"address":"/var/opt/gitlab/gitaly/internal_sockets/internal.sock","level":"info","msg":"listening at unix address","time":"2021-03-24T06:00:29.336Z"}
+{"level":"info","msg":"starting RSS monitor","supervisor.name":"gitaly-ruby.1","supervisor.rss_threshold":209715200,"time":"2021-03-24T06:00:29.355Z"}
+{"level":"warning","msg":"grpc: addrConn.createTransport failed to connect to {/var/opt/gitlab/gitaly/internal_sockets/ruby.1  \u003cnil\u003e 0 \u003cnil\u003e}. Err: connection error: desc = \"transport: Error while dialing dial unix /var/opt/gitlab/gitaly/internal_sockets/ruby.1: connect: connection refused\". Reconnecting...","pid":270,"system":"system","time":"2021-03-24T06:00:29.390Z"}
+{"level":"warning","msg":"grpc: addrConn.createTransport failed to connect to {/var/opt/gitlab/gitaly/internal_sockets/ruby.0  \u003cnil\u003e 0 \u003cnil\u003e}. Err: connection error: desc = \"transport: Error while dialing dial unix /var/opt/gitlab/gitaly/internal_sockets/ruby.0: connect: connection refused\". Reconnecting...","pid":270,"system":"system","time":"2021-03-24T06:00:29.391Z"}
+{"address":"localhost:9236","level":"info","msg":"starting prometheus listener","time":"2021-03-24T06:00:29.423Z"}
+{"level":"info","msg":"maintenance: daily scheduled","pid":270,"scheduled":"2021-03-24T12:00:00Z","time":"2021-03-24T06:00:29.432Z"}
+{"level":"info","msg":"PID 286 BUNDLE_GEMFILE=/opt/gitlab/embedded/service/gitaly-ruby/Gemfile","supervisor.args":["bundle","exec","bin/ruby-cd","/var/opt/gitlab/gitaly","/opt/gitlab/embedded/service/gitaly-ruby/bin/gitaly-ruby","270","/var/opt/gitlab/gitaly/internal_sockets/ruby.1"],"supervisor.name":"gitaly-ruby.1","time":"2021-03-24T06:00:31.964Z"}
+{"level":"info","msg":"PID 285 BUNDLE_GEMFILE=/opt/gitlab/embedded/service/gitaly-ruby/Gemfile","supervisor.args":["bundle","exec","bin/ruby-cd","/var/opt/gitlab/gitaly","/opt/gitlab/embedded/service/gitaly-ruby/bin/gitaly-ruby","270","/var/opt/gitlab/gitaly/internal_sockets/ruby.0"],"supervisor.name":"gitaly-ruby.0","time":"2021-03-24T06:00:31.976Z"}
+{"gitaly":270,"level":"warning","msg":"forwarding signal","signal":18,"time":"2021-03-24T06:03:59.314Z","wrapper":266}
+{"gitaly":270,"level":"warning","msg":"forwarding signal","signal":15,"time":"2021-03-24T06:03:59.316Z","wrapper":266}
+{"error":"signal: killed","level":"warning","msg":"exited","supervisor.args":["bundle","exec","bin/ruby-cd","/var/opt/gitlab/gitaly","/opt/gitlab/embedded/service/gitaly-ruby/bin/gitaly-ruby","270","/var/opt/gitlab/gitaly/internal_sockets/ruby.0"],"supervisor.name":"gitaly-ruby.0","time":"2021-03-24T06:03:59.347Z"}
+{"level":"warning","msg":"grpc: addrConn.createTransport failed to connect to {/var/opt/gitlab/gitaly/internal_sockets/ruby.0  \u003cnil\u003e 0 \u003cnil\u003e}. Err: connection error: desc = \"transport: Error while dialing dial unix /var/opt/gitlab/gitaly/internal_sockets/ruby.0: connect: connection refused\". Reconnecting...","pid":270,"system":"system","time":"2021-03-24T06:03:59.532Z"}
+{"error":"signal: killed","level":"warning","msg":"exited","supervisor.args":["bundle","exec","bin/ruby-cd","/var/opt/gitlab/gitaly","/opt/gitlab/embedded/service/gitaly-ruby/bin/gitaly-ruby","270","/var/opt/gitlab/gitaly/internal_sockets/ruby.1"],"supervisor.name":"gitaly-ruby.1","time":"2021-03-24T06:04:00.358Z"}
+{"level":"warning","msg":"transport: http2Server.HandleStreams failed to read frame: read unix /var/opt/gitlab/gitaly/internal_sockets/internal.sock-\u003e@: use of closed network connection","pid":270,"system":"system","time":"2021-03-24T06:04:00.358Z"}
+{"error":"received signal \"terminated\"","level":"error","msg":"shutting down","time":"2021-03-24T06:04:00.358Z"}
+{"level":"info","msg":"Gitaly stopped","time":"2021-03-24T06:04:00.358Z"}
+{"gitaly":270,"level":"warning","msg":"forwarding signal","signal":17,"time":"2021-03-24T06:04:00.361Z","wrapper":266}
+{"error":"os: process already finished","gitaly":270,"level":"error","msg":"can't forward the signal","signal":17,"time":"2021-03-24T06:04:00.361Z","wrapper":266}
+{"gitaly":270,"level":"error","msg":"wrapper for gitaly shutting down","time":"2021-03-24T06:04:00.729Z","wrapper":266}

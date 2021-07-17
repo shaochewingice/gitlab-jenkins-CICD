@@ -1,0 +1,21 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2021-03-30 21:34:41.453 UTC</timestamp>
+  <original>
+    <name>tomcat-cicd/com.efsavage:hello-world-war</name>
+    <number>3</number>
+  </original>
+  <md5sum>1ac5a69549e77bbb845b459a8b3c8853</md5sum>
+  <fileName>com.efsavage:hello-world-war-1.0.0.war</fileName>
+  <usages>
+    <entry>
+      <string>tomcat-cicd</string>
+      <ranges>3</ranges>
+    </entry>
+    <entry>
+      <string>tomcat-cicd/com.efsavage:hello-world-war</string>
+      <ranges>3</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

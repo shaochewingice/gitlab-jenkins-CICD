@@ -1,0 +1,108 @@
+--- Copying files at Tue Mar 23 03:39:44 UTC 2021
+INSTALLED plugins/ace-editor.jpi : 1.1
+INSTALLED plugins/antisamy-markup-formatter.jpi : 2.1
+INSTALLED plugins/apache-httpcomponents-client-4-api.jpi : 4.5.13-1.0
+INSTALLED plugins/authentication-tokens.jpi : 1.4
+INSTALLED plugins/blueocean-autofavorite.jpi : 1.2.4
+INSTALLED plugins/blueocean-bitbucket-pipeline.jpi : 1.24.5
+INSTALLED plugins/blueocean-commons.jpi : 1.24.5
+INSTALLED plugins/blueocean-config.jpi : 1.24.5
+INSTALLED plugins/blueocean-core-js.jpi : 1.24.5
+INSTALLED plugins/blueocean-dashboard.jpi : 1.24.5
+INSTALLED plugins/blueocean-display-url.jpi : 2.4.1
+INSTALLED plugins/blueocean-events.jpi : 1.24.5
+INSTALLED plugins/blueocean-git-pipeline.jpi : 1.24.5
+INSTALLED plugins/blueocean-github-pipeline.jpi : 1.24.5
+INSTALLED plugins/blueocean-i18n.jpi : 1.24.5
+INSTALLED plugins/blueocean-jwt.jpi : 1.24.5
+INSTALLED plugins/blueocean-personalization.jpi : 1.24.5
+INSTALLED plugins/blueocean-pipeline-api-impl.jpi : 1.24.5
+INSTALLED plugins/blueocean-pipeline-editor.jpi : 1.24.5
+INSTALLED plugins/blueocean-pipeline-scm-api.jpi : 1.24.5
+INSTALLED plugins/blueocean-rest-impl.jpi : 1.24.5
+INSTALLED plugins/blueocean-rest.jpi : 1.24.5
+INSTALLED plugins/blueocean-web.jpi : 1.24.5
+INSTALLED plugins/blueocean.jpi : 1.24.5
+INSTALLED plugins/bootstrap4-api.jpi : 4.6.0-2
+INSTALLED plugins/branch-api.jpi : 2.6.3
+INSTALLED plugins/checks-api.jpi : 1.6.1
+INSTALLED plugins/cloudbees-bitbucket-branch-source.jpi : 2.9.7
+INSTALLED plugins/cloudbees-folder.jpi : 6.15
+INSTALLED plugins/credentials-binding.jpi : 1.24
+INSTALLED plugins/credentials.jpi : 2.3.15
+INSTALLED plugins/display-url-api.jpi : 2.3.4
+INSTALLED plugins/durable-task.jpi : 1.35
+INSTALLED plugins/echarts-api.jpi : 5.0.1-1
+INSTALLED plugins/favorite.jpi : 2.3.3
+INSTALLED plugins/font-awesome-api.jpi : 5.15.2-2
+INSTALLED plugins/git-client.jpi : 3.7.0
+INSTALLED plugins/git-server.jpi : 1.9
+INSTALLED plugins/git.jpi : 4.7.0
+INSTALLED plugins/github-api.jpi : 1.123
+INSTALLED plugins/github-branch-source.jpi : 2.10.2
+INSTALLED plugins/github.jpi : 1.33.1
+INSTALLED plugins/handy-uri-templates-2-api.jpi : 2.1.8-1.0
+INSTALLED plugins/htmlpublisher.jpi : 1.25
+INSTALLED plugins/jackson2-api.jpi : 2.12.1
+INSTALLED plugins/jenkins-design-language.jpi : 1.24.5
+INSTALLED plugins/jjwt-api.jpi : 0.11.2-9.c8b45b8bb173
+INSTALLED plugins/jquery3-api.jpi : 3.5.1-3
+INSTALLED plugins/jsch.jpi : 0.1.55.2
+INSTALLED plugins/junit.jpi : 1.49
+INSTALLED plugins/mailer.jpi : 1.33
+INSTALLED plugins/matrix-auth.jpi : 2.6.6
+INSTALLED plugins/matrix-project.jpi : 1.18
+INSTALLED plugins/okhttp-api.jpi : 3.14.9
+INSTALLED plugins/pipeline-build-step.jpi : 2.13
+INSTALLED plugins/pipeline-graph-analysis.jpi : 1.10
+INSTALLED plugins/pipeline-input-step.jpi : 2.12
+INSTALLED plugins/pipeline-milestone-step.jpi : 1.3.2
+INSTALLED plugins/pipeline-model-api.jpi : 1.8.4
+INSTALLED plugins/pipeline-model-definition.jpi : 1.8.4
+INSTALLED plugins/pipeline-model-extensions.jpi : 1.8.4
+INSTALLED plugins/pipeline-stage-step.jpi : 2.5
+INSTALLED plugins/pipeline-stage-tags-metadata.jpi : 1.8.4
+INSTALLED plugins/plain-credentials.jpi : 1.7
+INSTALLED plugins/plugin-util-api.jpi : 2.0.0
+INSTALLED plugins/popper-api.jpi : 1.16.1-2
+INSTALLED plugins/pubsub-light.jpi : 1.13
+INSTALLED plugins/scm-api.jpi : 2.6.4
+INSTALLED plugins/script-security.jpi : 1.76
+INSTALLED plugins/snakeyaml-api.jpi : 1.27.0
+INSTALLED plugins/sse-gateway.jpi : 1.24
+INSTALLED plugins/ssh-credentials.jpi : 1.18.1
+INSTALLED plugins/structs.jpi : 1.22
+INSTALLED plugins/token-macro.jpi : 2.15
+INSTALLED plugins/trilead-api.jpi : 1.0.13
+INSTALLED plugins/variant.jpi : 1.4
+INSTALLED plugins/workflow-api.jpi : 2.42
+INSTALLED plugins/workflow-basic-steps.jpi : 2.23
+INSTALLED plugins/workflow-cps-global-lib.jpi : 2.18
+INSTALLED plugins/workflow-cps.jpi : 2.90
+INSTALLED plugins/workflow-durable-task-step.jpi : 2.38
+INSTALLED plugins/workflow-job.jpi : 2.40
+INSTALLED plugins/workflow-multibranch.jpi : 2.22
+INSTALLED plugins/workflow-scm-step.jpi : 2.12
+INSTALLED plugins/workflow-step-api.jpi : 2.23
+INSTALLED plugins/workflow-support.jpi : 3.8
+--- Copying files at Tue Mar 23 20:43:24 UTC 2021
+--- Copying files at Wed Mar 24 05:41:15 UTC 2021
+--- Copying files at Wed Mar 24 05:59:44 UTC 2021
+--- Copying files at Wed Mar 24 06:05:27 UTC 2021
+--- Copying files at Thu Mar 25 03:04:54 UTC 2021
+--- Copying files at Fri Mar 26 02:27:03 UTC 2021
+--- Copying files at Fri Mar 26 02:29:24 UTC 2021
+--- Copying files at Fri Mar 26 02:31:23 UTC 2021
+--- Copying files at Tue Mar 30 20:49:56 UTC 2021
+--- Copying files at Wed Mar 31 20:31:30 UTC 2021
+--- Copying files at Sat Apr  3 02:47:27 UTC 2021
+--- Copying files at Sun Apr  4 01:05:32 UTC 2021
+--- Copying files at Sun Apr  4 19:56:46 UTC 2021
+--- Copying files at Thu Jul 15 01:38:08 UTC 2021
+--- Copying files at Thu Jul 15 01:57:38 UTC 2021
+--- Copying files at Thu Jul 15 21:50:35 UTC 2021
+--- Copying files at Fri Jul 16 01:10:17 UTC 2021
+--- Copying files at Fri Jul 16 01:21:20 UTC 2021
+--- Copying files at Fri Jul 16 14:32:42 UTC 2021
+--- Copying files at Sat Jul 17 20:24:10 UTC 2021
+--- Copying files at Sat Jul 17 20:35:09 UTC 2021

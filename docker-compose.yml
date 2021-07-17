@@ -1,0 +1,48 @@
+version: '3.9'
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:latest
+    restart: always
+    hostname: my.cicd.com
+    environment: 
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://my.cicd.com:9280'
+        unicorn['worker_timeout'] = 60
+        unicorn['worker_process'] = 3 
+        unicorn['worker_memory_limit_min'] = "200 * 1 << 20"
+        unicorn['worker_memory_limit_max'] = "300 * 1 << 20" 
+        sidekiq['concurrency'] = 10
+        postgresql['shared_buffers'] = "128MB"
+        postgresql['max_worker_process'] = 8
+    networks:
+      - mycicd
+    ports:
+      - "9280:9280"
+      - "9222:22"
+      - "9243:443"
+    volumes:
+      - ./gitlab/config:/etc/gitlab
+      - ./gitlab/logs:/var/log/gitlab
+      - ./gitlab/data:/var/opt/gitlab
+  
+  jenkins:
+    image: jenkinsci/blueocean
+    restart: always
+    privileged: true
+    user: root
+    volumes:
+      - type: bind
+        source: ./jenkins/jenkins_home
+        target: /var/jenkins_home
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+        read_only: "yes"
+    networks:
+      - mycicd
+    ports:
+      - "9980:8080"
+  
+networks:
+  mycicd:
+

@@ -1,0 +1,21 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2021-03-24 02:58:46.42 UTC</timestamp>
+  <md5sum>67643abc3401b8646ef205497c5e5afd</md5sum>
+  <fileName>Credential id=ec5a97c8-f322-43db-986d-3e3d58ed972f name=root (jenkinsdocker-gitlabdocker)</fileName>
+  <usages>
+    <entry>
+      <string>freestyle-first</string>
+      <ranges>1</ranges>
+    </entry>
+    <entry>
+      <string>python-redis-count</string>
+      <ranges>1-2</ranges>
+    </entry>
+    <entry>
+      <string>gitlab-webhook-freestyle</string>
+      <ranges>1-4</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

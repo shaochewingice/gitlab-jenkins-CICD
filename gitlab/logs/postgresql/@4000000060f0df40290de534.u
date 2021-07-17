@@ -1,0 +1,1384 @@
+2021-07-16_01:10:55.47641 LOG:  starting PostgreSQL 12.5 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0, 64-bit
+2021-07-16_01:10:55.48792 LOG:  listening on Unix socket "/var/opt/gitlab/postgresql/.s.PGSQL.5432"
+2021-07-16_01:10:55.60541 LOG:  database system was shut down at 2021-07-16 01:09:41 GMT
+2021-07-16_01:10:55.63439 LOG:  database system is ready to accept connections
+2021-07-16_01:10:58.65741 LOG:  no match in usermap "gitlab" for user "gitlab" authenticated as "root"
+2021-07-16_01:10:58.65748 FATAL:  Peer authentication failed for user "gitlab"
+2021-07-16_01:10:58.65748 DETAIL:  Connection matched pg_hba.conf line 70: "local   all         all                               peer map=gitlab"
+2021-07-16_01:10:58.65749 LOG:  no match in usermap "gitlab" for user "gitlab" authenticated as "root"
+2021-07-16_01:10:58.65749 FATAL:  Peer authentication failed for user "gitlab"
+2021-07-16_01:10:58.65749 DETAIL:  Connection matched pg_hba.conf line 70: "local   all         all                               peer map=gitlab"
+2021-07-16_01:10:58.65750 LOG:  no match in usermap "gitlab" for user "gitlab" authenticated as "root"
+2021-07-16_01:10:58.65750 FATAL:  Peer authentication failed for user "gitlab"
+2021-07-16_01:10:58.65750 DETAIL:  Connection matched pg_hba.conf line 70: "local   all         all                               peer map=gitlab"
+2021-07-16_01:12:06.59341 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:12:06.59345 STATEMENT:  SELECT
+2021-07-16_01:12:06.59345 	  subquery.namespace_id,
+2021-07-16_01:12:06.59345 	  subquery.shared_runners_enabled,
+2021-07-16_01:12:06.59346 	  subquery.project_id,
+2021-07-16_01:12:06.59346 	  subquery.status,
+2021-07-16_01:12:06.59346 	  MAX(subquery.count) as count
+2021-07-16_01:12:06.59346 	FROM (
+2021-07-16_01:12:06.59347 	  SELECT
+2021-07-16_01:12:06.59347 	    projects.namespace_id,
+2021-07-16_01:12:06.59347 	    projects.shared_runners_enabled,
+2021-07-16_01:12:06.59347 	    ci_builds.project_id,
+2021-07-16_01:12:06.59348 	    ci_builds.commit_id,
+2021-07-16_01:12:06.59348 	    ci_builds.status,
+2021-07-16_01:12:06.59348 	    COUNT(*) AS count
+2021-07-16_01:12:06.59349 	  FROM ci_builds
+2021-07-16_01:12:06.59349 	  JOIN projects
+2021-07-16_01:12:06.59349 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:12:06.59349 	  JOIN namespaces
+2021-07-16_01:12:06.59349 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:12:06.59350 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:12:06.59350 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:12:06.59350 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:12:06.59350 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:12:06.59351 	  GROUP BY
+2021-07-16_01:12:06.59351 	    projects.namespace_id,
+2021-07-16_01:12:06.59351 	    projects.shared_runners_enabled,
+2021-07-16_01:12:06.59351 	    ci_builds.project_id,
+2021-07-16_01:12:06.59352 	    ci_builds.commit_id,
+2021-07-16_01:12:06.59352 	    ci_builds.status,
+2021-07-16_01:12:06.59352 	    ci_builds.commands
+2021-07-16_01:12:06.59352 	  HAVING COUNT(*) > 2
+2021-07-16_01:12:06.59352 	) AS subquery
+2021-07-16_01:12:06.59353 	GROUP BY
+2021-07-16_01:12:06.59353 	  subquery.namespace_id,
+2021-07-16_01:12:06.59354 	  subquery.shared_runners_enabled,
+2021-07-16_01:12:06.59355 	  subquery.project_id,
+2021-07-16_01:12:06.59355 	  subquery.commit_id,
+2021-07-16_01:12:06.59355 	  subquery.status
+2021-07-16_01:12:06.59355 	
+2021-07-16_01:12:21.15182 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:12:21.15184 STATEMENT:  SELECT
+2021-07-16_01:12:21.15184 	  subquery.namespace_id,
+2021-07-16_01:12:21.15184 	  subquery.shared_runners_enabled,
+2021-07-16_01:12:21.15184 	  subquery.project_id,
+2021-07-16_01:12:21.15185 	  subquery.status,
+2021-07-16_01:12:21.15185 	  MAX(subquery.count) as count
+2021-07-16_01:12:21.15185 	FROM (
+2021-07-16_01:12:21.15185 	  SELECT
+2021-07-16_01:12:21.15185 	    projects.namespace_id,
+2021-07-16_01:12:21.15186 	    projects.shared_runners_enabled,
+2021-07-16_01:12:21.15187 	    ci_builds.project_id,
+2021-07-16_01:12:21.15187 	    ci_builds.commit_id,
+2021-07-16_01:12:21.15188 	    ci_builds.status,
+2021-07-16_01:12:21.15188 	    COUNT(*) AS count
+2021-07-16_01:12:21.15188 	  FROM ci_builds
+2021-07-16_01:12:21.15188 	  JOIN projects
+2021-07-16_01:12:21.15188 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:12:21.15189 	  JOIN namespaces
+2021-07-16_01:12:21.15189 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:12:21.15189 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:12:21.15189 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:12:21.15189 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:12:21.15190 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:12:21.15190 	  GROUP BY
+2021-07-16_01:12:21.15190 	    projects.namespace_id,
+2021-07-16_01:12:21.15190 	    projects.shared_runners_enabled,
+2021-07-16_01:12:21.15191 	    ci_builds.project_id,
+2021-07-16_01:12:21.15191 	    ci_builds.commit_id,
+2021-07-16_01:12:21.15191 	    ci_builds.status,
+2021-07-16_01:12:21.15191 	    ci_builds.commands
+2021-07-16_01:12:21.15191 	  HAVING COUNT(*) > 2
+2021-07-16_01:12:21.15192 	) AS subquery
+2021-07-16_01:12:21.15192 	GROUP BY
+2021-07-16_01:12:21.15192 	  subquery.namespace_id,
+2021-07-16_01:12:21.15194 	  subquery.shared_runners_enabled,
+2021-07-16_01:12:21.15194 	  subquery.project_id,
+2021-07-16_01:12:21.15194 	  subquery.commit_id,
+2021-07-16_01:12:21.15194 	  subquery.status
+2021-07-16_01:12:21.15194 	
+2021-07-16_01:12:36.31642 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:12:36.31645 STATEMENT:  SELECT
+2021-07-16_01:12:36.31646 	  subquery.namespace_id,
+2021-07-16_01:12:36.31646 	  subquery.shared_runners_enabled,
+2021-07-16_01:12:36.31646 	  subquery.project_id,
+2021-07-16_01:12:36.31646 	  subquery.status,
+2021-07-16_01:12:36.31646 	  MAX(subquery.count) as count
+2021-07-16_01:12:36.31647 	FROM (
+2021-07-16_01:12:36.31647 	  SELECT
+2021-07-16_01:12:36.31647 	    projects.namespace_id,
+2021-07-16_01:12:36.31647 	    projects.shared_runners_enabled,
+2021-07-16_01:12:36.31648 	    ci_builds.project_id,
+2021-07-16_01:12:36.31648 	    ci_builds.commit_id,
+2021-07-16_01:12:36.31648 	    ci_builds.status,
+2021-07-16_01:12:36.31648 	    COUNT(*) AS count
+2021-07-16_01:12:36.31649 	  FROM ci_builds
+2021-07-16_01:12:36.31649 	  JOIN projects
+2021-07-16_01:12:36.31649 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:12:36.31649 	  JOIN namespaces
+2021-07-16_01:12:36.31649 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:12:36.31650 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:12:36.31650 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:12:36.31650 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:12:36.31650 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:12:36.31651 	  GROUP BY
+2021-07-16_01:12:36.31651 	    projects.namespace_id,
+2021-07-16_01:12:36.31651 	    projects.shared_runners_enabled,
+2021-07-16_01:12:36.31651 	    ci_builds.project_id,
+2021-07-16_01:12:36.31652 	    ci_builds.commit_id,
+2021-07-16_01:12:36.31652 	    ci_builds.status,
+2021-07-16_01:12:36.31652 	    ci_builds.commands
+2021-07-16_01:12:36.31652 	  HAVING COUNT(*) > 2
+2021-07-16_01:12:36.31653 	) AS subquery
+2021-07-16_01:12:36.31653 	GROUP BY
+2021-07-16_01:12:36.31653 	  subquery.namespace_id,
+2021-07-16_01:12:36.31655 	  subquery.shared_runners_enabled,
+2021-07-16_01:12:36.31655 	  subquery.project_id,
+2021-07-16_01:12:36.31655 	  subquery.commit_id,
+2021-07-16_01:12:36.31655 	  subquery.status
+2021-07-16_01:12:36.31655 	
+2021-07-16_01:12:51.18533 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:12:51.18551 STATEMENT:  SELECT
+2021-07-16_01:12:51.18552 	  subquery.namespace_id,
+2021-07-16_01:12:51.18552 	  subquery.shared_runners_enabled,
+2021-07-16_01:12:51.18553 	  subquery.project_id,
+2021-07-16_01:12:51.18554 	  subquery.status,
+2021-07-16_01:12:51.18554 	  MAX(subquery.count) as count
+2021-07-16_01:12:51.18554 	FROM (
+2021-07-16_01:12:51.18554 	  SELECT
+2021-07-16_01:12:51.18555 	    projects.namespace_id,
+2021-07-16_01:12:51.18555 	    projects.shared_runners_enabled,
+2021-07-16_01:12:51.18555 	    ci_builds.project_id,
+2021-07-16_01:12:51.18555 	    ci_builds.commit_id,
+2021-07-16_01:12:51.18556 	    ci_builds.status,
+2021-07-16_01:12:51.18556 	    COUNT(*) AS count
+2021-07-16_01:12:51.18556 	  FROM ci_builds
+2021-07-16_01:12:51.18556 	  JOIN projects
+2021-07-16_01:12:51.18556 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:12:51.18557 	  JOIN namespaces
+2021-07-16_01:12:51.18557 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:12:51.18557 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:12:51.18557 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:12:51.18558 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:12:51.18558 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:12:51.18558 	  GROUP BY
+2021-07-16_01:12:51.18558 	    projects.namespace_id,
+2021-07-16_01:12:51.18559 	    projects.shared_runners_enabled,
+2021-07-16_01:12:51.18559 	    ci_builds.project_id,
+2021-07-16_01:12:51.18559 	    ci_builds.commit_id,
+2021-07-16_01:12:51.18559 	    ci_builds.status,
+2021-07-16_01:12:51.18559 	    ci_builds.commands
+2021-07-16_01:12:51.18560 	  HAVING COUNT(*) > 2
+2021-07-16_01:12:51.18560 	) AS subquery
+2021-07-16_01:12:51.18560 	GROUP BY
+2021-07-16_01:12:51.18560 	  subquery.namespace_id,
+2021-07-16_01:12:51.18562 	  subquery.shared_runners_enabled,
+2021-07-16_01:12:51.18563 	  subquery.project_id,
+2021-07-16_01:12:51.18563 	  subquery.commit_id,
+2021-07-16_01:12:51.18563 	  subquery.status
+2021-07-16_01:12:51.18563 	
+2021-07-16_01:13:06.92204 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:13:06.92328 STATEMENT:  SELECT
+2021-07-16_01:13:06.92330 	  subquery.namespace_id,
+2021-07-16_01:13:06.92330 	  subquery.shared_runners_enabled,
+2021-07-16_01:13:06.92330 	  subquery.project_id,
+2021-07-16_01:13:06.92330 	  subquery.status,
+2021-07-16_01:13:06.92331 	  MAX(subquery.count) as count
+2021-07-16_01:13:06.92331 	FROM (
+2021-07-16_01:13:06.92331 	  SELECT
+2021-07-16_01:13:06.92331 	    projects.namespace_id,
+2021-07-16_01:13:06.92331 	    projects.shared_runners_enabled,
+2021-07-16_01:13:06.92332 	    ci_builds.project_id,
+2021-07-16_01:13:06.92332 	    ci_builds.commit_id,
+2021-07-16_01:13:06.92332 	    ci_builds.status,
+2021-07-16_01:13:06.92332 	    COUNT(*) AS count
+2021-07-16_01:13:06.92333 	  FROM ci_builds
+2021-07-16_01:13:06.92333 	  JOIN projects
+2021-07-16_01:13:06.92333 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:13:06.92333 	  JOIN namespaces
+2021-07-16_01:13:06.92334 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:13:06.92334 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:13:06.92334 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:13:06.92334 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:13:06.92335 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:13:06.92335 	  GROUP BY
+2021-07-16_01:13:06.92335 	    projects.namespace_id,
+2021-07-16_01:13:06.92335 	    projects.shared_runners_enabled,
+2021-07-16_01:13:06.92336 	    ci_builds.project_id,
+2021-07-16_01:13:06.92336 	    ci_builds.commit_id,
+2021-07-16_01:13:06.92336 	    ci_builds.status,
+2021-07-16_01:13:06.92336 	    ci_builds.commands
+2021-07-16_01:13:06.92337 	  HAVING COUNT(*) > 2
+2021-07-16_01:13:06.92337 	) AS subquery
+2021-07-16_01:13:06.92337 	GROUP BY
+2021-07-16_01:13:06.92337 	  subquery.namespace_id,
+2021-07-16_01:13:06.92339 	  subquery.shared_runners_enabled,
+2021-07-16_01:13:06.92340 	  subquery.project_id,
+2021-07-16_01:13:06.92340 	  subquery.commit_id,
+2021-07-16_01:13:06.92340 	  subquery.status
+2021-07-16_01:13:06.92340 	
+2021-07-16_01:13:21.43705 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:13:21.43710 STATEMENT:  SELECT
+2021-07-16_01:13:21.43710 	  subquery.namespace_id,
+2021-07-16_01:13:21.43711 	  subquery.shared_runners_enabled,
+2021-07-16_01:13:21.43711 	  subquery.project_id,
+2021-07-16_01:13:21.43711 	  subquery.status,
+2021-07-16_01:13:21.43711 	  MAX(subquery.count) as count
+2021-07-16_01:13:21.43712 	FROM (
+2021-07-16_01:13:21.43712 	  SELECT
+2021-07-16_01:13:21.43712 	    projects.namespace_id,
+2021-07-16_01:13:21.43713 	    projects.shared_runners_enabled,
+2021-07-16_01:13:21.43713 	    ci_builds.project_id,
+2021-07-16_01:13:21.43713 	    ci_builds.commit_id,
+2021-07-16_01:13:21.43713 	    ci_builds.status,
+2021-07-16_01:13:21.43714 	    COUNT(*) AS count
+2021-07-16_01:13:21.43714 	  FROM ci_builds
+2021-07-16_01:13:21.43714 	  JOIN projects
+2021-07-16_01:13:21.43714 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:13:21.43715 	  JOIN namespaces
+2021-07-16_01:13:21.43715 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:13:21.43715 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:13:21.43716 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:13:21.43716 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:13:21.43716 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:13:21.43717 	  GROUP BY
+2021-07-16_01:13:21.43717 	    projects.namespace_id,
+2021-07-16_01:13:21.43717 	    projects.shared_runners_enabled,
+2021-07-16_01:13:21.43717 	    ci_builds.project_id,
+2021-07-16_01:13:21.43718 	    ci_builds.commit_id,
+2021-07-16_01:13:21.43718 	    ci_builds.status,
+2021-07-16_01:13:21.43718 	    ci_builds.commands
+2021-07-16_01:13:21.43718 	  HAVING COUNT(*) > 2
+2021-07-16_01:13:21.43719 	) AS subquery
+2021-07-16_01:13:21.43719 	GROUP BY
+2021-07-16_01:13:21.43719 	  subquery.namespace_id,
+2021-07-16_01:13:21.43721 	  subquery.shared_runners_enabled,
+2021-07-16_01:13:21.43721 	  subquery.project_id,
+2021-07-16_01:13:21.43722 	  subquery.commit_id,
+2021-07-16_01:13:21.43722 	  subquery.status
+2021-07-16_01:13:21.43722 	
+2021-07-16_01:13:36.17002 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:13:36.17007 STATEMENT:  SELECT
+2021-07-16_01:13:36.17007 	  subquery.namespace_id,
+2021-07-16_01:13:36.17008 	  subquery.shared_runners_enabled,
+2021-07-16_01:13:36.17008 	  subquery.project_id,
+2021-07-16_01:13:36.17008 	  subquery.status,
+2021-07-16_01:13:36.17009 	  MAX(subquery.count) as count
+2021-07-16_01:13:36.17009 	FROM (
+2021-07-16_01:13:36.17010 	  SELECT
+2021-07-16_01:13:36.17010 	    projects.namespace_id,
+2021-07-16_01:13:36.17010 	    projects.shared_runners_enabled,
+2021-07-16_01:13:36.17011 	    ci_builds.project_id,
+2021-07-16_01:13:36.17011 	    ci_builds.commit_id,
+2021-07-16_01:13:36.17011 	    ci_builds.status,
+2021-07-16_01:13:36.17012 	    COUNT(*) AS count
+2021-07-16_01:13:36.17012 	  FROM ci_builds
+2021-07-16_01:13:36.17013 	  JOIN projects
+2021-07-16_01:13:36.17013 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:13:36.17015 	  JOIN namespaces
+2021-07-16_01:13:36.17016 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:13:36.17017 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:13:36.17018 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:13:36.17018 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:13:36.17019 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:13:36.17019 	  GROUP BY
+2021-07-16_01:13:36.17020 	    projects.namespace_id,
+2021-07-16_01:13:36.17020 	    projects.shared_runners_enabled,
+2021-07-16_01:13:36.17020 	    ci_builds.project_id,
+2021-07-16_01:13:36.17021 	    ci_builds.commit_id,
+2021-07-16_01:13:36.17021 	    ci_builds.status,
+2021-07-16_01:13:36.17022 	    ci_builds.commands
+2021-07-16_01:13:36.17022 	  HAVING COUNT(*) > 2
+2021-07-16_01:13:36.17022 	) AS subquery
+2021-07-16_01:13:36.17023 	GROUP BY
+2021-07-16_01:13:36.17023 	  subquery.namespace_id,
+2021-07-16_01:13:36.17025 	  subquery.shared_runners_enabled,
+2021-07-16_01:13:36.17027 	  subquery.project_id,
+2021-07-16_01:13:36.17028 	  subquery.commit_id,
+2021-07-16_01:13:36.17028 	  subquery.status
+2021-07-16_01:13:36.17028 	
+2021-07-16_01:13:51.14374 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:13:51.14378 STATEMENT:  SELECT
+2021-07-16_01:13:51.14379 	  subquery.namespace_id,
+2021-07-16_01:13:51.14379 	  subquery.shared_runners_enabled,
+2021-07-16_01:13:51.14379 	  subquery.project_id,
+2021-07-16_01:13:51.14380 	  subquery.status,
+2021-07-16_01:13:51.14380 	  MAX(subquery.count) as count
+2021-07-16_01:13:51.14380 	FROM (
+2021-07-16_01:13:51.14380 	  SELECT
+2021-07-16_01:13:51.14381 	    projects.namespace_id,
+2021-07-16_01:13:51.14381 	    projects.shared_runners_enabled,
+2021-07-16_01:13:51.14381 	    ci_builds.project_id,
+2021-07-16_01:13:51.14382 	    ci_builds.commit_id,
+2021-07-16_01:13:51.14382 	    ci_builds.status,
+2021-07-16_01:13:51.14382 	    COUNT(*) AS count
+2021-07-16_01:13:51.14382 	  FROM ci_builds
+2021-07-16_01:13:51.14383 	  JOIN projects
+2021-07-16_01:13:51.14383 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:13:51.14383 	  JOIN namespaces
+2021-07-16_01:13:51.14383 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:13:51.14384 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:13:51.14384 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:13:51.14384 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:13:51.14384 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:13:51.14385 	  GROUP BY
+2021-07-16_01:13:51.14385 	    projects.namespace_id,
+2021-07-16_01:13:51.14385 	    projects.shared_runners_enabled,
+2021-07-16_01:13:51.14386 	    ci_builds.project_id,
+2021-07-16_01:13:51.14386 	    ci_builds.commit_id,
+2021-07-16_01:13:51.14386 	    ci_builds.status,
+2021-07-16_01:13:51.14386 	    ci_builds.commands
+2021-07-16_01:13:51.14387 	  HAVING COUNT(*) > 2
+2021-07-16_01:13:51.14387 	) AS subquery
+2021-07-16_01:13:51.14387 	GROUP BY
+2021-07-16_01:13:51.14387 	  subquery.namespace_id,
+2021-07-16_01:13:51.14390 	  subquery.shared_runners_enabled,
+2021-07-16_01:13:51.14391 	  subquery.project_id,
+2021-07-16_01:13:51.14391 	  subquery.commit_id,
+2021-07-16_01:13:51.14391 	  subquery.status
+2021-07-16_01:13:51.14392 	
+2021-07-16_01:14:06.12904 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:14:06.12908 STATEMENT:  SELECT
+2021-07-16_01:14:06.12908 	  subquery.namespace_id,
+2021-07-16_01:14:06.12909 	  subquery.shared_runners_enabled,
+2021-07-16_01:14:06.12909 	  subquery.project_id,
+2021-07-16_01:14:06.12909 	  subquery.status,
+2021-07-16_01:14:06.12909 	  MAX(subquery.count) as count
+2021-07-16_01:14:06.12910 	FROM (
+2021-07-16_01:14:06.12910 	  SELECT
+2021-07-16_01:14:06.12910 	    projects.namespace_id,
+2021-07-16_01:14:06.12911 	    projects.shared_runners_enabled,
+2021-07-16_01:14:06.12911 	    ci_builds.project_id,
+2021-07-16_01:14:06.12911 	    ci_builds.commit_id,
+2021-07-16_01:14:06.12911 	    ci_builds.status,
+2021-07-16_01:14:06.12912 	    COUNT(*) AS count
+2021-07-16_01:14:06.12912 	  FROM ci_builds
+2021-07-16_01:14:06.12912 	  JOIN projects
+2021-07-16_01:14:06.12913 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:14:06.12913 	  JOIN namespaces
+2021-07-16_01:14:06.12913 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:14:06.12913 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:14:06.12914 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:14:06.12914 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:14:06.12914 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:14:06.12915 	  GROUP BY
+2021-07-16_01:14:06.12915 	    projects.namespace_id,
+2021-07-16_01:14:06.12915 	    projects.shared_runners_enabled,
+2021-07-16_01:14:06.12915 	    ci_builds.project_id,
+2021-07-16_01:14:06.12916 	    ci_builds.commit_id,
+2021-07-16_01:14:06.12916 	    ci_builds.status,
+2021-07-16_01:14:06.12916 	    ci_builds.commands
+2021-07-16_01:14:06.12918 	  HAVING COUNT(*) > 2
+2021-07-16_01:14:06.12918 	) AS subquery
+2021-07-16_01:14:06.12918 	GROUP BY
+2021-07-16_01:14:06.12919 	  subquery.namespace_id,
+2021-07-16_01:14:06.12920 	  subquery.shared_runners_enabled,
+2021-07-16_01:14:06.12920 	  subquery.project_id,
+2021-07-16_01:14:06.12921 	  subquery.commit_id,
+2021-07-16_01:14:06.12921 	  subquery.status
+2021-07-16_01:14:06.12921 	
+2021-07-16_01:14:21.14812 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:14:21.14817 STATEMENT:  SELECT
+2021-07-16_01:14:21.14817 	  subquery.namespace_id,
+2021-07-16_01:14:21.14818 	  subquery.shared_runners_enabled,
+2021-07-16_01:14:21.14818 	  subquery.project_id,
+2021-07-16_01:14:21.14818 	  subquery.status,
+2021-07-16_01:14:21.14819 	  MAX(subquery.count) as count
+2021-07-16_01:14:21.14819 	FROM (
+2021-07-16_01:14:21.14820 	  SELECT
+2021-07-16_01:14:21.14820 	    projects.namespace_id,
+2021-07-16_01:14:21.14820 	    projects.shared_runners_enabled,
+2021-07-16_01:14:21.14821 	    ci_builds.project_id,
+2021-07-16_01:14:21.14821 	    ci_builds.commit_id,
+2021-07-16_01:14:21.14822 	    ci_builds.status,
+2021-07-16_01:14:21.14822 	    COUNT(*) AS count
+2021-07-16_01:14:21.14822 	  FROM ci_builds
+2021-07-16_01:14:21.14823 	  JOIN projects
+2021-07-16_01:14:21.14823 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:14:21.14824 	  JOIN namespaces
+2021-07-16_01:14:21.14824 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:14:21.14825 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:14:21.14825 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:14:21.14825 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:14:21.14826 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:14:21.14828 	  GROUP BY
+2021-07-16_01:14:21.14829 	    projects.namespace_id,
+2021-07-16_01:14:21.14829 	    projects.shared_runners_enabled,
+2021-07-16_01:14:21.14830 	    ci_builds.project_id,
+2021-07-16_01:14:21.14830 	    ci_builds.commit_id,
+2021-07-16_01:14:21.14830 	    ci_builds.status,
+2021-07-16_01:14:21.14831 	    ci_builds.commands
+2021-07-16_01:14:21.14831 	  HAVING COUNT(*) > 2
+2021-07-16_01:14:21.14831 	) AS subquery
+2021-07-16_01:14:21.14832 	GROUP BY
+2021-07-16_01:14:21.14832 	  subquery.namespace_id,
+2021-07-16_01:14:21.14835 	  subquery.shared_runners_enabled,
+2021-07-16_01:14:21.14835 	  subquery.project_id,
+2021-07-16_01:14:21.14835 	  subquery.commit_id,
+2021-07-16_01:14:21.14836 	  subquery.status
+2021-07-16_01:14:21.14836 	
+2021-07-16_01:14:36.15028 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:14:36.15032 STATEMENT:  SELECT
+2021-07-16_01:14:36.15032 	  subquery.namespace_id,
+2021-07-16_01:14:36.15033 	  subquery.shared_runners_enabled,
+2021-07-16_01:14:36.15033 	  subquery.project_id,
+2021-07-16_01:14:36.15033 	  subquery.status,
+2021-07-16_01:14:36.15034 	  MAX(subquery.count) as count
+2021-07-16_01:14:36.15034 	FROM (
+2021-07-16_01:14:36.15034 	  SELECT
+2021-07-16_01:14:36.15034 	    projects.namespace_id,
+2021-07-16_01:14:36.15035 	    projects.shared_runners_enabled,
+2021-07-16_01:14:36.15035 	    ci_builds.project_id,
+2021-07-16_01:14:36.15035 	    ci_builds.commit_id,
+2021-07-16_01:14:36.15035 	    ci_builds.status,
+2021-07-16_01:14:36.15036 	    COUNT(*) AS count
+2021-07-16_01:14:36.15036 	  FROM ci_builds
+2021-07-16_01:14:36.15036 	  JOIN projects
+2021-07-16_01:14:36.15037 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:14:36.15037 	  JOIN namespaces
+2021-07-16_01:14:36.15037 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:14:36.15037 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:14:36.15038 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:14:36.15038 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:14:36.15038 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:14:36.15038 	  GROUP BY
+2021-07-16_01:14:36.15039 	    projects.namespace_id,
+2021-07-16_01:14:36.15039 	    projects.shared_runners_enabled,
+2021-07-16_01:14:36.15041 	    ci_builds.project_id,
+2021-07-16_01:14:36.15041 	    ci_builds.commit_id,
+2021-07-16_01:14:36.15041 	    ci_builds.status,
+2021-07-16_01:14:36.15041 	    ci_builds.commands
+2021-07-16_01:14:36.15042 	  HAVING COUNT(*) > 2
+2021-07-16_01:14:36.15042 	) AS subquery
+2021-07-16_01:14:36.15042 	GROUP BY
+2021-07-16_01:14:36.15042 	  subquery.namespace_id,
+2021-07-16_01:14:36.15044 	  subquery.shared_runners_enabled,
+2021-07-16_01:14:36.15044 	  subquery.project_id,
+2021-07-16_01:14:36.15045 	  subquery.commit_id,
+2021-07-16_01:14:36.15045 	  subquery.status
+2021-07-16_01:14:36.15045 	
+2021-07-16_01:14:51.14258 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:14:51.14262 STATEMENT:  SELECT
+2021-07-16_01:14:51.14262 	  subquery.namespace_id,
+2021-07-16_01:14:51.14262 	  subquery.shared_runners_enabled,
+2021-07-16_01:14:51.14263 	  subquery.project_id,
+2021-07-16_01:14:51.14263 	  subquery.status,
+2021-07-16_01:14:51.14263 	  MAX(subquery.count) as count
+2021-07-16_01:14:51.14263 	FROM (
+2021-07-16_01:14:51.14264 	  SELECT
+2021-07-16_01:14:51.14264 	    projects.namespace_id,
+2021-07-16_01:14:51.14264 	    projects.shared_runners_enabled,
+2021-07-16_01:14:51.14264 	    ci_builds.project_id,
+2021-07-16_01:14:51.14265 	    ci_builds.commit_id,
+2021-07-16_01:14:51.14265 	    ci_builds.status,
+2021-07-16_01:14:51.14265 	    COUNT(*) AS count
+2021-07-16_01:14:51.14266 	  FROM ci_builds
+2021-07-16_01:14:51.14266 	  JOIN projects
+2021-07-16_01:14:51.14266 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:14:51.14266 	  JOIN namespaces
+2021-07-16_01:14:51.14267 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:14:51.14267 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:14:51.14267 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:14:51.14267 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:14:51.14268 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:14:51.14268 	  GROUP BY
+2021-07-16_01:14:51.14268 	    projects.namespace_id,
+2021-07-16_01:14:51.14268 	    projects.shared_runners_enabled,
+2021-07-16_01:14:51.14269 	    ci_builds.project_id,
+2021-07-16_01:14:51.14269 	    ci_builds.commit_id,
+2021-07-16_01:14:51.14269 	    ci_builds.status,
+2021-07-16_01:14:51.14270 	    ci_builds.commands
+2021-07-16_01:14:51.14270 	  HAVING COUNT(*) > 2
+2021-07-16_01:14:51.14270 	) AS subquery
+2021-07-16_01:14:51.14270 	GROUP BY
+2021-07-16_01:14:51.14271 	  subquery.namespace_id,
+2021-07-16_01:14:51.14272 	  subquery.shared_runners_enabled,
+2021-07-16_01:14:51.14273 	  subquery.project_id,
+2021-07-16_01:14:51.14273 	  subquery.commit_id,
+2021-07-16_01:14:51.14273 	  subquery.status
+2021-07-16_01:14:51.14273 	
+2021-07-16_01:15:06.14816 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:15:06.14819 STATEMENT:  SELECT
+2021-07-16_01:15:06.14820 	  subquery.namespace_id,
+2021-07-16_01:15:06.14820 	  subquery.shared_runners_enabled,
+2021-07-16_01:15:06.14821 	  subquery.project_id,
+2021-07-16_01:15:06.14821 	  subquery.status,
+2021-07-16_01:15:06.14821 	  MAX(subquery.count) as count
+2021-07-16_01:15:06.14821 	FROM (
+2021-07-16_01:15:06.14822 	  SELECT
+2021-07-16_01:15:06.14822 	    projects.namespace_id,
+2021-07-16_01:15:06.14822 	    projects.shared_runners_enabled,
+2021-07-16_01:15:06.14823 	    ci_builds.project_id,
+2021-07-16_01:15:06.14823 	    ci_builds.commit_id,
+2021-07-16_01:15:06.14823 	    ci_builds.status,
+2021-07-16_01:15:06.14824 	    COUNT(*) AS count
+2021-07-16_01:15:06.14824 	  FROM ci_builds
+2021-07-16_01:15:06.14824 	  JOIN projects
+2021-07-16_01:15:06.14824 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:15:06.14825 	  JOIN namespaces
+2021-07-16_01:15:06.14825 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:15:06.14825 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:15:06.14826 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:15:06.14826 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:15:06.14828 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:15:06.14828 	  GROUP BY
+2021-07-16_01:15:06.14828 	    projects.namespace_id,
+2021-07-16_01:15:06.14829 	    projects.shared_runners_enabled,
+2021-07-16_01:15:06.14829 	    ci_builds.project_id,
+2021-07-16_01:15:06.14829 	    ci_builds.commit_id,
+2021-07-16_01:15:06.14830 	    ci_builds.status,
+2021-07-16_01:15:06.14830 	    ci_builds.commands
+2021-07-16_01:15:06.14830 	  HAVING COUNT(*) > 2
+2021-07-16_01:15:06.14831 	) AS subquery
+2021-07-16_01:15:06.14831 	GROUP BY
+2021-07-16_01:15:06.14831 	  subquery.namespace_id,
+2021-07-16_01:15:06.14833 	  subquery.shared_runners_enabled,
+2021-07-16_01:15:06.14833 	  subquery.project_id,
+2021-07-16_01:15:06.14834 	  subquery.commit_id,
+2021-07-16_01:15:06.14834 	  subquery.status
+2021-07-16_01:15:06.14834 	
+2021-07-16_01:15:21.17341 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:15:21.17345 STATEMENT:  SELECT
+2021-07-16_01:15:21.17345 	  subquery.namespace_id,
+2021-07-16_01:15:21.17346 	  subquery.shared_runners_enabled,
+2021-07-16_01:15:21.17346 	  subquery.project_id,
+2021-07-16_01:15:21.17346 	  subquery.status,
+2021-07-16_01:15:21.17346 	  MAX(subquery.count) as count
+2021-07-16_01:15:21.17347 	FROM (
+2021-07-16_01:15:21.17347 	  SELECT
+2021-07-16_01:15:21.17347 	    projects.namespace_id,
+2021-07-16_01:15:21.17347 	    projects.shared_runners_enabled,
+2021-07-16_01:15:21.17348 	    ci_builds.project_id,
+2021-07-16_01:15:21.17348 	    ci_builds.commit_id,
+2021-07-16_01:15:21.17348 	    ci_builds.status,
+2021-07-16_01:15:21.17349 	    COUNT(*) AS count
+2021-07-16_01:15:21.17349 	  FROM ci_builds
+2021-07-16_01:15:21.17349 	  JOIN projects
+2021-07-16_01:15:21.17349 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:15:21.17350 	  JOIN namespaces
+2021-07-16_01:15:21.17350 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:15:21.17350 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:15:21.17350 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:15:21.17351 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:15:21.17351 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:15:21.17351 	  GROUP BY
+2021-07-16_01:15:21.17352 	    projects.namespace_id,
+2021-07-16_01:15:21.17352 	    projects.shared_runners_enabled,
+2021-07-16_01:15:21.17352 	    ci_builds.project_id,
+2021-07-16_01:15:21.17352 	    ci_builds.commit_id,
+2021-07-16_01:15:21.17353 	    ci_builds.status,
+2021-07-16_01:15:21.17353 	    ci_builds.commands
+2021-07-16_01:15:21.17353 	  HAVING COUNT(*) > 2
+2021-07-16_01:15:21.17353 	) AS subquery
+2021-07-16_01:15:21.17354 	GROUP BY
+2021-07-16_01:15:21.17354 	  subquery.namespace_id,
+2021-07-16_01:15:21.17356 	  subquery.shared_runners_enabled,
+2021-07-16_01:15:21.17356 	  subquery.project_id,
+2021-07-16_01:15:21.17356 	  subquery.commit_id,
+2021-07-16_01:15:21.17356 	  subquery.status
+2021-07-16_01:15:21.17357 	
+2021-07-16_01:15:36.15090 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:15:36.15094 STATEMENT:  SELECT
+2021-07-16_01:15:36.15095 	  subquery.namespace_id,
+2021-07-16_01:15:36.15095 	  subquery.shared_runners_enabled,
+2021-07-16_01:15:36.15095 	  subquery.project_id,
+2021-07-16_01:15:36.15095 	  subquery.status,
+2021-07-16_01:15:36.15096 	  MAX(subquery.count) as count
+2021-07-16_01:15:36.15096 	FROM (
+2021-07-16_01:15:36.15096 	  SELECT
+2021-07-16_01:15:36.15097 	    projects.namespace_id,
+2021-07-16_01:15:36.15097 	    projects.shared_runners_enabled,
+2021-07-16_01:15:36.15097 	    ci_builds.project_id,
+2021-07-16_01:15:36.15097 	    ci_builds.commit_id,
+2021-07-16_01:15:36.15098 	    ci_builds.status,
+2021-07-16_01:15:36.15098 	    COUNT(*) AS count
+2021-07-16_01:15:36.15098 	  FROM ci_builds
+2021-07-16_01:15:36.15098 	  JOIN projects
+2021-07-16_01:15:36.15099 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:15:36.15099 	  JOIN namespaces
+2021-07-16_01:15:36.15099 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:15:36.15100 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:15:36.15101 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:15:36.15101 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:15:36.15101 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:15:36.15102 	  GROUP BY
+2021-07-16_01:15:36.15102 	    projects.namespace_id,
+2021-07-16_01:15:36.15102 	    projects.shared_runners_enabled,
+2021-07-16_01:15:36.15102 	    ci_builds.project_id,
+2021-07-16_01:15:36.15103 	    ci_builds.commit_id,
+2021-07-16_01:15:36.15103 	    ci_builds.status,
+2021-07-16_01:15:36.15103 	    ci_builds.commands
+2021-07-16_01:15:36.15103 	  HAVING COUNT(*) > 2
+2021-07-16_01:15:36.15104 	) AS subquery
+2021-07-16_01:15:36.15104 	GROUP BY
+2021-07-16_01:15:36.15104 	  subquery.namespace_id,
+2021-07-16_01:15:36.15106 	  subquery.shared_runners_enabled,
+2021-07-16_01:15:36.15106 	  subquery.project_id,
+2021-07-16_01:15:36.15106 	  subquery.commit_id,
+2021-07-16_01:15:36.15107 	  subquery.status
+2021-07-16_01:15:36.15107 	
+2021-07-16_01:15:51.13889 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:15:51.13893 STATEMENT:  SELECT
+2021-07-16_01:15:51.13894 	  subquery.namespace_id,
+2021-07-16_01:15:51.13894 	  subquery.shared_runners_enabled,
+2021-07-16_01:15:51.13894 	  subquery.project_id,
+2021-07-16_01:15:51.13894 	  subquery.status,
+2021-07-16_01:15:51.13895 	  MAX(subquery.count) as count
+2021-07-16_01:15:51.13895 	FROM (
+2021-07-16_01:15:51.13895 	  SELECT
+2021-07-16_01:15:51.13895 	    projects.namespace_id,
+2021-07-16_01:15:51.13896 	    projects.shared_runners_enabled,
+2021-07-16_01:15:51.13896 	    ci_builds.project_id,
+2021-07-16_01:15:51.13896 	    ci_builds.commit_id,
+2021-07-16_01:15:51.13897 	    ci_builds.status,
+2021-07-16_01:15:51.13897 	    COUNT(*) AS count
+2021-07-16_01:15:51.13897 	  FROM ci_builds
+2021-07-16_01:15:51.13897 	  JOIN projects
+2021-07-16_01:15:51.13898 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:15:51.13898 	  JOIN namespaces
+2021-07-16_01:15:51.13898 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:15:51.13898 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:15:51.13899 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:15:51.13899 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:15:51.13899 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:15:51.13900 	  GROUP BY
+2021-07-16_01:15:51.13900 	    projects.namespace_id,
+2021-07-16_01:15:51.13900 	    projects.shared_runners_enabled,
+2021-07-16_01:15:51.13900 	    ci_builds.project_id,
+2021-07-16_01:15:51.13901 	    ci_builds.commit_id,
+2021-07-16_01:15:51.13901 	    ci_builds.status,
+2021-07-16_01:15:51.13901 	    ci_builds.commands
+2021-07-16_01:15:51.13901 	  HAVING COUNT(*) > 2
+2021-07-16_01:15:51.13902 	) AS subquery
+2021-07-16_01:15:51.13902 	GROUP BY
+2021-07-16_01:15:51.13902 	  subquery.namespace_id,
+2021-07-16_01:15:51.13904 	  subquery.shared_runners_enabled,
+2021-07-16_01:15:51.13904 	  subquery.project_id,
+2021-07-16_01:15:51.13904 	  subquery.commit_id,
+2021-07-16_01:15:51.13905 	  subquery.status
+2021-07-16_01:15:51.13905 	
+2021-07-16_01:16:06.13646 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:16:06.13651 STATEMENT:  SELECT
+2021-07-16_01:16:06.13651 	  subquery.namespace_id,
+2021-07-16_01:16:06.13652 	  subquery.shared_runners_enabled,
+2021-07-16_01:16:06.13652 	  subquery.project_id,
+2021-07-16_01:16:06.13652 	  subquery.status,
+2021-07-16_01:16:06.13652 	  MAX(subquery.count) as count
+2021-07-16_01:16:06.13653 	FROM (
+2021-07-16_01:16:06.13653 	  SELECT
+2021-07-16_01:16:06.13653 	    projects.namespace_id,
+2021-07-16_01:16:06.13653 	    projects.shared_runners_enabled,
+2021-07-16_01:16:06.13654 	    ci_builds.project_id,
+2021-07-16_01:16:06.13654 	    ci_builds.commit_id,
+2021-07-16_01:16:06.13654 	    ci_builds.status,
+2021-07-16_01:16:06.13655 	    COUNT(*) AS count
+2021-07-16_01:16:06.13656 	  FROM ci_builds
+2021-07-16_01:16:06.13656 	  JOIN projects
+2021-07-16_01:16:06.13657 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:16:06.13657 	  JOIN namespaces
+2021-07-16_01:16:06.13657 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:16:06.13657 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:16:06.13658 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:16:06.13658 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:16:06.13658 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:16:06.13659 	  GROUP BY
+2021-07-16_01:16:06.13659 	    projects.namespace_id,
+2021-07-16_01:16:06.13659 	    projects.shared_runners_enabled,
+2021-07-16_01:16:06.13659 	    ci_builds.project_id,
+2021-07-16_01:16:06.13660 	    ci_builds.commit_id,
+2021-07-16_01:16:06.13660 	    ci_builds.status,
+2021-07-16_01:16:06.13660 	    ci_builds.commands
+2021-07-16_01:16:06.13660 	  HAVING COUNT(*) > 2
+2021-07-16_01:16:06.13661 	) AS subquery
+2021-07-16_01:16:06.13661 	GROUP BY
+2021-07-16_01:16:06.13661 	  subquery.namespace_id,
+2021-07-16_01:16:06.13663 	  subquery.shared_runners_enabled,
+2021-07-16_01:16:06.13663 	  subquery.project_id,
+2021-07-16_01:16:06.13664 	  subquery.commit_id,
+2021-07-16_01:16:06.13664 	  subquery.status
+2021-07-16_01:16:06.13666 	
+2021-07-16_01:16:21.13341 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:16:21.13347 STATEMENT:  SELECT
+2021-07-16_01:16:21.13348 	  subquery.namespace_id,
+2021-07-16_01:16:21.13348 	  subquery.shared_runners_enabled,
+2021-07-16_01:16:21.13349 	  subquery.project_id,
+2021-07-16_01:16:21.13349 	  subquery.status,
+2021-07-16_01:16:21.13349 	  MAX(subquery.count) as count
+2021-07-16_01:16:21.13349 	FROM (
+2021-07-16_01:16:21.13350 	  SELECT
+2021-07-16_01:16:21.13350 	    projects.namespace_id,
+2021-07-16_01:16:21.13350 	    projects.shared_runners_enabled,
+2021-07-16_01:16:21.13350 	    ci_builds.project_id,
+2021-07-16_01:16:21.13351 	    ci_builds.commit_id,
+2021-07-16_01:16:21.13351 	    ci_builds.status,
+2021-07-16_01:16:21.13351 	    COUNT(*) AS count
+2021-07-16_01:16:21.13352 	  FROM ci_builds
+2021-07-16_01:16:21.13352 	  JOIN projects
+2021-07-16_01:16:21.13352 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:16:21.13352 	  JOIN namespaces
+2021-07-16_01:16:21.13353 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:16:21.13353 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:16:21.13353 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:16:21.13361 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:16:21.13363 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:16:21.13364 	  GROUP BY
+2021-07-16_01:16:21.13366 	    projects.namespace_id,
+2021-07-16_01:16:21.13367 	    projects.shared_runners_enabled,
+2021-07-16_01:16:21.13369 	    ci_builds.project_id,
+2021-07-16_01:16:21.13372 	    ci_builds.commit_id,
+2021-07-16_01:16:21.13373 	    ci_builds.status,
+2021-07-16_01:16:21.13375 	    ci_builds.commands
+2021-07-16_01:16:21.13376 	  HAVING COUNT(*) > 2
+2021-07-16_01:16:21.13378 	) AS subquery
+2021-07-16_01:16:21.13379 	GROUP BY
+2021-07-16_01:16:21.13380 	  subquery.namespace_id,
+2021-07-16_01:16:21.13383 	  subquery.shared_runners_enabled,
+2021-07-16_01:16:21.13385 	  subquery.project_id,
+2021-07-16_01:16:21.13387 	  subquery.commit_id,
+2021-07-16_01:16:21.13389 	  subquery.status
+2021-07-16_01:16:21.13390 	
+2021-07-16_01:16:36.13205 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:16:36.13212 STATEMENT:  SELECT
+2021-07-16_01:16:36.13212 	  subquery.namespace_id,
+2021-07-16_01:16:36.13213 	  subquery.shared_runners_enabled,
+2021-07-16_01:16:36.13213 	  subquery.project_id,
+2021-07-16_01:16:36.13213 	  subquery.status,
+2021-07-16_01:16:36.13213 	  MAX(subquery.count) as count
+2021-07-16_01:16:36.13214 	FROM (
+2021-07-16_01:16:36.13214 	  SELECT
+2021-07-16_01:16:36.13214 	    projects.namespace_id,
+2021-07-16_01:16:36.13214 	    projects.shared_runners_enabled,
+2021-07-16_01:16:36.13216 	    ci_builds.project_id,
+2021-07-16_01:16:36.13216 	    ci_builds.commit_id,
+2021-07-16_01:16:36.13217 	    ci_builds.status,
+2021-07-16_01:16:36.13217 	    COUNT(*) AS count
+2021-07-16_01:16:36.13217 	  FROM ci_builds
+2021-07-16_01:16:36.13217 	  JOIN projects
+2021-07-16_01:16:36.13218 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:16:36.13218 	  JOIN namespaces
+2021-07-16_01:16:36.13218 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:16:36.13218 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:16:36.13219 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:16:36.13219 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:16:36.13219 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:16:36.13220 	  GROUP BY
+2021-07-16_01:16:36.13220 	    projects.namespace_id,
+2021-07-16_01:16:36.13220 	    projects.shared_runners_enabled,
+2021-07-16_01:16:36.13220 	    ci_builds.project_id,
+2021-07-16_01:16:36.13221 	    ci_builds.commit_id,
+2021-07-16_01:16:36.13221 	    ci_builds.status,
+2021-07-16_01:16:36.13221 	    ci_builds.commands
+2021-07-16_01:16:36.13221 	  HAVING COUNT(*) > 2
+2021-07-16_01:16:36.13222 	) AS subquery
+2021-07-16_01:16:36.13222 	GROUP BY
+2021-07-16_01:16:36.13222 	  subquery.namespace_id,
+2021-07-16_01:16:36.13224 	  subquery.shared_runners_enabled,
+2021-07-16_01:16:36.13224 	  subquery.project_id,
+2021-07-16_01:16:36.13225 	  subquery.commit_id,
+2021-07-16_01:16:36.13225 	  subquery.status
+2021-07-16_01:16:36.13225 	
+2021-07-16_01:16:51.13374 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:16:51.13377 STATEMENT:  SELECT
+2021-07-16_01:16:51.13378 	  subquery.namespace_id,
+2021-07-16_01:16:51.13378 	  subquery.shared_runners_enabled,
+2021-07-16_01:16:51.13379 	  subquery.project_id,
+2021-07-16_01:16:51.13379 	  subquery.status,
+2021-07-16_01:16:51.13379 	  MAX(subquery.count) as count
+2021-07-16_01:16:51.13379 	FROM (
+2021-07-16_01:16:51.13380 	  SELECT
+2021-07-16_01:16:51.13380 	    projects.namespace_id,
+2021-07-16_01:16:51.13380 	    projects.shared_runners_enabled,
+2021-07-16_01:16:51.13381 	    ci_builds.project_id,
+2021-07-16_01:16:51.13381 	    ci_builds.commit_id,
+2021-07-16_01:16:51.13381 	    ci_builds.status,
+2021-07-16_01:16:51.13381 	    COUNT(*) AS count
+2021-07-16_01:16:51.13382 	  FROM ci_builds
+2021-07-16_01:16:51.13382 	  JOIN projects
+2021-07-16_01:16:51.13382 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:16:51.13383 	  JOIN namespaces
+2021-07-16_01:16:51.13383 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:16:51.13383 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:16:51.13383 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:16:51.13384 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:16:51.13384 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:16:51.13384 	  GROUP BY
+2021-07-16_01:16:51.13385 	    projects.namespace_id,
+2021-07-16_01:16:51.13385 	    projects.shared_runners_enabled,
+2021-07-16_01:16:51.13385 	    ci_builds.project_id,
+2021-07-16_01:16:51.13386 	    ci_builds.commit_id,
+2021-07-16_01:16:51.13386 	    ci_builds.status,
+2021-07-16_01:16:51.13386 	    ci_builds.commands
+2021-07-16_01:16:51.13386 	  HAVING COUNT(*) > 2
+2021-07-16_01:16:51.13387 	) AS subquery
+2021-07-16_01:16:51.13387 	GROUP BY
+2021-07-16_01:16:51.13387 	  subquery.namespace_id,
+2021-07-16_01:16:51.13389 	  subquery.shared_runners_enabled,
+2021-07-16_01:16:51.13389 	  subquery.project_id,
+2021-07-16_01:16:51.13390 	  subquery.commit_id,
+2021-07-16_01:16:51.13390 	  subquery.status
+2021-07-16_01:16:51.13390 	
+2021-07-16_01:17:06.14192 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:17:06.14200 STATEMENT:  SELECT
+2021-07-16_01:17:06.14201 	  subquery.namespace_id,
+2021-07-16_01:17:06.14201 	  subquery.shared_runners_enabled,
+2021-07-16_01:17:06.14202 	  subquery.project_id,
+2021-07-16_01:17:06.14205 	  subquery.status,
+2021-07-16_01:17:06.14206 	  MAX(subquery.count) as count
+2021-07-16_01:17:06.14207 	FROM (
+2021-07-16_01:17:06.14207 	  SELECT
+2021-07-16_01:17:06.14208 	    projects.namespace_id,
+2021-07-16_01:17:06.14209 	    projects.shared_runners_enabled,
+2021-07-16_01:17:06.14209 	    ci_builds.project_id,
+2021-07-16_01:17:06.14210 	    ci_builds.commit_id,
+2021-07-16_01:17:06.14210 	    ci_builds.status,
+2021-07-16_01:17:06.14211 	    COUNT(*) AS count
+2021-07-16_01:17:06.14212 	  FROM ci_builds
+2021-07-16_01:17:06.14212 	  JOIN projects
+2021-07-16_01:17:06.14213 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:17:06.14214 	  JOIN namespaces
+2021-07-16_01:17:06.14214 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:17:06.14215 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:17:06.14216 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:17:06.14216 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:17:06.14217 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:17:06.14218 	  GROUP BY
+2021-07-16_01:17:06.14218 	    projects.namespace_id,
+2021-07-16_01:17:06.14219 	    projects.shared_runners_enabled,
+2021-07-16_01:17:06.14219 	    ci_builds.project_id,
+2021-07-16_01:17:06.14220 	    ci_builds.commit_id,
+2021-07-16_01:17:06.14221 	    ci_builds.status,
+2021-07-16_01:17:06.14221 	    ci_builds.commands
+2021-07-16_01:17:06.14222 	  HAVING COUNT(*) > 2
+2021-07-16_01:17:06.14223 	) AS subquery
+2021-07-16_01:17:06.14223 	GROUP BY
+2021-07-16_01:17:06.14224 	  subquery.namespace_id,
+2021-07-16_01:17:06.14228 	  subquery.shared_runners_enabled,
+2021-07-16_01:17:06.14228 	  subquery.project_id,
+2021-07-16_01:17:06.14229 	  subquery.commit_id,
+2021-07-16_01:17:06.14230 	  subquery.status
+2021-07-16_01:17:06.14230 	
+2021-07-16_01:17:21.13907 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:17:21.13910 STATEMENT:  SELECT
+2021-07-16_01:17:21.13911 	  subquery.namespace_id,
+2021-07-16_01:17:21.13911 	  subquery.shared_runners_enabled,
+2021-07-16_01:17:21.13911 	  subquery.project_id,
+2021-07-16_01:17:21.13912 	  subquery.status,
+2021-07-16_01:17:21.13912 	  MAX(subquery.count) as count
+2021-07-16_01:17:21.13912 	FROM (
+2021-07-16_01:17:21.13913 	  SELECT
+2021-07-16_01:17:21.13913 	    projects.namespace_id,
+2021-07-16_01:17:21.13913 	    projects.shared_runners_enabled,
+2021-07-16_01:17:21.13913 	    ci_builds.project_id,
+2021-07-16_01:17:21.13914 	    ci_builds.commit_id,
+2021-07-16_01:17:21.13914 	    ci_builds.status,
+2021-07-16_01:17:21.13914 	    COUNT(*) AS count
+2021-07-16_01:17:21.13914 	  FROM ci_builds
+2021-07-16_01:17:21.13915 	  JOIN projects
+2021-07-16_01:17:21.13915 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:17:21.13915 	  JOIN namespaces
+2021-07-16_01:17:21.13915 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:17:21.13916 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:17:21.13916 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:17:21.13916 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:17:21.13917 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:17:21.13917 	  GROUP BY
+2021-07-16_01:17:21.13917 	    projects.namespace_id,
+2021-07-16_01:17:21.13917 	    projects.shared_runners_enabled,
+2021-07-16_01:17:21.13918 	    ci_builds.project_id,
+2021-07-16_01:17:21.13918 	    ci_builds.commit_id,
+2021-07-16_01:17:21.13918 	    ci_builds.status,
+2021-07-16_01:17:21.13919 	    ci_builds.commands
+2021-07-16_01:17:21.13919 	  HAVING COUNT(*) > 2
+2021-07-16_01:17:21.13919 	) AS subquery
+2021-07-16_01:17:21.13919 	GROUP BY
+2021-07-16_01:17:21.13920 	  subquery.namespace_id,
+2021-07-16_01:17:21.13921 	  subquery.shared_runners_enabled,
+2021-07-16_01:17:21.13921 	  subquery.project_id,
+2021-07-16_01:17:21.13922 	  subquery.commit_id,
+2021-07-16_01:17:21.13922 	  subquery.status
+2021-07-16_01:17:21.13922 	
+2021-07-16_01:17:36.15096 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:17:36.15101 STATEMENT:  SELECT
+2021-07-16_01:17:36.15102 	  subquery.namespace_id,
+2021-07-16_01:17:36.15102 	  subquery.shared_runners_enabled,
+2021-07-16_01:17:36.15102 	  subquery.project_id,
+2021-07-16_01:17:36.15103 	  subquery.status,
+2021-07-16_01:17:36.15103 	  MAX(subquery.count) as count
+2021-07-16_01:17:36.15103 	FROM (
+2021-07-16_01:17:36.15104 	  SELECT
+2021-07-16_01:17:36.15104 	    projects.namespace_id,
+2021-07-16_01:17:36.15104 	    projects.shared_runners_enabled,
+2021-07-16_01:17:36.15105 	    ci_builds.project_id,
+2021-07-16_01:17:36.15105 	    ci_builds.commit_id,
+2021-07-16_01:17:36.15105 	    ci_builds.status,
+2021-07-16_01:17:36.15106 	    COUNT(*) AS count
+2021-07-16_01:17:36.15106 	  FROM ci_builds
+2021-07-16_01:17:36.15106 	  JOIN projects
+2021-07-16_01:17:36.15107 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:17:36.15107 	  JOIN namespaces
+2021-07-16_01:17:36.15107 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:17:36.15108 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:17:36.15108 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:17:36.15108 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:17:36.15109 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:17:36.15109 	  GROUP BY
+2021-07-16_01:17:36.15109 	    projects.namespace_id,
+2021-07-16_01:17:36.15110 	    projects.shared_runners_enabled,
+2021-07-16_01:17:36.15110 	    ci_builds.project_id,
+2021-07-16_01:17:36.15110 	    ci_builds.commit_id,
+2021-07-16_01:17:36.15111 	    ci_builds.status,
+2021-07-16_01:17:36.15111 	    ci_builds.commands
+2021-07-16_01:17:36.15111 	  HAVING COUNT(*) > 2
+2021-07-16_01:17:36.15112 	) AS subquery
+2021-07-16_01:17:36.15112 	GROUP BY
+2021-07-16_01:17:36.15112 	  subquery.namespace_id,
+2021-07-16_01:17:36.15114 	  subquery.shared_runners_enabled,
+2021-07-16_01:17:36.15115 	  subquery.project_id,
+2021-07-16_01:17:36.15115 	  subquery.commit_id,
+2021-07-16_01:17:36.15115 	  subquery.status
+2021-07-16_01:17:36.15116 	
+2021-07-16_01:17:51.13348 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:17:51.13352 STATEMENT:  SELECT
+2021-07-16_01:17:51.13352 	  subquery.namespace_id,
+2021-07-16_01:17:51.13352 	  subquery.shared_runners_enabled,
+2021-07-16_01:17:51.13353 	  subquery.project_id,
+2021-07-16_01:17:51.13353 	  subquery.status,
+2021-07-16_01:17:51.13353 	  MAX(subquery.count) as count
+2021-07-16_01:17:51.13353 	FROM (
+2021-07-16_01:17:51.13354 	  SELECT
+2021-07-16_01:17:51.13354 	    projects.namespace_id,
+2021-07-16_01:17:51.13354 	    projects.shared_runners_enabled,
+2021-07-16_01:17:51.13355 	    ci_builds.project_id,
+2021-07-16_01:17:51.13355 	    ci_builds.commit_id,
+2021-07-16_01:17:51.13355 	    ci_builds.status,
+2021-07-16_01:17:51.13355 	    COUNT(*) AS count
+2021-07-16_01:17:51.13356 	  FROM ci_builds
+2021-07-16_01:17:51.13356 	  JOIN projects
+2021-07-16_01:17:51.13356 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:17:51.13356 	  JOIN namespaces
+2021-07-16_01:17:51.13357 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:17:51.13357 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:17:51.13357 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:17:51.13357 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:17:51.13358 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:17:51.13361 	  GROUP BY
+2021-07-16_01:17:51.13363 	    projects.namespace_id,
+2021-07-16_01:17:51.13364 	    projects.shared_runners_enabled,
+2021-07-16_01:17:51.13364 	    ci_builds.project_id,
+2021-07-16_01:17:51.13364 	    ci_builds.commit_id,
+2021-07-16_01:17:51.13365 	    ci_builds.status,
+2021-07-16_01:17:51.13365 	    ci_builds.commands
+2021-07-16_01:17:51.13365 	  HAVING COUNT(*) > 2
+2021-07-16_01:17:51.13365 	) AS subquery
+2021-07-16_01:17:51.13366 	GROUP BY
+2021-07-16_01:17:51.13366 	  subquery.namespace_id,
+2021-07-16_01:17:51.13368 	  subquery.shared_runners_enabled,
+2021-07-16_01:17:51.13369 	  subquery.project_id,
+2021-07-16_01:17:51.13369 	  subquery.commit_id,
+2021-07-16_01:17:51.13369 	  subquery.status
+2021-07-16_01:17:51.13370 	
+2021-07-16_01:18:06.14651 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:18:06.14655 STATEMENT:  SELECT
+2021-07-16_01:18:06.14656 	  subquery.namespace_id,
+2021-07-16_01:18:06.14656 	  subquery.shared_runners_enabled,
+2021-07-16_01:18:06.14656 	  subquery.project_id,
+2021-07-16_01:18:06.14656 	  subquery.status,
+2021-07-16_01:18:06.14657 	  MAX(subquery.count) as count
+2021-07-16_01:18:06.14657 	FROM (
+2021-07-16_01:18:06.14657 	  SELECT
+2021-07-16_01:18:06.14658 	    projects.namespace_id,
+2021-07-16_01:18:06.14658 	    projects.shared_runners_enabled,
+2021-07-16_01:18:06.14658 	    ci_builds.project_id,
+2021-07-16_01:18:06.14659 	    ci_builds.commit_id,
+2021-07-16_01:18:06.14659 	    ci_builds.status,
+2021-07-16_01:18:06.14659 	    COUNT(*) AS count
+2021-07-16_01:18:06.14660 	  FROM ci_builds
+2021-07-16_01:18:06.14660 	  JOIN projects
+2021-07-16_01:18:06.14660 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:18:06.14661 	  JOIN namespaces
+2021-07-16_01:18:06.14661 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:18:06.14661 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:18:06.14661 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:18:06.14662 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:18:06.14662 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:18:06.14662 	  GROUP BY
+2021-07-16_01:18:06.14663 	    projects.namespace_id,
+2021-07-16_01:18:06.14663 	    projects.shared_runners_enabled,
+2021-07-16_01:18:06.14663 	    ci_builds.project_id,
+2021-07-16_01:18:06.14664 	    ci_builds.commit_id,
+2021-07-16_01:18:06.14664 	    ci_builds.status,
+2021-07-16_01:18:06.14664 	    ci_builds.commands
+2021-07-16_01:18:06.14665 	  HAVING COUNT(*) > 2
+2021-07-16_01:18:06.14665 	) AS subquery
+2021-07-16_01:18:06.14665 	GROUP BY
+2021-07-16_01:18:06.14666 	  subquery.namespace_id,
+2021-07-16_01:18:06.14667 	  subquery.shared_runners_enabled,
+2021-07-16_01:18:06.14668 	  subquery.project_id,
+2021-07-16_01:18:06.14668 	  subquery.commit_id,
+2021-07-16_01:18:06.14668 	  subquery.status
+2021-07-16_01:18:06.14669 	
+2021-07-16_01:18:21.13765 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:18:21.13774 STATEMENT:  SELECT
+2021-07-16_01:18:21.13775 	  subquery.namespace_id,
+2021-07-16_01:18:21.13775 	  subquery.shared_runners_enabled,
+2021-07-16_01:18:21.13775 	  subquery.project_id,
+2021-07-16_01:18:21.13776 	  subquery.status,
+2021-07-16_01:18:21.13776 	  MAX(subquery.count) as count
+2021-07-16_01:18:21.13776 	FROM (
+2021-07-16_01:18:21.13776 	  SELECT
+2021-07-16_01:18:21.13777 	    projects.namespace_id,
+2021-07-16_01:18:21.13777 	    projects.shared_runners_enabled,
+2021-07-16_01:18:21.13777 	    ci_builds.project_id,
+2021-07-16_01:18:21.13777 	    ci_builds.commit_id,
+2021-07-16_01:18:21.13778 	    ci_builds.status,
+2021-07-16_01:18:21.13778 	    COUNT(*) AS count
+2021-07-16_01:18:21.13778 	  FROM ci_builds
+2021-07-16_01:18:21.13779 	  JOIN projects
+2021-07-16_01:18:21.13779 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:18:21.13779 	  JOIN namespaces
+2021-07-16_01:18:21.13779 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:18:21.13780 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:18:21.13780 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:18:21.13780 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:18:21.13780 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:18:21.13781 	  GROUP BY
+2021-07-16_01:18:21.13781 	    projects.namespace_id,
+2021-07-16_01:18:21.13781 	    projects.shared_runners_enabled,
+2021-07-16_01:18:21.13782 	    ci_builds.project_id,
+2021-07-16_01:18:21.13782 	    ci_builds.commit_id,
+2021-07-16_01:18:21.13782 	    ci_builds.status,
+2021-07-16_01:18:21.13782 	    ci_builds.commands
+2021-07-16_01:18:21.13784 	  HAVING COUNT(*) > 2
+2021-07-16_01:18:21.13784 	) AS subquery
+2021-07-16_01:18:21.13784 	GROUP BY
+2021-07-16_01:18:21.13785 	  subquery.namespace_id,
+2021-07-16_01:18:21.13786 	  subquery.shared_runners_enabled,
+2021-07-16_01:18:21.13787 	  subquery.project_id,
+2021-07-16_01:18:21.13787 	  subquery.commit_id,
+2021-07-16_01:18:21.13787 	  subquery.status
+2021-07-16_01:18:21.13788 	
+2021-07-16_01:18:36.13494 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:18:36.13498 STATEMENT:  SELECT
+2021-07-16_01:18:36.13499 	  subquery.namespace_id,
+2021-07-16_01:18:36.13499 	  subquery.shared_runners_enabled,
+2021-07-16_01:18:36.13500 	  subquery.project_id,
+2021-07-16_01:18:36.13500 	  subquery.status,
+2021-07-16_01:18:36.13501 	  MAX(subquery.count) as count
+2021-07-16_01:18:36.13501 	FROM (
+2021-07-16_01:18:36.13501 	  SELECT
+2021-07-16_01:18:36.13502 	    projects.namespace_id,
+2021-07-16_01:18:36.13503 	    projects.shared_runners_enabled,
+2021-07-16_01:18:36.13503 	    ci_builds.project_id,
+2021-07-16_01:18:36.13503 	    ci_builds.commit_id,
+2021-07-16_01:18:36.13504 	    ci_builds.status,
+2021-07-16_01:18:36.13504 	    COUNT(*) AS count
+2021-07-16_01:18:36.13505 	  FROM ci_builds
+2021-07-16_01:18:36.13505 	  JOIN projects
+2021-07-16_01:18:36.13506 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:18:36.13506 	  JOIN namespaces
+2021-07-16_01:18:36.13506 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:18:36.13507 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:18:36.13507 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:18:36.13508 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:18:36.13509 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:18:36.13509 	  GROUP BY
+2021-07-16_01:18:36.13509 	    projects.namespace_id,
+2021-07-16_01:18:36.13509 	    projects.shared_runners_enabled,
+2021-07-16_01:18:36.13510 	    ci_builds.project_id,
+2021-07-16_01:18:36.13510 	    ci_builds.commit_id,
+2021-07-16_01:18:36.13510 	    ci_builds.status,
+2021-07-16_01:18:36.13510 	    ci_builds.commands
+2021-07-16_01:18:36.13511 	  HAVING COUNT(*) > 2
+2021-07-16_01:18:36.13511 	) AS subquery
+2021-07-16_01:18:36.13511 	GROUP BY
+2021-07-16_01:18:36.13512 	  subquery.namespace_id,
+2021-07-16_01:18:36.13513 	  subquery.shared_runners_enabled,
+2021-07-16_01:18:36.13514 	  subquery.project_id,
+2021-07-16_01:18:36.13514 	  subquery.commit_id,
+2021-07-16_01:18:36.13514 	  subquery.status
+2021-07-16_01:18:36.13514 	
+2021-07-16_01:18:51.13270 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:18:51.13276 STATEMENT:  SELECT
+2021-07-16_01:18:51.13277 	  subquery.namespace_id,
+2021-07-16_01:18:51.13278 	  subquery.shared_runners_enabled,
+2021-07-16_01:18:51.13279 	  subquery.project_id,
+2021-07-16_01:18:51.13279 	  subquery.status,
+2021-07-16_01:18:51.13280 	  MAX(subquery.count) as count
+2021-07-16_01:18:51.13280 	FROM (
+2021-07-16_01:18:51.13283 	  SELECT
+2021-07-16_01:18:51.13285 	    projects.namespace_id,
+2021-07-16_01:18:51.13286 	    projects.shared_runners_enabled,
+2021-07-16_01:18:51.13287 	    ci_builds.project_id,
+2021-07-16_01:18:51.13289 	    ci_builds.commit_id,
+2021-07-16_01:18:51.13290 	    ci_builds.status,
+2021-07-16_01:18:51.13292 	    COUNT(*) AS count
+2021-07-16_01:18:51.13293 	  FROM ci_builds
+2021-07-16_01:18:51.13294 	  JOIN projects
+2021-07-16_01:18:51.13296 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:18:51.13297 	  JOIN namespaces
+2021-07-16_01:18:51.13299 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:18:51.13300 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:18:51.13308 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:18:51.13310 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:18:51.13311 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:18:51.13312 	  GROUP BY
+2021-07-16_01:18:51.13314 	    projects.namespace_id,
+2021-07-16_01:18:51.13315 	    projects.shared_runners_enabled,
+2021-07-16_01:18:51.13318 	    ci_builds.project_id,
+2021-07-16_01:18:51.13319 	    ci_builds.commit_id,
+2021-07-16_01:18:51.13321 	    ci_builds.status,
+2021-07-16_01:18:51.13322 	    ci_builds.commands
+2021-07-16_01:18:51.13323 	  HAVING COUNT(*) > 2
+2021-07-16_01:18:51.13325 	) AS subquery
+2021-07-16_01:18:51.13326 	GROUP BY
+2021-07-16_01:18:51.13328 	  subquery.namespace_id,
+2021-07-16_01:18:51.13330 	  subquery.shared_runners_enabled,
+2021-07-16_01:18:51.13332 	  subquery.project_id,
+2021-07-16_01:18:51.13333 	  subquery.commit_id,
+2021-07-16_01:18:51.13334 	  subquery.status
+2021-07-16_01:18:51.13336 	
+2021-07-16_01:19:06.13616 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:19:06.13622 STATEMENT:  SELECT
+2021-07-16_01:19:06.13623 	  subquery.namespace_id,
+2021-07-16_01:19:06.13624 	  subquery.shared_runners_enabled,
+2021-07-16_01:19:06.13624 	  subquery.project_id,
+2021-07-16_01:19:06.13625 	  subquery.status,
+2021-07-16_01:19:06.13626 	  MAX(subquery.count) as count
+2021-07-16_01:19:06.13626 	FROM (
+2021-07-16_01:19:06.13627 	  SELECT
+2021-07-16_01:19:06.13627 	    projects.namespace_id,
+2021-07-16_01:19:06.13628 	    projects.shared_runners_enabled,
+2021-07-16_01:19:06.13628 	    ci_builds.project_id,
+2021-07-16_01:19:06.13629 	    ci_builds.commit_id,
+2021-07-16_01:19:06.13629 	    ci_builds.status,
+2021-07-16_01:19:06.13630 	    COUNT(*) AS count
+2021-07-16_01:19:06.13630 	  FROM ci_builds
+2021-07-16_01:19:06.13631 	  JOIN projects
+2021-07-16_01:19:06.13631 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:19:06.13632 	  JOIN namespaces
+2021-07-16_01:19:06.13633 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:19:06.13633 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:19:06.13634 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:19:06.13634 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:19:06.13635 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:19:06.13635 	  GROUP BY
+2021-07-16_01:19:06.13635 	    projects.namespace_id,
+2021-07-16_01:19:06.13636 	    projects.shared_runners_enabled,
+2021-07-16_01:19:06.13636 	    ci_builds.project_id,
+2021-07-16_01:19:06.13637 	    ci_builds.commit_id,
+2021-07-16_01:19:06.13637 	    ci_builds.status,
+2021-07-16_01:19:06.13638 	    ci_builds.commands
+2021-07-16_01:19:06.13638 	  HAVING COUNT(*) > 2
+2021-07-16_01:19:06.13639 	) AS subquery
+2021-07-16_01:19:06.13639 	GROUP BY
+2021-07-16_01:19:06.13640 	  subquery.namespace_id,
+2021-07-16_01:19:06.13643 	  subquery.shared_runners_enabled,
+2021-07-16_01:19:06.13643 	  subquery.project_id,
+2021-07-16_01:19:06.13644 	  subquery.commit_id,
+2021-07-16_01:19:06.13644 	  subquery.status
+2021-07-16_01:19:06.13645 	
+2021-07-16_01:19:21.15469 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:19:21.15474 STATEMENT:  SELECT
+2021-07-16_01:19:21.15475 	  subquery.namespace_id,
+2021-07-16_01:19:21.15475 	  subquery.shared_runners_enabled,
+2021-07-16_01:19:21.15475 	  subquery.project_id,
+2021-07-16_01:19:21.15477 	  subquery.status,
+2021-07-16_01:19:21.15477 	  MAX(subquery.count) as count
+2021-07-16_01:19:21.15477 	FROM (
+2021-07-16_01:19:21.15478 	  SELECT
+2021-07-16_01:19:21.15478 	    projects.namespace_id,
+2021-07-16_01:19:21.15478 	    projects.shared_runners_enabled,
+2021-07-16_01:19:21.15478 	    ci_builds.project_id,
+2021-07-16_01:19:21.15479 	    ci_builds.commit_id,
+2021-07-16_01:19:21.15479 	    ci_builds.status,
+2021-07-16_01:19:21.15479 	    COUNT(*) AS count
+2021-07-16_01:19:21.15480 	  FROM ci_builds
+2021-07-16_01:19:21.15480 	  JOIN projects
+2021-07-16_01:19:21.15480 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:19:21.15480 	  JOIN namespaces
+2021-07-16_01:19:21.15481 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:19:21.15481 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:19:21.15481 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:19:21.15482 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:19:21.15483 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:19:21.15484 	  GROUP BY
+2021-07-16_01:19:21.15484 	    projects.namespace_id,
+2021-07-16_01:19:21.15484 	    projects.shared_runners_enabled,
+2021-07-16_01:19:21.15485 	    ci_builds.project_id,
+2021-07-16_01:19:21.15485 	    ci_builds.commit_id,
+2021-07-16_01:19:21.15485 	    ci_builds.status,
+2021-07-16_01:19:21.15485 	    ci_builds.commands
+2021-07-16_01:19:21.15486 	  HAVING COUNT(*) > 2
+2021-07-16_01:19:21.15486 	) AS subquery
+2021-07-16_01:19:21.15486 	GROUP BY
+2021-07-16_01:19:21.15486 	  subquery.namespace_id,
+2021-07-16_01:19:21.15489 	  subquery.shared_runners_enabled,
+2021-07-16_01:19:21.15490 	  subquery.project_id,
+2021-07-16_01:19:21.15490 	  subquery.commit_id,
+2021-07-16_01:19:21.15490 	  subquery.status
+2021-07-16_01:19:21.15490 	
+2021-07-16_01:19:36.13979 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:19:36.13984 STATEMENT:  SELECT
+2021-07-16_01:19:36.13985 	  subquery.namespace_id,
+2021-07-16_01:19:36.13985 	  subquery.shared_runners_enabled,
+2021-07-16_01:19:36.13985 	  subquery.project_id,
+2021-07-16_01:19:36.13986 	  subquery.status,
+2021-07-16_01:19:36.13986 	  MAX(subquery.count) as count
+2021-07-16_01:19:36.13986 	FROM (
+2021-07-16_01:19:36.13987 	  SELECT
+2021-07-16_01:19:36.13987 	    projects.namespace_id,
+2021-07-16_01:19:36.13987 	    projects.shared_runners_enabled,
+2021-07-16_01:19:36.13987 	    ci_builds.project_id,
+2021-07-16_01:19:36.13988 	    ci_builds.commit_id,
+2021-07-16_01:19:36.13988 	    ci_builds.status,
+2021-07-16_01:19:36.13988 	    COUNT(*) AS count
+2021-07-16_01:19:36.13988 	  FROM ci_builds
+2021-07-16_01:19:36.13989 	  JOIN projects
+2021-07-16_01:19:36.13989 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:19:36.13989 	  JOIN namespaces
+2021-07-16_01:19:36.13990 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:19:36.13990 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:19:36.13990 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:19:36.13990 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:19:36.13991 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:19:36.13991 	  GROUP BY
+2021-07-16_01:19:36.13991 	    projects.namespace_id,
+2021-07-16_01:19:36.13991 	    projects.shared_runners_enabled,
+2021-07-16_01:19:36.13992 	    ci_builds.project_id,
+2021-07-16_01:19:36.13992 	    ci_builds.commit_id,
+2021-07-16_01:19:36.13992 	    ci_builds.status,
+2021-07-16_01:19:36.13993 	    ci_builds.commands
+2021-07-16_01:19:36.13993 	  HAVING COUNT(*) > 2
+2021-07-16_01:19:36.13993 	) AS subquery
+2021-07-16_01:19:36.13993 	GROUP BY
+2021-07-16_01:19:36.13994 	  subquery.namespace_id,
+2021-07-16_01:19:36.13995 	  subquery.shared_runners_enabled,
+2021-07-16_01:19:36.13996 	  subquery.project_id,
+2021-07-16_01:19:36.13996 	  subquery.commit_id,
+2021-07-16_01:19:36.13996 	  subquery.status
+2021-07-16_01:19:36.13996 	
+2021-07-16_01:19:51.14763 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:19:51.14778 STATEMENT:  SELECT
+2021-07-16_01:19:51.14786 	  subquery.namespace_id,
+2021-07-16_01:19:51.14787 	  subquery.shared_runners_enabled,
+2021-07-16_01:19:51.14788 	  subquery.project_id,
+2021-07-16_01:19:51.14789 	  subquery.status,
+2021-07-16_01:19:51.14790 	  MAX(subquery.count) as count
+2021-07-16_01:19:51.14791 	FROM (
+2021-07-16_01:19:51.14792 	  SELECT
+2021-07-16_01:19:51.14792 	    projects.namespace_id,
+2021-07-16_01:19:51.14793 	    projects.shared_runners_enabled,
+2021-07-16_01:19:51.14794 	    ci_builds.project_id,
+2021-07-16_01:19:51.14795 	    ci_builds.commit_id,
+2021-07-16_01:19:51.14795 	    ci_builds.status,
+2021-07-16_01:19:51.14796 	    COUNT(*) AS count
+2021-07-16_01:19:51.14797 	  FROM ci_builds
+2021-07-16_01:19:51.14802 	  JOIN projects
+2021-07-16_01:19:51.14805 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:19:51.14807 	  JOIN namespaces
+2021-07-16_01:19:51.14809 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:19:51.14818 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:19:51.14879 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:19:51.14910 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:19:51.14980 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:19:51.15056 	  GROUP BY
+2021-07-16_01:19:51.15063 	    projects.namespace_id,
+2021-07-16_01:19:51.15067 	    projects.shared_runners_enabled,
+2021-07-16_01:19:51.15072 	    ci_builds.project_id,
+2021-07-16_01:19:51.15076 	    ci_builds.commit_id,
+2021-07-16_01:19:51.15080 	    ci_builds.status,
+2021-07-16_01:19:51.15084 	    ci_builds.commands
+2021-07-16_01:19:51.15088 	  HAVING COUNT(*) > 2
+2021-07-16_01:19:51.15092 	) AS subquery
+2021-07-16_01:19:51.15097 	GROUP BY
+2021-07-16_01:19:51.15105 	  subquery.namespace_id,
+2021-07-16_01:19:51.15114 	  subquery.shared_runners_enabled,
+2021-07-16_01:19:51.15118 	  subquery.project_id,
+2021-07-16_01:19:51.15122 	  subquery.commit_id,
+2021-07-16_01:19:51.15126 	  subquery.status
+2021-07-16_01:19:51.15131 	
+2021-07-16_01:20:06.14425 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:20:06.14429 STATEMENT:  SELECT
+2021-07-16_01:20:06.14429 	  subquery.namespace_id,
+2021-07-16_01:20:06.14430 	  subquery.shared_runners_enabled,
+2021-07-16_01:20:06.14430 	  subquery.project_id,
+2021-07-16_01:20:06.14430 	  subquery.status,
+2021-07-16_01:20:06.14430 	  MAX(subquery.count) as count
+2021-07-16_01:20:06.14431 	FROM (
+2021-07-16_01:20:06.14431 	  SELECT
+2021-07-16_01:20:06.14431 	    projects.namespace_id,
+2021-07-16_01:20:06.14431 	    projects.shared_runners_enabled,
+2021-07-16_01:20:06.14432 	    ci_builds.project_id,
+2021-07-16_01:20:06.14432 	    ci_builds.commit_id,
+2021-07-16_01:20:06.14432 	    ci_builds.status,
+2021-07-16_01:20:06.14433 	    COUNT(*) AS count
+2021-07-16_01:20:06.14433 	  FROM ci_builds
+2021-07-16_01:20:06.14433 	  JOIN projects
+2021-07-16_01:20:06.14433 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:20:06.14434 	  JOIN namespaces
+2021-07-16_01:20:06.14434 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:20:06.14434 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:20:06.14434 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:20:06.14435 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:20:06.14435 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:20:06.14435 	  GROUP BY
+2021-07-16_01:20:06.14436 	    projects.namespace_id,
+2021-07-16_01:20:06.14436 	    projects.shared_runners_enabled,
+2021-07-16_01:20:06.14436 	    ci_builds.project_id,
+2021-07-16_01:20:06.14436 	    ci_builds.commit_id,
+2021-07-16_01:20:06.14437 	    ci_builds.status,
+2021-07-16_01:20:06.14437 	    ci_builds.commands
+2021-07-16_01:20:06.14437 	  HAVING COUNT(*) > 2
+2021-07-16_01:20:06.14437 	) AS subquery
+2021-07-16_01:20:06.14438 	GROUP BY
+2021-07-16_01:20:06.14438 	  subquery.namespace_id,
+2021-07-16_01:20:06.14440 	  subquery.shared_runners_enabled,
+2021-07-16_01:20:06.14440 	  subquery.project_id,
+2021-07-16_01:20:06.14440 	  subquery.commit_id,
+2021-07-16_01:20:06.14440 	  subquery.status
+2021-07-16_01:20:06.14441 	
+2021-07-16_01:20:21.12812 ERROR:  column ci_builds.commands does not exist at character 825
+2021-07-16_01:20:21.12815 STATEMENT:  SELECT
+2021-07-16_01:20:21.12816 	  subquery.namespace_id,
+2021-07-16_01:20:21.12816 	  subquery.shared_runners_enabled,
+2021-07-16_01:20:21.12816 	  subquery.project_id,
+2021-07-16_01:20:21.12817 	  subquery.status,
+2021-07-16_01:20:21.12817 	  MAX(subquery.count) as count
+2021-07-16_01:20:21.12817 	FROM (
+2021-07-16_01:20:21.12817 	  SELECT
+2021-07-16_01:20:21.12818 	    projects.namespace_id,
+2021-07-16_01:20:21.12818 	    projects.shared_runners_enabled,
+2021-07-16_01:20:21.12818 	    ci_builds.project_id,
+2021-07-16_01:20:21.12818 	    ci_builds.commit_id,
+2021-07-16_01:20:21.12819 	    ci_builds.status,
+2021-07-16_01:20:21.12819 	    COUNT(*) AS count
+2021-07-16_01:20:21.12820 	  FROM ci_builds
+2021-07-16_01:20:21.12820 	  JOIN projects
+2021-07-16_01:20:21.12821 	    ON projects.id = ci_builds.project_id
+2021-07-16_01:20:21.12821 	  JOIN namespaces
+2021-07-16_01:20:21.12821 	    ON namespaces.id = projects.namespace_id
+2021-07-16_01:20:21.12822 	  WHERE ci_builds.type = 'Ci::Build'
+2021-07-16_01:20:21.12822 	    AND ci_builds.status IN ('running', 'pending')
+2021-07-16_01:20:21.12822 	  -- The created_at filter has been introduced for performance reasons only
+2021-07-16_01:20:21.12822 	  AND ci_builds.created_at > NOW() - INTERVAL '7 days'
+2021-07-16_01:20:21.12823 	  GROUP BY
+2021-07-16_01:20:21.12823 	    projects.namespace_id,
+2021-07-16_01:20:21.12823 	    projects.shared_runners_enabled,
+2021-07-16_01:20:21.12824 	    ci_builds.project_id,
+2021-07-16_01:20:21.12824 	    ci_builds.commit_id,
+2021-07-16_01:20:21.12824 	    ci_builds.status,
+2021-07-16_01:20:21.12824 	    ci_builds.commands
+2021-07-16_01:20:21.12825 	  HAVING COUNT(*) > 2
+2021-07-16_01:20:21.12825 	) AS subquery
+2021-07-16_01:20:21.12825 	GROUP BY
+2021-07-16_01:20:21.12825 	  subquery.namespace_id,
+2021-07-16_01:20:21.12827 	  subquery.shared_runners_enabled,
+2021-07-16_01:20:21.12827 	  subquery.project_id,
+2021-07-16_01:20:21.12828 	  subquery.commit_id,
+2021-07-16_01:20:21.12828 	  subquery.status
+2021-07-16_01:20:21.12828 	
+2021-07-16_01:20:33.44286 received TERM from runit, sending INT instead to force quit connections
+2021-07-16_01:20:33.44474 LOG:  received fast shutdown request
+2021-07-16_01:20:33.44747 LOG:  aborting any active transactions
+2021-07-16_01:20:33.44755 FATAL:  terminating connection due to administrator command
+2021-07-16_01:20:33.45212 FATAL:  terminating connection due to administrator command
+2021-07-16_01:20:33.45732 FATAL:  terminating connection due to administrator command
+2021-07-16_01:20:33.46473 FATAL:  terminating connection due to administrator command
+2021-07-16_01:20:33.46482 FATAL:  terminating connection due to administrator command
+2021-07-16_01:20:33.47010 LOG:  background worker "logical replication launcher" (PID 314) exited with exit code 1
+2021-07-16_01:20:33.47119 LOG:  shutting down
+2021-07-16_01:20:33.49867 LOG:  database system is shut down

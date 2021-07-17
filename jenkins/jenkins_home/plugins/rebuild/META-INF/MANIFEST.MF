@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: gustaflh
+Build-Jdk: 11.0.9.1
+Extension-Name: rebuild
+Specification-Title: The Jenkins Plugins Parent POM Project
+Implementation-Title: rebuild
+Implementation-Version: 1.32
+Group-Id: com.sonyericsson.hudson.plugins.rebuild
+Short-Name: rebuild
+Long-Name: Rebuilder
+Url: https://wiki.jenkins.io/display/JENKINS/Rebuild+Plugin
+Minimum-Java-Version: 1.8
+Plugin-Version: 1.32
+Hudson-Version: 2.176.4
+Jenkins-Version: 2.176.4
+Plugin-Dependencies: matrix-project:1.18
+Plugin-Developers: Gustaf Lundh:gustafl:gustaf.lundh@gmail.com
+Plugin-License-Name: MIT
+Plugin-License-Url: https://www.opensource.org/licenses/mit-license.php
+Plugin-ScmUrl: https://github.com/jenkinsci/rebuild-plugin
+

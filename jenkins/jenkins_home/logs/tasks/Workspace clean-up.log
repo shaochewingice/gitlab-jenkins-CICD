@@ -1,0 +1,16 @@
+Started at Fri Jul 16 20:09:35 GMT 2021
+Checking cicd-docker-nginx
+Checking freestyle-first
+Checking gitlab-webhook-freestyle
+Checking jenkins-ansible
+Checking maven-agent
+Deleting /var/jenkins_home/workspace/maven-agent on Jenkins
+Checking nginx-harbor
+Checking pipe-nginx
+Checking pipeline-java
+Deleting /var/jenkins_home/workspace/pipeline-java on Jenkins
+Checking python-redis-count
+Checking sayhello
+Checking test-ansible
+Checking tomcat-cicd
+Finished at Fri Jul 16 20:09:35 GMT 2021. 129ms

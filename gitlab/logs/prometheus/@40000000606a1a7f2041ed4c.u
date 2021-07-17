@@ -1,0 +1,74 @@
+2021-04-04_01:07:55.67102 level=info ts=2021-04-04T01:07:55.651Z caller=main.go:366 msg="No time or size retention was set so using the default time retention" duration=15d
+2021-04-04_01:07:55.67122 level=info ts=2021-04-04T01:07:55.667Z caller=main.go:404 msg="Starting Prometheus" version="(version=2.25.0, branch=master, revision=)"
+2021-04-04_01:07:55.67122 level=info ts=2021-04-04T01:07:55.667Z caller=main.go:409 build_context="(go=go1.15.8, user=GitLab-Omnibus, date=)"
+2021-04-04_01:07:55.67122 level=info ts=2021-04-04T01:07:55.667Z caller=main.go:410 host_details="(Linux 3.10.0-1127.el7.x86_64 #1 SMP Tue Mar 31 23:36:51 UTC 2020 x86_64 gitlab.shao.com (none))"
+2021-04-04_01:07:55.67123 level=info ts=2021-04-04T01:07:55.667Z caller=main.go:411 fd_limits="(soft=50000, hard=50000)"
+2021-04-04_01:07:55.67123 level=info ts=2021-04-04T01:07:55.667Z caller=main.go:412 vm_limits="(soft=unlimited, hard=unlimited)"
+2021-04-04_01:07:56.43359 level=info ts=2021-04-04T01:07:56.431Z caller=web.go:532 component=web msg="Start listening for connections" address=localhost:9090
+2021-04-04_01:07:56.46816 level=info ts=2021-04-04T01:07:56.467Z caller=main.go:779 msg="Starting TSDB ..."
+2021-04-04_01:07:56.62084 level=info ts=2021-04-04T01:07:56.619Z caller=tls_config.go:191 component=web msg="TLS is disabled." http2=false
+2021-04-04_01:07:56.65022 level=info ts=2021-04-04T01:07:56.642Z caller=repair.go:57 component=tsdb msg="Found healthy block" mint=1616565714462 maxt=1616572800000 ulid=01F1P65FQA4F4DQV6XE0DYVV7T
+2021-04-04_01:07:56.68715 level=info ts=2021-04-04T01:07:56.686Z caller=repair.go:57 component=tsdb msg="Found healthy block" mint=1616471015311 maxt=1616479200000 ulid=01F1P65R51J7T1W9K5D2SHPE3M
+2021-04-04_01:07:56.71833 level=info ts=2021-04-04T01:07:56.717Z caller=repair.go:57 component=tsdb msg="Found healthy block" mint=1616532339461 maxt=1616565600000 ulid=01F1P65Y6MCEPHDGHRCWSEVHSQ
+2021-04-04_01:07:56.74054 level=info ts=2021-04-04T01:07:56.730Z caller=repair.go:57 component=tsdb msg="Found healthy block" mint=1616641734461 maxt=1616652000000 ulid=01F22EMRY75SNG75J0R3HQ6MRX
+2021-04-04_01:07:56.78922 level=info ts=2021-04-04T01:07:56.788Z caller=repair.go:57 component=tsdb msg="Found healthy block" mint=1616726104445 maxt=1616738400000 ulid=01F22WPQPM5VHEGDXYMW6A464E
+2021-04-04_01:07:56.79889 level=info ts=2021-04-04T01:07:56.798Z caller=repair.go:57 component=tsdb msg="Found healthy block" mint=1617137651979 maxt=1617148800000 ulid=01F23AE6A0V3HGDGXCVG0HQCW4
+2021-04-04_01:07:56.80984 level=info ts=2021-04-04T01:07:56.809Z caller=repair.go:57 component=tsdb msg="Found healthy block" mint=1617148800254 maxt=1617177600000 ulid=01F25F3EMFHCK8D8V6SHJ44AAY
+2021-04-04_01:07:56.83364 level=info ts=2021-04-04T01:07:56.833Z caller=repair.go:57 component=tsdb msg="Found healthy block" mint=1617235200262 maxt=1617242400000 ulid=01F25NZ5H51K1F33QA3SVAE22N
+2021-04-04_01:07:56.87266 level=info ts=2021-04-04T01:07:56.872Z caller=repair.go:57 component=tsdb msg="Found healthy block" mint=1617242400262 maxt=1617249600000 ulid=01F25WTWS5SQBMKR0KT2CBVZWK
+2021-04-04_01:07:56.88647 level=info ts=2021-04-04T01:07:56.886Z caller=repair.go:57 component=tsdb msg="Found healthy block" mint=1617222881982 maxt=1617235200000 ulid=01F25WTX5FN48X9NFBZD57ZSWH
+2021-04-04_01:07:56.89643 level=info ts=2021-04-04T01:07:56.895Z caller=repair.go:57 component=tsdb msg="Found healthy block" mint=1617249600000 maxt=1617256800000 ulid=01F2AT8Q2DSJX62MXFCKP6A78N
+2021-04-04_01:07:56.92035 level=info ts=2021-04-04T01:07:56.919Z caller=repair.go:57 component=tsdb msg="Found healthy block" mint=1617256800262 maxt=1617264000000 ulid=01F2AT8RK34XN2WQXYR1E9DHM1
+2021-04-04_01:08:08.39306 level=info ts=2021-04-04T01:08:08.391Z caller=head.go:668 component=tsdb msg="Replaying on-disk memory mappable chunks if any"
+2021-04-04_01:08:09.05409 level=info ts=2021-04-04T01:08:09.053Z caller=head.go:682 component=tsdb msg="On-disk memory mappable chunks replay completed" duration=661.950626ms
+2021-04-04_01:08:09.05411 level=info ts=2021-04-04T01:08:09.054Z caller=head.go:688 component=tsdb msg="Replaying WAL, this may take a while"
+2021-04-04_01:08:13.57228 level=info ts=2021-04-04T01:08:13.547Z caller=head.go:714 component=tsdb msg="WAL checkpoint loaded"
+2021-04-04_01:08:35.29861 level=info ts=2021-04-04T01:08:35.293Z caller=head.go:740 component=tsdb msg="WAL segment loaded" segment=34 maxSegment=38
+2021-04-04_01:08:35.34153 level=info ts=2021-04-04T01:08:35.319Z caller=head.go:740 component=tsdb msg="WAL segment loaded" segment=35 maxSegment=38
+2021-04-04_01:08:41.87202 level=info ts=2021-04-04T01:08:41.868Z caller=head.go:740 component=tsdb msg="WAL segment loaded" segment=36 maxSegment=38
+2021-04-04_01:08:46.83304 level=info ts=2021-04-04T01:08:46.831Z caller=head.go:740 component=tsdb msg="WAL segment loaded" segment=37 maxSegment=38
+2021-04-04_01:08:46.84620 level=info ts=2021-04-04T01:08:46.843Z caller=head.go:740 component=tsdb msg="WAL segment loaded" segment=38 maxSegment=38
+2021-04-04_01:08:46.84622 level=info ts=2021-04-04T01:08:46.843Z caller=head.go:745 component=tsdb msg="WAL replay completed" checkpoint_replay_duration=4.493619577s wal_replay_duration=33.296058847s total_replay_duration=38.45171886s
+2021-04-04_01:08:46.91021 level=info ts=2021-04-04T01:08:46.909Z caller=main.go:799 fs_type=XFS_SUPER_MAGIC
+2021-04-04_01:08:46.91024 level=info ts=2021-04-04T01:08:46.909Z caller=main.go:802 msg="TSDB started"
+2021-04-04_01:08:46.91024 level=info ts=2021-04-04T01:08:46.909Z caller=main.go:928 msg="Loading configuration file" filename=/var/opt/gitlab/prometheus/prometheus.yml
+2021-04-04_01:08:46.94106 level=error ts=2021-04-04T01:08:46.936Z caller=manager.go:314 component="discovery manager scrape" msg="Cannot create service discovery" err="unable to load specified CA cert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: open /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: no such file or directory" type=kubernetes
+2021-04-04_01:08:46.94109 level=error ts=2021-04-04T01:08:46.936Z caller=manager.go:314 component="discovery manager scrape" msg="Cannot create service discovery" err="unable to load specified CA cert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: open /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: no such file or directory" type=kubernetes
+2021-04-04_01:08:46.94109 level=error ts=2021-04-04T01:08:46.936Z caller=manager.go:314 component="discovery manager scrape" msg="Cannot create service discovery" err="unable to load specified CA cert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: open /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: no such file or directory" type=kubernetes
+2021-04-04_01:08:46.95769 level=info ts=2021-04-04T01:08:46.957Z caller=main.go:959 msg="Completed loading of configuration file" filename=/var/opt/gitlab/prometheus/prometheus.yml totalDuration=48.12981ms remote_storage=82.762µs web_handler=692ns query_engine=1.249µs scrape=195.168µs scrape_sd=537.82µs notify=122.799µs notify_sd=16.152µs rules=20.176487ms
+2021-04-04_01:08:46.95772 level=info ts=2021-04-04T01:08:46.957Z caller=main.go:751 msg="Server is ready to receive web requests."
+2021-04-04_01:08:50.53152 level=info ts=2021-04-04T01:08:50.528Z caller=compact.go:498 component=tsdb msg="write block resulted in empty block" mint=1617264000000 maxt=1617271200000 duration=448.825317ms
+2021-04-04_01:08:50.53909 level=info ts=2021-04-04T01:08:50.537Z caller=head.go:847 component=tsdb msg="Head GC completed" duration=7.814252ms
+2021-04-04_01:08:50.57720 level=info ts=2021-04-04T01:08:50.571Z caller=checkpoint.go:95 component=tsdb msg="Creating checkpoint" from_segment=34 to_segment=36 mint=1617271200000
+2021-04-04_01:08:51.96778 level=error ts=2021-04-04T01:08:51.966Z caller=manager.go:188 component="scrape manager" msg="error creating new scrape pool" err="error creating HTTP client: unable to load specified CA cert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: open /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: no such file or directory" scrape_pool=kubernetes-pods
+2021-04-04_01:08:51.96781 level=error ts=2021-04-04T01:08:51.966Z caller=manager.go:188 component="scrape manager" msg="error creating new scrape pool" err="error creating HTTP client: unable to load specified CA cert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: open /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: no such file or directory" scrape_pool=kubernetes-cadvisor
+2021-04-04_01:08:51.96787 level=error ts=2021-04-04T01:08:51.966Z caller=manager.go:188 component="scrape manager" msg="error creating new scrape pool" err="error creating HTTP client: unable to load specified CA cert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: open /var/run/secrets/kubernetes.io/serviceaccount/ca.crt: no such file or directory" scrape_pool=kubernetes-nodes
+2021-04-04_01:08:56.00749 level=info ts=2021-04-04T01:08:56.005Z caller=head.go:944 component=tsdb msg="WAL checkpoint complete" first=34 last=36 duration=5.43441201s
+2021-04-04_01:08:56.98923 level=info ts=2021-04-04T01:08:56.985Z caller=compact.go:507 component=tsdb msg="write block" mint=1617418279439 maxt=1617422400000 ulid=01F2D6SY262P1E4ZF3AW3JMKVD duration=978.768403ms
+2021-04-04_01:08:57.03101 level=info ts=2021-04-04T01:08:57.021Z caller=head.go:847 component=tsdb msg="Head GC completed" duration=33.642278ms
+2021-04-04_01:08:59.08629 level=info ts=2021-04-04T01:08:59.080Z caller=compact.go:507 component=tsdb msg="write block" mint=1617422400263 maxt=1617429600000 ulid=01F2D6SZ4PVFA9RZRYPEZSFNQJ duration=1.969981808s
+2021-04-04_01:08:59.10076 level=info ts=2021-04-04T01:08:59.099Z caller=head.go:847 component=tsdb msg="Head GC completed" duration=17.209828ms
+2021-04-04_01:09:05.37971 level=info ts=2021-04-04T01:09:05.377Z caller=compact.go:448 component=tsdb msg="compact blocks" count=3 mint=1617235200262 maxt=1617256800000 ulid=01F2D6T13AEB62QNEH71N7BKYG sources="[01F25NZ5H51K1F33QA3SVAE22N 01F25WTWS5SQBMKR0KT2CBVZWK 01F2AT8Q2DSJX62MXFCKP6A78N]" duration=6.262783928s
+2021-04-04_01:09:05.39261 level=info ts=2021-04-04T01:09:05.392Z caller=db.go:1212 component=tsdb msg="Deleting obsolete block" block=01F25NZ5H51K1F33QA3SVAE22N
+2021-04-04_01:09:05.42132 level=info ts=2021-04-04T01:09:05.420Z caller=db.go:1212 component=tsdb msg="Deleting obsolete block" block=01F25WTWS5SQBMKR0KT2CBVZWK
+2021-04-04_01:09:05.43480 level=info ts=2021-04-04T01:09:05.432Z caller=db.go:1212 component=tsdb msg="Deleting obsolete block" block=01F2AT8Q2DSJX62MXFCKP6A78N
+2021-04-04_01:09:09.17083 level=info ts=2021-04-04T01:09:09.167Z caller=compact.go:448 component=tsdb msg="compact blocks" count=3 mint=1617222881982 maxt=1617264000000 ulid=01F2D6T78SWSCHVNEZ9EW5NQ51 sources="[01F25WTX5FN48X9NFBZD57ZSWH 01F2D6T13AEB62QNEH71N7BKYG 01F2AT8RK34XN2WQXYR1E9DHM1]" duration=3.734823153s
+2021-04-04_01:09:09.17630 level=info ts=2021-04-04T01:09:09.176Z caller=db.go:1212 component=tsdb msg="Deleting obsolete block" block=01F2D6T13AEB62QNEH71N7BKYG
+2021-04-04_01:09:09.18393 level=info ts=2021-04-04T01:09:09.183Z caller=db.go:1212 component=tsdb msg="Deleting obsolete block" block=01F2AT8RK34XN2WQXYR1E9DHM1
+2021-04-04_01:09:09.18682 level=info ts=2021-04-04T01:09:09.185Z caller=db.go:1212 component=tsdb msg="Deleting obsolete block" block=01F25WTX5FN48X9NFBZD57ZSWH
+2021-04-04_03:09:00.52512 level=info ts=2021-04-04T03:09:00.513Z caller=compact.go:507 component=tsdb msg="write block" mint=1617494938476 maxt=1617501600000 ulid=01F2DDNSF96MWMZ20WBVY0JD1N duration=248.626934ms
+2021-04-04_03:09:00.53426 level=info ts=2021-04-04T03:09:00.531Z caller=head.go:847 component=tsdb msg="Head GC completed" duration=8.87251ms
+2021-04-04_03:09:00.54680 level=info ts=2021-04-04T03:09:00.542Z caller=checkpoint.go:95 component=tsdb msg="Creating checkpoint" from_segment=37 to_segment=38 mint=1617501600000
+2021-04-04_03:09:01.02446 level=info ts=2021-04-04T03:09:01.023Z caller=head.go:944 component=tsdb msg="WAL checkpoint complete" first=37 last=38 duration=481.102551ms
+2021-04-04_04:47:21.15290 level=warn ts=2021-04-04T04:47:21.145Z caller=main.go:629 msg="Received SIGTERM, exiting gracefully..."
+2021-04-04_04:47:21.16111 level=info ts=2021-04-04T04:47:21.153Z caller=main.go:652 msg="Stopping scrape discovery manager..."
+2021-04-04_04:47:21.16178 level=info ts=2021-04-04T04:47:21.161Z caller=main.go:666 msg="Stopping notify discovery manager..."
+2021-04-04_04:47:21.16199 level=info ts=2021-04-04T04:47:21.161Z caller=main.go:688 msg="Stopping scrape manager..."
+2021-04-04_04:47:21.16926 level=info ts=2021-04-04T04:47:21.169Z caller=main.go:648 msg="Scrape discovery manager stopped"
+2021-04-04_04:47:21.16989 level=info ts=2021-04-04T04:47:21.169Z caller=main.go:662 msg="Notify discovery manager stopped"
+2021-04-04_04:47:21.17989 level=info ts=2021-04-04T04:47:21.179Z caller=manager.go:924 component="rule manager" msg="Stopping rule manager..."
+2021-04-04_04:47:21.18029 level=info ts=2021-04-04T04:47:21.180Z caller=manager.go:934 component="rule manager" msg="Rule manager stopped"
+2021-04-04_04:47:21.18254 level=info ts=2021-04-04T04:47:21.182Z caller=main.go:682 msg="Scrape manager stopped"
+2021-04-04_04:47:21.19094 level=info ts=2021-04-04T04:47:21.190Z caller=notifier.go:601 component=notifier msg="Stopping notification manager..."
+2021-04-04_04:47:21.19119 level=info ts=2021-04-04T04:47:21.191Z caller=main.go:856 msg="Notifier manager stopped"
+2021-04-04_04:47:21.19145 level=info ts=2021-04-04T04:47:21.191Z caller=main.go:868 msg="See you next time!"

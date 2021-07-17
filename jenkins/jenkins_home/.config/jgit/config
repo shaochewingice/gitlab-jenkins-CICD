@@ -1,0 +1,3 @@
+[filesystem "AdoptOpenJDK|1.8.0_282|/dev/mapper/centos-root"]
+	timestampResolution = 6001 microseconds
+	minRacyThreshold = 0 nanoseconds

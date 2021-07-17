@@ -1,0 +1,13 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<fingerprint>
+  <timestamp>2021-03-26 03:28:26.112 UTC</timestamp>
+  <md5sum>b6051bb7b262b6c95f15d2e9d25ecb07</md5sum>
+  <fileName>Credential id=ec5a97c8-f322-43db-986d-3e3d58ed972f name=root (jenkinsdocker-gitlabdocker)</fileName>
+  <usages>
+    <entry>
+      <string>tomcat-cicd</string>
+      <ranges>3-4</ranges>
+    </entry>
+  </usages>
+  <facets/>
+</fingerprint>

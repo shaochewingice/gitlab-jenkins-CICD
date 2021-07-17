@@ -1,0 +1,17 @@
+{
+	"ulid": "01FAV29Q33XHVZ34KX42MHRSD4",
+	"minTime": 1626494400000,
+	"maxTime": 1626501600000,
+	"stats": {
+		"numSamples": 4936771,
+		"numSeries": 14794,
+		"numChunks": 44159
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01FAV29Q33XHVZ34KX42MHRSD4"
+		]
+	},
+	"version": 1
+}
